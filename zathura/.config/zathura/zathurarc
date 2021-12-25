@@ -1,0 +1,35 @@
+set font 'Fira Code'
+
+set default-bg                  "#202124"
+set default-fg                  "#EDFEFE"
+
+set statusbar-fg                "#EDFEFE"
+set statusbar-bg                "#202124"
+
+set inputbar-bg                 "#202124"
+set inputbar-fg                 "#EDFEFE"
+
+set notification-bg             "#202124"
+set notification-fg             "#EDFEFE"
+
+set notification-error-bg       "#202124"
+set notification-error-fg       "#AC4142"
+
+set notification-warning-bg     "#202124"
+set notification-warning-fg     "#AC4142"
+
+set highlight-color             "#2980B9"
+set highlight-active-color      "#F4BF75"
+
+set completion-bg               "#333333"
+set completion-fg               "#EDFEFE"
+
+set completion-highlight-fg     "#202124"
+set completion-highlight-bg     "#EDFEFE"
+
+set recolor-lightcolor          "#202124"
+set recolor-darkcolor           "#EDFEFE"
+
+set recolor                     "false"
+set recolor-keephue             "false"
+
