@@ -4,6 +4,8 @@
 ## *config files for Linux*
 
 *The files herein exist first and foremost as my backups. I've only made them public incase someone may find them useful.*  
+
+This repo is setup to be managed locally by GNU Stow.
 ___
 
 ![desktop](screenshots/desktop-bspwm.png)
