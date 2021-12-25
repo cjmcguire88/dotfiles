@@ -1,0 +1,74 @@
+#  █████╗ ██╗     ██╗ █████╗ ███████╗███████╗███████╗
+# ██╔══██╗██║     ██║██╔══██╗██╔════╝██╔════╝██╔════╝
+# ███████║██║     ██║███████║███████╗█████╗  ███████╗
+# ██╔══██║██║     ██║██╔══██║╚════██║██╔══╝  ╚════██║
+# ██║  ██║███████╗██║██║  ██║███████║███████╗███████║
+# ╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
+
+# 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
+
+# cmd replacement
+alias cpp="rsync -HAX"
+alias cpr='rsync -rah --info=progress2'
+alias cat="bat --style=changes"
+alias l="exa --icons --group-directories-first "
+alias ll="exa -a --icons --group-directories-first"
+alias lk="exa -lg --group-directories-first --octal-permissions --icons --no-permissions --git"
+alias la="exa -lag --group-directories-first --octal-permissions --icons --no-permissions --git"
+alias lr="exa -RT --level=2"
+alias v="nvim"
+alias chmod="chmod --preserve-root"
+
+# administration
+# system
+alias scstatus="sudo systemctl status"
+alias scstart="sudo systemctl start"
+alias screstart="sudo systemctl restart"
+alias scenable="sudo systemctl enable"
+alias scstop="sudo systemctl stop"
+alias scdisable="sudo systemctl disable"
+alias scmask="sudo systemctl mask"
+# user
+alias scustatus="systemctl --user status"
+alias scustart="systemctl --user start"
+alias scurestart="systemctl --user restart"
+alias scuenable="systemctl --user enable"
+alias scustop="systemctl --user stop"
+alias scudisable="systemctl --user disable"
+alias scumask="systemctl --user mask"
+
+# boot commands
+alias uefi="systemctl reboot --firmware-setup"
+alias grub="sudo efibootmgr -n 1 && reboot"
+
+# package management
+alias install="paru -S"
+alias download="paru -Sw"
+alias ifd="paru -U"
+alias search="paru -Ss"
+alias info="paru -Si "
+alias info_all="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+alias update="paru -Syu"
+alias remove="paru -Rsu"
+alias query="paru -Q"
+alias files="paru -Ql"      # either belonging to a specific package or the whole system
+alias cache="paru -Sc"
+alias pb="paru -Gc"
+alias pkglist="sudo pacman -Qqe > /home/jason/.build/git/config-files/pkglist.txt"
+
+# etc
+alias sysscan="sudo lynis audit system ; sudo rkhunter --propupd && sudo rkhunter --check -sk ; sudo rkhunter --config-check ; sudo arch-audit"
+alias matrix="unimatrix"
+alias nf="neofetch --source ~/.config/neofetch/MiniBeast.txt"
+alias cpu="sudo i7z"
+alias zshrc="nvim ~/.config/zsh/.zshrc"
+alias bashrc="nvim ~/.config/bash/bashrc"
+alias sa="systemd-analyze"
+alias gitdir="/home/jason/.build/git"
+alias mntsec="ecryptfs-mount-private"
+alias umntsec="ecryptfs-umount-private"
+alias efs="sudo cryptsetup open /dev/sda1 efs && sudo mount /dev/mapper/efs /home/jason/.secure"
+alias cefs="sudo umount /dev/mapper/efs && sudo cryptsetup close efs"
+alias rmf="rm -rf"
+alias dmesg="sudo dmesg"
+alias update_nv="sudo dkms install --no-depmod -m nvidia -v $(sudo pacman -Q nvidia-dkms | sed 's/-/ /g' | awk '{ print $3 }') -k $(uname -r) && sudo depmod $(uname -r)"
