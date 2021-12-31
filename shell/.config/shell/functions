@@ -31,6 +31,11 @@ ex () {
   fi
 }
 
+# zoxide into directory then exa
+zls() {
+    z $1 && exa -a --icons --group-directories-first
+}
+
 # download and convert to .mp3 all YT urls in file
 ytdl () {
     cat $1 | while read line; do youtube-dl --external-downloader aria2c --external-downloader-args '-c -j 3 -x 3 -s 3 -k 1M' --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" ytsearch:"$line" ;done
