@@ -8,7 +8,7 @@
 # 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
 
 # cmd replacement
-alias cd="zls"
+alias c="zls"
 alias cpp="rsync -HAX"
 alias cpr='rsync -rah --info=progress2'
 alias cat="bat --style=changes"
