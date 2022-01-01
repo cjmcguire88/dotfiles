@@ -9,7 +9,7 @@
 
 ! special
 *.foreground:   #edfefe
-*.background:   #181818
+*.background:   #202124
 *.cursorColor:  #edfefe
 *.font:         JetBrainsMono Nerd Font:pixelsize=14
 
