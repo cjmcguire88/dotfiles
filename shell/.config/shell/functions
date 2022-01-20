@@ -36,6 +36,12 @@ zls() {
     z $1 && exa -a --icons --group-directories-first
 }
 
+# Display current public IP
+myip () {
+  res=$(curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+')
+  echo -e "Your public IP is: ${echo_bold_green} $res ${echo_normal}"
+}
+
 # download and convert to .mp3 all YT urls in file
 ytdl () {
     cat $1 | while read line; do youtube-dl --external-downloader aria2c --external-downloader-args '-c -j 3 -x 3 -s 3 -k 1M' --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" ytsearch:"$line" ;done

@@ -8,7 +8,6 @@
 # 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
 
 # cmd replacement
-alias c="zls"
 alias cpp="rsync -HAX"
 alias cpr='rsync -rah --info=progress2'
 alias cat="bat --style=changes"
@@ -19,6 +18,23 @@ alias la="exa -lag --group-directories-first --octal-permissions --icons --no-pe
 alias lr="exa -RT --level=2"
 alias v="nvim"
 alias chmod="chmod --preserve-root"
+
+# navigation
+alias c="zls"
+alias ...='../..'
+alias ....='../../..'
+alias .....='../../../..'
+alias ......='../../../../..'
+alias -- -='cd -'
+alias 1='cd -'
+alias 2='cd -2'
+alias 3='cd -3'
+alias 4='cd -4'
+alias 5='cd -5'
+alias 6='cd -6'
+alias 7='cd -7'
+alias 8='cd -8'
+alias 9='cd -9'
 
 # administration
 # system
@@ -43,7 +59,7 @@ alias uefi="systemctl reboot --firmware-setup"
 alias grub="sudo efibootmgr -n 1 && reboot"
 
 # package management
-alias install="paru -S"
+alias ins="paru -S"
 alias download="paru -Sw"
 alias ifd="paru -U"
 alias search="paru -Ss"
@@ -51,10 +67,10 @@ alias info="paru -Si "
 alias info_all="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias update="paru -Syu"
 alias remove="paru -Rsu"
-alias query="paru -Q"
-alias files="paru -Ql"      # either belonging to a specific package or the whole system
-alias cache="paru -Sc"
-alias pb="paru -Gc"
+alias query="pacman -Q"
+alias files="pacman -Ql"      # either belonging to a specific package or the whole system
+alias cache="pacman -Sc"
+alias pb="pacman -Gc"
 alias pkglist="sudo pacman -Qqe > /home/jason/.build/git/config-files/pkglist.txt"
 
 # etc
@@ -63,7 +79,7 @@ alias matrix="unimatrix"
 alias nf="neofetch --source ~/.config/neofetch/MiniBeast.txt"
 alias cpu="sudo i7z"
 alias zshrc="nvim ~/.config/zsh/.zshrc"
-alias bashrc="nvim ~/.config/bash/bashrc"
+alias bashrc="nvim ~/.bashrc"
 alias sa="systemd-analyze"
 alias gitdir="/home/jason/.build/git"
 alias mntsec="ecryptfs-mount-private"

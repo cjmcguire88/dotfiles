@@ -11,7 +11,9 @@
 export PATH=$HOME/.local/bin:$PATH
 
 # Source bashrc
-[[ $(ps -p $$ -oargs=) =~ "bash" ]] && source ~/.bashrc
+if [[ $(ps -p $$ -oargs=) =~ "bash" ]] && [[ -n "$PS1" ]]; then
+    source $HOME/.bashrc
+fi
 
 # Zsh config directory
 export ZDOTDIR=$HOME/.config/zsh
