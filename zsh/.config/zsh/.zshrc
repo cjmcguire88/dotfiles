@@ -18,10 +18,12 @@ eval "$(zoxide init zsh)"
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
-ZSH_CACHE_DIR=~/.cache/zsh
-HISTSIZE=1000000
-
-HISTFILE=~/.config/zsh/zsh_history
+ZSH_CACHE_DIR=$HOME/.cache/zsh
+setopt share_history
+setopt inc_append_history
+export HISTSIZE=100000
+export SAVEHIST=1000000
+export HISTFILE=$HOME/.config/zsh/zsh_history
 
 ZSH_THEME="powerlevel10k"
 plugins=(git sudo colorize zsh-vi-mode zsh-syntax-highlighting zsh-autosuggestions)
@@ -34,12 +36,12 @@ for plugin ($plugins); do
     source $ZDOTDIR/plugins/$plugin/$plugin.plugin.zsh
 done
 
-if [ ! "$ZSH_THEME" = ""  ] && [ -f "$ZDOTDIR/themes/$ZSH_THEME/$ZSH_THEME.zsh-theme" ]; then
+if [[ -n "$ZSH_THEME"  ]]; then
     source "$ZDOTDIR/themes/$ZSH_THEME/$ZSH_THEME.zsh-theme"
 fi
 
-source ~/.config/zsh/.p10k.zsh
-source ~/.config/shell/aliases
-source ~/.config/shell/functions
+source $XDG_CONFIG_HOME/zsh/.p10k.zsh
+source $XDG_CONFIG_HOME/shell/aliases
+source $XDG_CONFIG_HOME/shell/functions
 
 cursor_mode
