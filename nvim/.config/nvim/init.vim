@@ -131,7 +131,7 @@ let g:airline_section_warning = ''
 let g:airline#extensions#tabline#enabled = 1
 
 " Rainbow parenthesis
-let g:rainbow_active = 0
+let g:rainbow_active = 1
 
 " Neovim :Terminal
 tmap <Esc> <C-\><C-n>
@@ -221,6 +221,9 @@ autocmd FileType journal setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Python
 autocmd FileType python nmap <leader>py :0,$!~/.config/nvim/env/bin/python -m yapf<CR>
+
+" Shell
+autocmd bufnewfile *.sh so ~/.config/nvim/header_template
 
 """ Custom Functions
 
