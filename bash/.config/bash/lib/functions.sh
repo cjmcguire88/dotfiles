@@ -3,14 +3,6 @@ function bash_stats() {
   fc -l 1 | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n20
 }
 
-function uninstall_oh_my_bash() {
-  env OSH=$OSH sh $OSH/tools/uninstall.sh
-}
-
-function upgrade_oh_my_bash() {
-  env OSH=$OSH sh $OSH/tools/upgrade.sh
-}
-
 function take() {
   mkdir -p "$1"
   cd "$1" || exit
@@ -18,24 +10,7 @@ function take() {
 
 function open_command() {
   local open_cmd
-
-  # define the open command
-  case "$OSTYPE" in
-    darwin*)  open_cmd='open' ;;
-    cygwin*)  open_cmd='cygstart' ;;
-    linux*)   open_cmd='xdg-open' ;;
-    msys*)    open_cmd='start ""' ;;
-    *)        echo "Platform $OSTYPE not supported"
-              return 1
-              ;;
-  esac
-
-  # don't use nohup on OSX
-  if [[ "$OSTYPE" == darwin* ]]; then
-    $open_cmd "$@" &>/dev/null
-  else
-    nohup $open_cmd "$@" &>/dev/null
-  fi
+  open_cmd='xdg-open'
 }
 
 #

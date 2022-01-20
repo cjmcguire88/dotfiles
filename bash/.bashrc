@@ -7,25 +7,24 @@
 
 # 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
 
-BASH_THEME="bobby"
 HISTFILE=$HOME/.config/bash/bash_history
+HISTSIZE=100000
+HISTFILESIZE=1000000
+BASH_THEME="pure"
 plugins=(sudo)
+BASH_DIR="$XDG_CONFIG_HOME/bash"
 eval "$(zoxide init bash)"
-
-for config_file in ~/.config/bash/lib/*.sh; do
+for config_file in $BASH_DIR/lib/*.sh; do
   source $config_file
 done
-
 for plugin in $plugins; do
-    source ~/.config/bash/plugins/$plugin.plugin.bash
+    source $BASH_DIR/plugins/$plugin.plugin.bash
 done
-
-if [[ ! -z $BASH_THEME ]]; then
-    source ~/.config/bash/themes/colours.theme.sh
-    source ~/.config/bash/themes/base.theme.sh
-    source ~/.config/bash/themes/$BASH_THEME/$BASH_THEME.theme.sh
+if [[ -n $BASH_THEME ]]; then
+    source $BASH_DIR/themes/colours.theme.sh
+    source $BASH_DIR/themes/base.theme.sh
+    source $BASH_DIR/themes/$BASH_THEME/$BASH_THEME.theme.sh
 fi
-
-source ~/.config/bash/bash_welcome
-source ~/.config/shell/aliases
-source ~/.config/shell/functions
+[[ $(tty) =~ /dev/tty* ]] && source $HOME/.config/bash/bash_welcome
+source $XDG_CONFIG_HOME/shell/aliases
+source $XDG_CONFIG_HOME/shell/functions

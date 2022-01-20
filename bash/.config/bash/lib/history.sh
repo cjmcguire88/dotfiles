@@ -1,15 +1,6 @@
 #!/usr/bin/env bash
 shopt -s histappend # append to bash_history if Terminal.app quits
 
-## Command history configuration
-if [ -z "$HISTFILE" ]; then
-  HISTFILE=$HOME/.bash_history
-fi
-
-
-# some moderate history controls taken from sensible.bash
-## SANE HISTORY DEFAULTS ##
-
 # Append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -27,10 +18,6 @@ shopt -s lithist
 
 # Record each line as it gets issued
 PROMPT_COMMAND='history -a'
-
-# Huge history. Doesn't appear to slow things down, so why not?
-HISTSIZE=500000
-HISTFILESIZE=100000
 
 # Avoid duplicate entries
 HISTCONTROL="erasedups:ignoreboth"
@@ -50,11 +37,3 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 bind '"\e[C": forward-char'
 bind '"\e[D": backward-char'
-
-# Show history
-#case $HIST_STAMPS in
-  #"mm/dd/yyyy") alias history='fc -fl 1' ;;
-  #"dd.mm.yyyy") alias history='fc -El 1' ;;
-  #"yyyy-mm-dd") alias history='fc -il 1' ;;
-  #*) alias history='fc -l 1' ;;
-#esac

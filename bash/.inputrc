@@ -10,6 +10,7 @@
 $include /etc/inputrc
 set editing-mode vi
 set show-mode-in-prompt on
+set vi-cmd-mode-string on
 
 $if term=linux
 	set vi-ins-mode-string \1\e[?0c\2
@@ -21,6 +22,11 @@ $endif
 
 $if mode=vi
 set keymap vi-command
+
+set bell-style visual
+set colored-completion-prefix on
+set colored-stats on
+set completion-ignore-case on
 
 # these are for vi-command mode
 "\e[A": history-search-backward
