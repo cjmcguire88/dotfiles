@@ -1,0 +1,104 @@
+# ███████╗██╗   ██╗███╗   ██╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
+# ██╔════╝██║   ██║████╗  ██║██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+# █████╗  ██║   ██║██╔██╗ ██║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗
+# ██╔══╝  ██║   ██║██║╚██╗██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║
+# ██║     ╚██████╔╝██║ ╚████║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║
+# ╚═╝      ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+
+# 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
+
+# extract archives based on filetype
+ex () {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.tar.xz)    tar xJf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.xz)        xz -d $1     ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+# zoxide into directory then exa
+zls() {
+    z $1 && exa -a --icons --group-directories-first
+}
+
+# Display current public IP
+myip () {
+  res=$(curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+')
+  echo -e "Your public IP is: ${echo_bold_green} $res ${echo_normal}"
+}
+
+# download and convert to .mp3 all YT urls in file
+ytdl () {
+    cat $1 | while read line; do youtube-dl --external-downloader aria2c --external-downloader-args '-c -j 3 -x 3 -s 3 -k 1M' --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" ytsearch:"$line" ;done
+}
+
+# play first yt search result in mpv
+yt() {
+  mpv ytdl://ytsearch:"$*"
+}
+
+# play first yt search result in mpv (audio only)
+yta() {
+  mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
+}
+
+# arch news
+arch_news() {
+    w3m https://www.archlinux.org/ | sed -n "/Latest News/,/Older News/p" | head -n -1
+}
+
+# change zsh theme
+ztheme() {
+    if [ "${1}" = "p10k" ]; then
+        sed -i 's|^ZSH_THEME=.*$|ZSH_THEME="powerlevel10k/powerlevel10k"|' ~/.config/zsh/.zshrc
+        source ~/.config/zsh/.zshrc
+    else
+        sed -i 's/^ZSH_THEME=.*$/ZSH_THEME="'${1}'"/' ~/.config/zsh/.zshrc
+        source ~/.config/zsh/.zshrc
+    fi
+}
+
+# zsh cursor mode (called from zshrc)
+cursor_mode() {
+    # See https://ttssh2.osdn.jp/manual/4/en/usage/tips/vim.html for cursor shapes
+    cursor_block='\e[2 q'
+    cursor_beam='\e[6 q'
+
+    zle-keymap-select() {
+        if [[ ${KEYMAP} == vicmd ]] ||
+            [[ $1 = 'block' ]]; then
+            echo -ne $cursor_block
+        elif [[ ${KEYMAP} == main ]] ||
+            [[ ${KEYMAP} == viins ]] ||
+            [[ ${KEYMAP} = '' ]] ||
+            [[ $1 = 'beam' ]]; then
+            echo -ne $cursor_beam
+        fi
+    }
+
+    zle-line-init() {
+        echo -ne $cursor_beam
+    }
+
+    zle -N zle-keymap-select
+    zle -N zle-line-init
+}
+
+weather() {
+    curl -m 1 wttr.in/26155 2>/dev/null
+}

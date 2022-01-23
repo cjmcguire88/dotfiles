@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+objcopy \
+    --add-section .osrel="/usr/lib/os-release" --change-section-vma .osrel=0x20000 \
+    --add-section .cmdline="/etc/kernel/cmdline" --change-section-vma .cmdline=0x30000 \
+    --add-section .splash="/usr/share/systemd/bootctl/splash-arch.bmp" --change-section-vma .splash=0x40000 \
+    --add-section .linux="$KERNEL_DIR/vmlinuz-linux-${1}" --change-section-vma .linux=0x2000000 \
+    "/usr/lib/systemd/boot/efi/linuxx64.efi.stub" "${1}.efi"
+sudo mv ${1}.efi $KERNEL_DIR/
+yes | sudo pacman -S nvidia-dkms
+sudo efibootmgr -B -b 0001
+sudo efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "MiniBeast" --loader /${1}.efi
+sudo update-boot ${1}

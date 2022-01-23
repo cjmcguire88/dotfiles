@@ -1,0 +1,18 @@
+#1642898731
+ll
+#1642898773
+ll .config/zsh/plugins/
+#1642898785
+ll .config/zsh/plugins/zsh-vi-mode/
+#1642899472
+l
+#1642899516
+mv powerlevel10k/ .dotfiles/dotfiles/.config/zsh/themes/
+#1642899533
+c .dotfiles/dotfiles/.config/zsh/
+#1642899539
+rmf themes/*
+#1642899546
+ll
+#1642899550
+ll themes/
