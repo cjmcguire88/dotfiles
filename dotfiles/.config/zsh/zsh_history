@@ -13137,3 +13137,8 @@ cd hiptext-0.2
 : 1642907415:0;ga *
 : 1642907447:0;gc -m "restructured"
 : 1642907461:0;ga dotfiles/
+: 1642907465:0;gc -m "restructured"
+: 1642907472:0;ga bash/
+: 1642907498:0;ga bspwm/ cava/ deadd/ dotfiles/ dunst/ gtk/ kitty/
+: 1642907511:0;ga nvim/ paru/ picom/ polybar/ rofi/
+: 1642907530:0;ga dotfiles/ shell/ sxhkd/ tmux/ xorg/ zathura/ zsh/
