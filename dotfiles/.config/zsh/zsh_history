@@ -13148,3 +13148,514 @@ cd hiptext-0.2
 : 1642907568:0;ga dotfiles/.config/zsh/zsh_history
 : 1642907574:0;gc -m "restructured"
 : 1642907582:0;ga dotfiles/.config/zsh/
+: 1642907585:0;gc -m "restructured"
+: 1642907597:0;pass -c System/ssh
+: 1642907604:0;gp
+: 1642907936:0;nf
+: 1642907980:0;l
+: 1642907987:0;c dotfiles
+: 1642907994:0;c .tmux
+: 1642908024:0;v LICENSE.WTFPLv2
+: 1642908078:0;rmf .git* LICENSE.*
+: 1642908083:0;ll
+: 1642908131:0;..
+: 1642908154:0;rmf .tmux
+: 1642908156:0;ll
+: 1642908165:0;stow dotfiles
+: 1642908168:0;ll
+: 1642908179:0;c .tmux
+: 1642908188:0;..
+: 1642908211:0;ln -s .tmux/.tmux.conf ./
+: 1642908212:0;l
+: 1642908214:0;ll
+: 1642908221:0;la
+: 1642908271:0;ga dotfiles/.tmux
+: 1642908278:0;la
+: 1642908282:0;c dotfiles
+: 1642908284:0;la
+: 1642908291:0;c .tmux
+: 1642908295:0;..
+: 1642908344:0;ll
+: 1642908468:0;..
+: 1642908469:0;l
+: 1642908472:0;ll
+: 1642908478:0;v .gitignore
+: 1642908531:0;ll
+: 1642908542:0;v README.md
+: 1642908583:0;ranger
+: 1642909941:0;c
+: 1642909945:0;v .profile
+: 1642911761:0;v .nwinkler_random_colors
+: 1642911772:0;file .nwinkler_random_colors
+: 1642912249:0;rmf .nwinkler_random_colors
+: 1642920563:0;ll
+: 1642920575:0;l .fontconfig
+: 1642920653:0;fc-list
+: 1642920667:0;c .local/share
+: 1642920668:0;l
+: 1642920674:0;c fonts
+: 1642920679:0;l NerdFonts
+: 1642920739:0;l
+: 1642920744:0;l Noto_Sans
+: 1642920751:0;l panels
+: 1642920773:0;c /usr/share/font
+: 1642920780:0;c /usr/share/fonts
+: 1642920787:0;ll TTF
+: 1642920812:0;l gnu-free
+: 1642950058:0;l
+: 1642950061:0;ll
+: 1642950070:0;ll .dotfiles
+: 1642950081:0;ll .dotfiles/dotfiles
+: 1642956296:0;v .config/neofetch/config.conf
+: 1642956344:0;nf
+: 1642956610:0;c
+: 1642956614:0;c .gtkrc-2.0
+: 1642956625:0;la
+: 1642956637:0;v .gtkrc-2.0
+: 1642956667:0;c
+: 1642956670:0;l .icons
+: 1642956695:0;nf
+: 1642957091:0;ranger Pictures/Wallpapers
+: 1642957170:0;nf
+: 1642957433:0;neofetch --kitty --source Pictures/Wallpapers/anon.jpg
+: 1642957446:0;neofetch --kitty --source Pictures/Wallpapers/jason
+: 1642957482:0;nf
+: 1642957485:0;neofetch --kitty --source Pictures/Wallpapers/jason
+: 1642957525:0;gimp Pictures/Wallpapers/jason
+: 1642957837:0;l Pictures/Wallpapers
+: 1642957851:0;neofetch --kitty --source Pictures/Wallpapers/neofetch.png
+: 1642957862:0;neofetch --kitty --source Pictures/Wallpapers/jason
+: 1642957922:0;neofetch --kitty --source Pictures/Wallpapers/neofetch.png
+: 1642957925:0;neofetch --kitty --source Pictures/Wallpapers/jason
+: 1642957976:0;nf
+: 1642957979:0;neofetch --kitty --source Pictures/Wallpapers/jason
+: 1642958063:0;nf
+: 1642958066:0;neofetch --kitty --source Pictures/Wallpapers/jason
+: 1642958337:0;v .config/shell/aliases
+: 1642958401:0;nfk
+: 1642958404:0;nf
+: 1642958409:0;nfk
+: 1642958421:0;nf
+: 1642958424:0;nfk
+: 1642958521:0;nf
+: 1642958577:0;dmesg
+: 1642958582:0;ll
+: 1642958602:0;l
+: 1642958607:0;rmf dotfiles
+: 1642958612:0;c .dotfiles
+: 1642958616:0;l dotfiles
+: 1642958621:0;ll dotfiles
+: 1642958656:0;v dotfiles/.xserverrc
+: 1642958728:0;compile dash
+: 1642958753:0;dash
+: 1642959012:0;v .config/neofetch/config.conf
+: 1642959089:0;nf
+: 1642959132:0;nfk
+: 1642959539:0;neofetch --kitty --source neofetch2.png
+: 1642959672:0;neofetch --kitty --source neofetch3.png
+: 1642959822:0;mv neofetch3.png Pictures/Wallpapers/neofetch.png
+: 1642959825:0;nfk
+: 1642959841:0;c wall
+: 1642959846:0;c wallpapers
+: 1642959852:0;c Pictures/Wallpapers
+: 1642959855:0;ranger
+: 1642959887:0;nfk
+: 1642959896:0;v .config/shell/aliases
+: 1642959927:0;nfk
+: 1642959935:0;ranger Pictures/Wallpapers
+: 1642959961:0;nfk
+: 1642959966:0;v .config/shell/aliases
+: 1642960036:0;nfk
+: 1642960053:0;c Pictures/Wallpapers
+: 1642960062:0;rmf neofetch.png
+: 1642960075:0;nfk
+: 1642965930:0;v .gtkrc-2.0
+: 1642965990:0;pass -c System/ssh
+: 1642966012:0;v .gtkrc-2.0
+: 1642966030:0;c .themes
+: 1642966051:0;pass -c System/ssh
+: 1642966069:0;v .gtkrc-2.0
+: 1642966090:0;pass -c System/ssh
+: 1642966141:0;v .gtkrc-2.0
+: 1642966162:0;pass -c System/ssh
+: 1642966305:0;v .gtkrc-2.0
+: 1642966321:0;pass -c System/ssh
+: 1642967671:0;v .gtkrc-2.0
+: 1642967689:0;pass -c System/ssh
+: 1642967856:0;c /etc
+: 1642967903:0;sudo rm -rf cron.*
+: 1642967925:0;c /home
+: 1642967929:0;c .snapshots
+: 1642967935:0;ls .snapshots
+: 1642967939:0;su
+: 1642968333:0;nf
+: 1642968383:0;v mkinitcpio.conf.pacnew
+: 1642969424:0;la
+: 1642969444:0;v localtime
+: 1642969739:0;ll
+: 1642969746:0;cat passwd
+: 1642969753:0;cat passwd-
+: 1642969768:0;diff passwd passwd-
+: 1642970959:0;ll
+: 1642970977:0;rmf lynx.*
+: 1642970986:0;sudo rm -rf lynx.*
+: 1642971065:0;v passwd
+: 1642971101:0;scstatus i2pd
+: 1642971311:0;v irqbalance.env
+: 1642971330:0;scstatus irqbalance
+: 1642973566:0;c
+: 1642973572:0;v .config/shell/aliases
+cd .snapshots/
+l
+su jason
+: 1642973645:0;ser screensaver
+: 1642973682:0;nfk
+: 1642973688:0;nf
+: 1642973691:0;nfk
+: 1642973716:0;kernel -n
+: 1642987334:0;nfk
+: 1642988151:0;roll
+: 1643020266:0;man pgrep
+: 1643020295:0;pgrep -x sxhkd
+: 1643020317:0;pgrep -x bspwm
+: 1643020332:0;pgrep kite
+: 1643020337:0;pgrep
+: 1643020378:0;pgrep -u jason
+: 1643020396:0;pgrep xorg
+: 1643020402:0;pgrep x
+: 1643021119:0;nfk
+: 1643021133:0;nf
+: 1643021165:0;v
+: 1643021421:0;c ass
+: 1643021429:0;......
+: 1643021438:0;ll
+: 1643023204:0;c
+: 1643023214:0;v .config/bspwm/bspwmrc
+: 1643023411:0;v .Xresources
+: 1643023642:0;xrandr
+: 1643023696:0;c scripts
+: 1643023701:0;c
+: 1643023707:0;c .local/bin
+: 1643023903:0;cat update-hosts
+: 1643023944:0;cat kernel-manager/assets/k_new.sh
+: 1643023960:0;c kernel-manager/assets
+: 1643023966:0;ack awk
+: 1643023994:0;..
+: 1643023996:0;ack awk
+: 1643024062:0;..
+: 1643024065:0;l
+: 1643024261:0;xrandr | awk 'HDMI-2{ print $2 }'
+: 1643024272:0;xrandr | awk 'HDMI-2 { print $2 }'
+: 1643024286:0;xrandr
+: 1643024317:0;xrandr | awk 'HDMI-2 {print $2}'
+: 1643024387:0;xrandr | awk '/HDMI-2/ {print $2}'
+: 1643024693:0;bash
+: 1643024707:0;ll
+: 1643024713:0;v .profile
+: 1643024769:0;ll
+: 1643026745:0;c .build/git
+: 1643026752:0;c suckless-st-fork
+: 1643026764:0;v x.c
+: 1643027731:0;dmesg
+: 1643036782:0;v
+: 1643052530:0;v st.c
+: 1643052851:0;upd
+: 1643053037:0;v hb.c
+: 1643053220:0;v config.mk
+: 1643053329:0;v st.desktop
+: 1643053355:0;v config.mk
+: 1643053508:0;v st.1
+: 1643061091:0;ls
+: 1643061093:0;ll
+: 1643061096:0;l
+: 1643061098:0;ls
+: 1643061104:0;nf
+: 1643061106:0;nfk
+: 1643061122:0;v
+: 1643061143:0;xrandr | awk '/HDMI-2/ {print $2}'
+: 1643061186:0;flatpak install flathub tv.kodi.Kodi\
+
+: 1643061343:0;rem kodi
+: 1643061360:0;sudo rmorphan
+: 1643061374:0;nfk
+: 1643061456:0;ser snap
+: 1643061495:0;ins snapd
+: 1643061628:0;flatpak install flathub tv.kodi.Kodi\
+
+: 1643061870:0;ins snapd
+: 1643062316:0;nf
+: 1643062346:0;l
+: 1643062348:0;ll
+: 1643062362:0;scstatus snapd
+: 1643062376:0;scustart snapd
+: 1643062382:0;scstart snapd
+: 1643062385:0;scstatus snapd
+: 1643062420:0;scstatus snapd > snap.txt
+: 1643062421:0;l
+: 1643062423:0;v snap.txt
+: 1643062457:0;rem snapd
+: 1643064532:0;nfk
+: 1643064541:0;sa
+: 1643064820:0;v .config/nvim/plugged/vim-startify
+: 1643064859:0;v .config/nvim/plugged/vim-startify/autoload/startify/fortune.vim
+: 1643065046:0;v
+: 1643065196:0;v .config/nvim/plugged/vim-startify/autoload/startify/fortune.vim
+: 1643065227:0;v
+: 1643065609:0;v .config/bspwm/bspwmrc
+: 1643068621:0;v
+: 1643070514:0;v .build/git/custom-kernel-manager/kernel
+: 1643070534:0;v .build/git/kernel-manager-devel
+: 1643070581:0;v .config/bspwm/bspwmrc
+: 1643070610:0;nfk
+: 1643070613:0;sa
+: 1643070641:0;df -Th /dev/nvme0n1
+: 1643070660:0;df -Th /dev/nvme0n1p3
+: 1643070674:0;df -Th / /home
+: 1643070688:0;nf
+: 1643070698:0;df -Th
+: 1643070758:0;ll
+: 1643070763:0;l /etc
+: 1643070787:0;l /usr/src
+: 1643070806:0;df -Th
+: 1643070890:0;ytop
+: 1643070921:0;l
+: 1643070935:0;mv 2022-01-24-193514_1920x1080_scrot.png term.png
+: 1643071114:0;l
+: 1643071126:0;mv 2022-01-24-193828_1920x1080_scrot.png desktop.png
+: 1643071156:0;.
+: 1643071157:0;..
+: 1643071163:0;c kernel-manager-devel
+: 1643071169:0;c kernel
+: 1643071181:0;ll assets
+: 1643071212:0;kernel
+: 1643071273:0;v .build/git/kernel-manager-devel/kernel/assets/k_new.sh
+: 1643071292:0;v .build/git/kernel-manager-devel/kernel/assets/k_install.sh
+: 1643071311:0;v .build/git/kernel-manager-devel/kernel/assets/k_update.sh
+: 1643071344:0;kernel -n
+: 1643071393:0;v .build/git/kernel-manager-devel/kernel/assets/k_new.sh
+: 1643071448:0;kernel
+: 1643071458:0;kernel -n
+: 1643071517:0;l
+: 1643071525:0;mv 2022-01-24-194506_1920x1080_scrot.png tmux.png
+: 1643071526:0;l
+: 1643071584:0;pass -c Social_Media/Facebook
+: 1643079932:0;update-hosts
+: 1643079934:0;sudo update-hosts
+: 1643079993:0;ll /etc
+: 1643140262:0;upd
+: 1643140358:0;pacman -Q timeshift
+: 1643143482:0;ytop
+: 1643143953:0;search flatseal
+: 1643143963:0;ser flatseal
+: 1643143981:0;ins flatseal
+: 1643245876:0;upd
+: 1643245920:0;compile polkit bat
+: 1643246408:0;v k_install.sh
+: 1643246436:0;v assets/k_prepare.sh
+: 1643328743:0;upd
+: 1643328819:0;compile pipewire
+: 1643403431:0;npm audit fix
+: 1643403643:0;nf
+: 1643403647:0;nfk
+: 1643403698:0;sa
+: 1643403702:0;reboot
+: 1643403899:0;sa
+: 1643403902:0;sa blame
+: 1643403992:0;v .profile
+: 1643404028:0;reboot
+: 1643404873:0;nf
+: 1643404876:0;sa
+: 1643404880:0;sa blame
+: 1643406840:0;ll
+: 1643406844:0;la
+: 1643406847:0;sa
+: 1643406864:0;v .xbindkeysrc
+: 1643406888:0;v .Xmodmap
+: 1643406918:0;sa
+: 1643406933:0;dmesg
+: 1643406994:0;c /usr/lib/firmware
+: 1643407006:0;c intel-ucode
+: 1643407040:0;c /usr/src/linux-5.16.3-MiniBeast
+: 1643407047:0;sudo make menuconfig
+: 1643407128:0;c /lib/firmware/intel-ucode
+: 1643407131:0;la
+: 1643407133:0;..
+: 1643407135:0;la
+: 1643407140:0;..
+: 1643407142:0;la
+: 1643407146:0;..
+: 1643407147:0;la
+: 1643407239:0;c
+: 1643407299:0;time cd /usr/src
+: 1643407309:0;time c /usr/src
+: 1643407325:0;c
+: 1643407347:0;9
+: 1643407351:0;1
+: 1643407353:0;2
+: 1643407355:0;3
+: 1643407356:0;4
+: 1643407357:0;1
+: 1643407358:0;c
+: 1643408226:0;c .var
+: 1643412201:0;c
+: 1643412209:0;v .profile
+: 1643413625:0;zshrc
+: 1643413736:0;bashrc
+: 1643414213:0;v .inputrc
+: 1643416970:0;c
+: 1643416978:0;echo $BASH
+: 1643416982:0;bash
+: 1643417065:0;bashrc
+: 1643417076:0;v .profile
+: 1643417827:0;compile the_silver_searcher
+: 1643417858:0;ser ack
+: 1643417867:0;query ack
+: 1643418453:0;ag
+: 1643418511:0;ag --list-file-types
+: 1643418727:0;c .config/bash/lib
+: 1643418821:0;ag --shell globstar
+: 1643418868:0;ag --shell dirspell
+: 1643418877:0;ag --shell cdspell
+: 1643419092:0;ag git
+: 1643419115:0;ack git
+: 1643419118:0;ag git
+: 1643419129:0;time ag git
+: 1643419147:0;time ack git
+: 1643419194:0;c
+: 1643419203:0;v .bash_history
+: 1643419231:0;c .config/bash
+: 1643419240:0;v bash_history
+: 1643419270:0;c
+: 1643419274:0;c .dotfiles
+: 1643419278:0;c
+: 1643420077:0;l .designer
+: 1643420084:0;l .designer/backup
+: 1643420096:0;l .designer/templates
+: 1643420107:0;l .designer/backup/tmp
+: 1643420122:0;l .ecryptfs
+: 1643420359:0;nfk
+: 1643420367:0;dmesg
+: 1643420400:0;kernel
+: 1643420407:0;sudo kernel
+: 1643423620:0;v .config/nvim/init.vim
+: 1643423943:0;l
+: 1643423965:0;rmf *.png snap.txt
+: 1643423966:0;l
+: 1643424660:0;v .Xresources
+: 1643468694:0;ser ytfzf
+: 1643468808:0;ins ytfzf
+: 1643468906:0;ytfzf -t gods country
+: 1643469331:0;ytfzf -t aceu
+: 1643583337:0;kernel -u
+: 1643586297:0;v .config/kernel/patchfile
+: 1643586323:0;kernel -u
+: 1643586351:0;v .local/bin/kernel-manager/kernel.sh
+: 1643586381:0;v .local/bin/kernel-manager/assets/k_prepare.sh
+: 1643586451:0;kernel -u
+: 1643586502:0;c .build
+: 1643586550:0;rm -rf linux-5.10.92.tar.xz linux-5.16.1.tar.xz linux-5.16.2.tar.xz linux-5.16.3.tar.xz
+: 1643586553:0;l
+: 1643586559:0;rmf linux-5.16.4-MiniBeast
+: 1643586564:0;c
+: 1643586568:0;kernel -u
+: 1643591802:0;kernel
+: 1643591840:0;kernel -r 5.16.0-MiniBeast
+: 1643591916:0;kernel -r 5.16.1-MiniBeast
+: 1643591978:0;kernel -r 5.16.2-MiniBeast
+: 1643592047:0;kernel
+: 1643592076:0;sudo rm -rf /usr/src/backups/5.15.13-MiniBeast.tar.gz
+: 1643592080:0;kernel
+: 1643592807:0;compile git systemd
+: 1643673872:0;reboot
+: 1643673911:0;nf
+: 1643673916:0;sa
+: 1643673921:0;sa 
+: 1643673924:0;sa blame
+: 1643676330:0;upd
+: 1643849527:0;kernel -n
+: 1643973012:0;time zsh -i -c exit
+: 1643973020:0;time bash -i -c exit
+: 1643974945:0;kernel -u
+: 1643974962:0;kernel
+: 1643974972:0;c .build
+: 1643974982:0;rmf linux-5.16.5
+: 1643974984:0;l
+: 1643974989:0;c
+: 1643975000:0;upd
+: 1643975009:0;reboot
+: 1643975054:0;nf
+: 1643975065:0;sa
+: 1643977448:0;upd
+: 1643977483:0;compile pipewire
+: 1643977546:0;kernel -n
+: 1644005758:0;c .build
+: 1644005763:0;c .git
+: 1644005766:0;c git
+: 1644005781:0;c kernel-manager-devel
+: 1644005792:0;l ../custom-kernel-manager
+: 1644005832:0;rmf ../custom-kernel-manager/kernel
+: 1644005862:0;cp -r kernel ../custom-kernel-manager
+: 1644005871:0;c ../custom-kernel-manager
+: 1644005872:0;l
+: 1644005940:0;l kernel
+: 1644005965:0;mv kernel/install.sh ./
+: 1644005966:0;l
+: 1644006024:0;v install.sh
+: 1644006073:0;v .config/kernel/kernel.conf
+: 1644006211:0;c .build/git/custom-kernel-manager
+: 1644006773:0;l kernel
+: 1644006783:0;l kernel/assets
+: 1644006794:0;ga install.sh kernel
+: 1644006851:0;gc -m "Rewritten and restructured
+: 1644006854:0;gc -m "Rewritten and restructured"
+: 1644006865:0;pass -c System/ssh
+: 1644006882:0;gp
+: 1644006921:0;v README.md
+: 1644007351:0;ga README.md
+: 1644007359:0;gc -m "Update README"
+: 1644007361:0;pass -c System/ssh
+: 1644007363:0;gp
+: 1644009838:0;c
+: 1644009841:0;upd
+: 1644009871:0;sudo pacman -Rscn kguiaddons
+: 1644012938:0;bash
+: 1644021529:0;time bash -i -c exit
+: 1644021538:0;time zsh -i -c exit
+: 1644021657:0;c .config/bash/lib
+: 1644021661:0;v base.sh
+: 1644021740:0;v bourne-shell.sh
+: 1644021764:0;v directories.sh
+: 1644021816:0;rm directories.sh
+: 1644021824:0;v functions.sh
+: 1644021853:0;v grep.sh
+: 1644021869:0;v history.sh
+: 1644021931:0;v .bashrc
+: 1644021957:0;v misc.sh
+: 1644022000:0;v mo.sh
+: 1644022027:0;v shopt.sh
+: 1644022053:0;v utils.sh
+: 1644022085:0;time bash -i -c exit
+: 1644022094:0;..
+: 1644022102:0;c zsh/lib
+: 1644022111:0;v clipboard.zsh
+: 1644022347:0;v compfix.zsh
+: 1644022417:0;v completion.zsh
+: 1644022480:0;v directories.zsh 
+: 1644022540:0;v git.zsh
+: 1644022637:0;v grep.zsh
+: 1644022682:0;v history.zsh
+: 1644022794:0;history
+: 1644022822:0;c
+: 1644022832:0;v .config/zsh/zsh_history
+: 1644022883:0;v key-bindings.zsh
+: 1644023013:0;v misc.zsh
+: 1644023043:0;_ kernel
+: 1644023057:0;v spectrum.zsh
+: 1644023070:0;v termsupport.zsh
+: 1644023096:0;echo $TERM
+: 1644023386:0;v theme-and-appearance.zsh
+: 1644023393:0;c
+: 1644023407:0;time bash -i -c exit
+: 1644023420:0;time zsh -i -c exit
+: 1644023432:0;c .dotfiles
+: 1644023488:0;ga *

@@ -15,15 +15,14 @@ autoload -Uz compinit
 compinit
 eval "$(zoxide init zsh)"
 
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
-
 ZSH_CACHE_DIR=$HOME/.cache/zsh
 setopt share_history
 setopt inc_append_history
 export HISTSIZE=100000
 export SAVEHIST=1000000
 export HISTFILE=$HOME/.config/zsh/zsh_history
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 ZSH_THEME="powerlevel10k"
 plugins=(git sudo colorize zsh-vi-mode zsh-syntax-highlighting zsh-autosuggestions)

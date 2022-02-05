@@ -10,11 +10,6 @@
 # Additions to path
 export PATH=$HOME/.local/bin:$PATH
 
-# Source bashrc
-if [[ $(ps -p $$ -oargs=) =~ "bash" ]] && [[ -n "$PS1" ]]; then
-    source $HOME/.bashrc
-fi
-
 # Zsh config directory
 export ZDOTDIR=$HOME/.config/zsh
 
@@ -48,3 +43,8 @@ export PACKAGER="Jason McGuire <cjmcguire88@gmail.com>"
 # Theming
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_STYLE_OVERRIDE=kvantum
+
+# Source bashrc
+if [[ -n $BASH ]] && [[ -n $PS1 ]]; then
+    source $HOME/.bashrc
+fi

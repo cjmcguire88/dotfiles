@@ -16,3 +16,30 @@ rmf themes/*
 ll
 #1642899550
 ll themes/
+#1642967974
+l
+#1642967978
+c
+#1642967982
+zsh
+bash
+#1642900050
+zsh
+#1643024695
+l
+#1643024701
+rmf neofetch2.png 
+bash
+#1643024674
+xinit
+#1643024704
+zsh
+bash
+#1643403877
+xinit
+#1643416988
+echo $BASH
+#1643417063
+zsh
+#1643673894
+xinit
