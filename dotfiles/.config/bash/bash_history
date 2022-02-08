@@ -43,3 +43,31 @@ echo $BASH
 zsh
 #1643673894
 xinit
+#1644023594
+zsh
+#1644023608
+zsh
+#1644012974
+zsh
+#1644012968
+zsh
+#1644070308
+xinit
+#1644171038
+nfk
+#1644171052
+zsh
+#1644197247
+xinit
+#1644197542
+xin
+#1644197545
+xinit
+#1644275174
+reboot
+#1644281279
+ls -a
+#1644281316
+cp .Xauthority .dotfiles/dotfiles/
+#1644281325
+cd .dotfiles/dotfiles/

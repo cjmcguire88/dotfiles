@@ -13305,9 +13305,9 @@ cd hiptext-0.2
 : 1642971330:0;scstatus irqbalance
 : 1642973566:0;c
 : 1642973572:0;v .config/shell/aliases
-cd .snapshots/
-l
-su jason
+: 1644024000:0;cd .snapshots/
+: 1644024000:0;l
+: 1644024000:0;su jason
 : 1642973645:0;ser screensaver
 : 1642973682:0;nfk
 : 1642973688:0;nf
@@ -13659,3 +13659,394 @@ su jason
 : 1644023420:0;time zsh -i -c exit
 : 1644023432:0;c .dotfiles
 : 1644023488:0;ga *
+: 1644023495:0;gc
+: 1644023548:0;pass -c System/ssh
+: 1644023555:0;gp
+: 1644023591:0;bash
+: 1644023601:0;time bash
+: 1644023614:0;time zsh -i -c exit
+: 1644023628:0;time bash -i -c exit
+: 1644023991:0;nfk
+: 1644024876:0;compile wireplumber
+: 1644065468:0;sa
+: 1644065528:0;ser musl
+: 1644067203:0;ser virt-manager
+: 1644067214:0;compile virt-manager
+: 1644067353:0;ser qemu
+: 1644067389:0;ser libvirt
+: 1644067514:0;sudoedit /etc/libvirt/libvirtd.conf
+: 1644067689:0;sudo groupadd jason libvirt
+: 1644067770:0;gpasswd -a jason libvirt
+: 1644067773:0;sudo gpasswd -a jason libvirt
+: 1644067787:0;groupadd 
+: 1644067813:0;groupadd --users libvirt
+: 1644067837:0;groupadd -U libvirt
+: 1644067845:0;groupadd -U jason
+: 1644067922:0;_ cat /etc/passwd
+: 1644067957:0;_ cat /etc/group
+: 1644068170:0;scstart libvirtd.service
+: 1644068179:0;scstatus libvirtd.service
+: 1644068198:0;ser dmidecode
+: 1644068209:0;ins dmidecode
+: 1644068222:0;screstart libvirt
+: 1644068232:0;screstart libvirtd
+: 1644068238:0;scstatus libvirtd.service
+: 1644068281:0;scstart virtlogd.service
+: 1644068291:0;scstatus virtlogd
+: 1644068417:0;zgrep CONFIG_KVM /proc/config.gz
+: 1644068453:0;lsmod | grep kvm
+: 1644068520:0;zgrep VIRTIO /proc/config.gz
+: 1644068542:0;lsmod | grep virtio
+: 1644068564:0;ins qemu
+: 1644068799:0;mv Pictures/Wallpapers/Void_Linux_musl.iso ./
+: 1644068826:0;mkdir Virt
+: 1644068831:0;mv Void_Linux_musl.iso Virt
+: 1644069216:0;ins dnsmasq
+: 1644069505:0;ins virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat
+: 1644069579:0;rem virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat
+: 1644069857:0;ins firewalld
+: 1644069899:0;scstart firewalld
+: 1644070330:0;scstatus firewalld
+: 1644070376:0;scstart libvirtd.service
+: 1644070387:0;scstatus libvirtd.service
+: 1644070399:0;scstart virtlogd.service
+: 1644070542:0;dmesg
+: 1644070565:0;kernel -n
+: 1644070621:0;virsh net-start default\
+
+: 1644070681:0;lspci
+: 1644070708:0;lsusb
+: 1644070730:0;ip addr
+: 1644070982:0;virsh net-list --all
+: 1644071043:0;virsh net-list
+: 1644071128:0;virsh net-autostart default\
+
+: 1644071164:0;ls /etc/libvirt/qemu/networks/\
+
+: 1644071177:0;ls /etc/libvirt/qemu/networks/autostart\
+
+: 1644071241:0;virsh net-define /usr/share/libvirt/networks/default.xml
+: 1644071245:0;sudo virsh net-define /usr/share/libvirt/networks/default.xml
+: 1644071263:0;sudo virsh net-define /etc/libvirt/networks/default.xml
+: 1644071286:0;sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
+: 1644071299:0;virsh net-autostart default\
+
+: 1644071307:0;virsh net-list
+: 1644071341:0;virsh net-autostart default
+: 1644071403:0;scstop firewalld
+: 1644072703:0;LC_ALL=C lscpu | grep Virtualization
+: 1644072726:0;zgrep CONFIG_KVM /proc/config.gz
+: 1644072755:0;lsmod | grep kvm
+: 1644072826:0;c .config/kernel
+: 1644072834:0;v hooks
+: 1644072859:0;l /boot
+: 1644072887:0;./hooks 5.16.6-MiniBeast
+: 1644072939:0;c /usr/src/linux-5.16.6-MiniBeast
+: 1644072970:0;c
+: 1644072981:0;v .local/bin/kernel-manager/assets/k_install.sh
+: 1644073024:0;zgrep VIRTIO /proc/config.gz
+: 1644073176:0;grep VIRTIO /usr/src/linux-lts/.config
+: 1644073223:0;kernel -r 5.16.6-MiniBeast
+: 1644073240:0;kernel -n
+: 1644073334:0;grep VIRTIO /usr/src/linux-lts/.config
+: 1644073743:0;zgrep VIRTIO /proc/config.gz
+: 1644076549:0;cat /boot/loader/entries/MiniBeast.conf
+: 1644076828:0;reboot
+: 1644076863:0;nf
+: 1644076877:0;virsh net-autostart default
+: 1644076890:0;virsh net-list
+: 1644076903:0;virsh net-start default\
+
+: 1644077477:0;scstart libvirtd.service
+: 1644077487:0;scstart virtlogd.service
+: 1644077493:0;scstatus libvirtd.service
+: 1644077595:0;ser iptables-nft
+: 1644077604:0;ins iptables-nft
+: 1644077622:0;ser dmidecode
+: 1644077635:0;ser bridge-utils
+: 1644077726:0;v start-virt
+: 1644077893:0;cp start-virt stop-virt
+: 1644077896:0;v stop-virt
+: 1644077940:0;chmod +x start-virt stop-virt
+: 1644077942:0;ll
+: 1644077954:0;mv *-virt .local/bin
+: 1644077965:0;stop-virt
+: 1644077975:0;start-virt
+: 1644078010:0;cp .local/bin/start-virt .local/bin/virt-status
+: 1644078017:0;v .local/bin/virt-status
+: 1644078053:0;virt-status
+: 1644078106:0;virsh net-list
+: 1644078196:0;scstart dnsmasq
+: 1644078207:0;scstatus dnsmasq
+: 1644078233:0;scstart dnsmasq
+: 1644078310:0;ser ebtables
+: 1644078322:0;ins ebtables
+: 1644078345:0;ser ebtables
+: 1644078706:0;zgrep VIRTIO /proc/config.gz
+: 1644078735:0;lsmod | grep virtio
+: 1644078863:0;lsmod
+: 1644078888:0;modinfo virtio
+: 1644078897:0;modinfo virtio_net
+: 1644078913:0;modprobe virtio
+: 1644078921:0;lsmod | grep virtio
+: 1644078945:0;modprobe virtio_net
+: 1644078949:0;sudo modprobe virtio_net
+: 1644078957:0;lsmod | grep virtio
+: 1644079100:0;virsh -c qemu:///system
+: 1644079388:0;sudo virt-manager
+: 1644079508:0;stop-virt
+: 1644079511:0;start-virt
+: 1644079516:0;virt-status
+: 1644079543:0;virsh net-list
+: 1644079550:0;virsh net-list --all
+: 1644079564:0;virsh net-create default
+: 1644079837:0;v default.xml
+: 1644079870:0;sudo virsh net-define --file default.xml
+: 1644079889:0;sudo virsh net-start default\
+
+: 1644079985:0;systemctl status virbr0
+: 1644080039:0;ipaddr
+: 1644080049:0;ip addr
+: 1644080149:0;systemctl daemon-reload
+: 1644080164:0;virsh net-list --all
+: 1644080188:0;virsh net-start default\
+
+: 1644080237:0;rem virt-viewer dnsmasq bridge-utils openbsd-netcat virt-manager
+: 1644080262:0;ins libcaca
+: 1644080277:0;rem virt-viewer libvirt dnsmasq bridge-utils openbsd-netcat virt-manager
+: 1644080304:0;ins libcaca
+: 1644080309:0;nf
+: 1644080316:0;nfk
+: 1644080328:0;ins virtualbox
+: 1644080658:0;ser virtualbox
+: 1644080717:0;ins virtualbox-ext-oracle
+: 1644081003:0;l
+: 1644082017:0;sa
+: 1644082270:0;dmesg
+: 1644084332:0;nfk
+: 1644084840:0;upd
+: 1644085884:0;ytop
+: 1644085899:0;nf
+: 1644086201:0;reboot
+: 1644086351:0;sa
+: 1644086360:0;lsmod
+: 1644086368:0;lsmod | grep virtio
+: 1644089042:0;kernel -n
+: 1644089551:0;v .local/bin/kernel-manager/assets/k_prepare.sh
+: 1644099267:0;grep VIRTIO /usr/src/linux-lts/.config
+: 1644099298:0;grep BRIDGE /usr/src/linux-lts/.config
+: 1644100352:0;c .config/kernel
+: 1644100356:0;c configs
+: 1644100363:0;c 2022-02-05
+: 1644100374:0;v 5.16.7-05:23:22.diff
+: 1644100409:0;v 5.16.6-09:40:16.diff
+: 1644101100:0;reboot
+: 1644101157:0;ins virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat virt-manager libvirt qemu
+: 1644101171:0;ins firewalld
+: 1644101183:0;start-virt
+: 1644101189:0;virt-status
+: 1644101356:0;ip addr
+: 1644102353:0;virsh net-list --all
+: 1644102428:0;ser python-nftables
+: 1644102515:0;stop-virt
+: 1644102530:0;scstop nftables
+: 1644102543:0;scstop firewalld
+: 1644102558:0;v .local/bin/start-virt
+: 1644102564:0;start-virt
+: 1644102569:0;virt-status
+: 1644102648:0;scdisable nftables
+: 1644102656:0;scenable firewalld
+: 1644102659:0;reboot
+: 1644102697:0;sa
+: 1644102701:0;sa blame
+: 1644102711:0;scstatus firewalld
+: 1644102839:0;sudo pip3 install python-nftables
+: 1644103100:0;virsh net-start default\
+
+: 1644103119:0;virsh net-autostart default
+: 1644103171:0;scstatus firewalld
+: 1644103238:0;rem firewalld
+: 1644103259:0;scstop firewalld
+: 1644103262:0;scstatus firewalld
+: 1644103280:0;virsh net-list --all
+: 1644103286:0;virsh net-autostart default
+: 1644103312:0;scstart libvirt
+: 1644103318:0;scstart libvirtd
+: 1644103324:0;scstatus libvirtd.service
+: 1644103350:0;iptables
+: 1644103356:0;iptables -h
+: 1644103415:0;scstop libvirt
+: 1644103417:0;scstop libvirtd
+: 1644103433:0;scenable libvirtd
+: 1644103438:0;reboot
+: 1644103481:0;virt-status
+: 1644103968:0;scstatus firewalld
+: 1644157635:0;upd
+: 1644158103:0;ytop
+: 1644158107:0;nf
+: 1644164313:0;kernel -n
+: 1644168988:0;btop
+: 1644170677:0;roll
+: 1644171008:0;nfk
+: 1644171030:0;bash
+: 1644171063:0;nfk
+: 1644173769:0;upd
+: 1644175713:0;SCUSTATUS
+: 1644175721:0;scustatus
+: 1644177374:0;echo 1 | sudo tee /sys/module/kvm/parameters/ignore_msrs
+: 1644177425:0;sudo usermod -aG kvm $(whoami)\
+sudo usermod -aG libvirt $(whoami)
+: 1644177450:0;cd ~\
+\
+git clone --depth 1 --recursive https://github.com/kholia/OSX-KVM.git\
+\
+cd OSX-KVM
+: 1644177528:0;sudo cp kvm.conf /etc/modprobe.d/kvm.conf
+: 1644177557:0;ser uml-utilities
+: 1644177586:0;l
+: 1644177599:0;..
+: 1644177600:0;l
+: 1644177613:0;c OSX-KVM
+: 1644177621:0;./fetch-macOS-v2.py
+: 1644177727:0;c OSX-KVM
+: 1644177779:0;v OpenCore-Boot
+: 1644177788:0;v OpenCore-Boot.sh
+: 1644177805:0;qemu-img convert BaseSystem.dmg -O raw BaseSystem.img
+: 1644177821:0;./OpenCore-Boot.sh
+: 1644177828:0;l
+: 1644177874:0;./OpenCore-Boot.sh
+: 1644177885:0;qemu-img create -f qcow2 mac_hdd_ng.img 128G
+: 1644177889:0;./OpenCore-Boot.sh
+: 1644178666:0;c OSX-KVM
+: 1644178798:0;..
+: 1644178800:0;l
+: 1644178814:0;rmf Oracle_VM_VirtualBox_Extension_Pack-6.1.32.vbox-extpack OSX-KVM default.xml
+: 1644178816:0;l
+: 1644180507:0;c
+: 1644180509:0;l
+: 1644180525:0;l Virt VirtualBox\ VMs
+: 1644180539:0;mv slackware64-15.0-install-dvd.iso Virt
+: 1644180916:0;/sbin/vboxconfig
+: 1644182993:0;ins virtualbox-host-dkms
+: 1644183056:0;c
+: 1644183067:0;sudo modprobe vboxdrv
+: 1644183881:0;c VirtualBox\ VMs
+: 1644183886:0;c Slackware
+: 1644183899:0;rmf Slackware.vdi
+: 1644189681:0;ls
+: 1644189683:0;l
+: 1644189692:0;c Virt
+: 1644189695:0;..
+: 1644189700:0;l VirtualBox\ VMs
+: 1644189708:0;la
+: 1644189711:0;ls
+: 1644189714:0;lk
+: 1644189719:0;ll
+: 1644189746:0;du -h VirtualBox\ VMs
+: 1644194695:0;l
+: 1644194715:0;scstatus firewalld
+: 1644194904:0;c /etc/firewall
+: 1644194906:0;..
+: 1644194911:0;c firewalld
+: 1644194919:0;sudoedit firewalld.conf
+: 1644194967:0;sudo mv firewalld.conf /home/jason/Documents
+: 1644194981:0;screstart firewalld.service
+: 1644194984:0;scstatus firewalld
+: 1644195115:0;c /etc/firewalld
+: 1644195118:0;l ipsets
+: 1644195124:0;l *
+: 1644195148:0;sudo mv /home/jason/Documents/firewalld.conf ./
+: 1644195154:0;sudoedit firewalld.conf
+: 1644195256:0;zgrep CONFIG_NFT_NAT /proc/config.gz
+: 1644195293:0;scstatus firewalld
+: 1644195380:0;..
+: 1644195383:0;c nftables.conf
+: 1644195402:0;sudo mv nftables.conf /home/jason/Documents
+: 1644195411:0;scstatus nftables
+: 1644195418:0;screstart firewalld.service
+: 1644195426:0;scstatus firewalld
+: 1644195446:0;sudo mv Documents/nftables.conf /etc
+: 1644195477:0;grep firewalld /var/log/messages
+: 1644195498:0;journalctl -xu firewalld
+: 1644195629:0;c
+: 1644195660:0;c /etc/firewalld/zones
+: 1644195662:0;l
+: 1644195908:0;c
+: 1644195915:0;rm /usr/lib/firewalld/policies/allow-host-ipv6.xml
+: 1644195922:0;sudo rm /usr/lib/firewalld/policies/allow-host-ipv6.xml
+: 1644195939:0;sudo rm /etc/firewalld/policies/allow-host-ipv6.xml
+: 1644195948:0;screstart firewalld.service
+: 1644195956:0;scstatus firewalld
+: 1644196051:0;sudoedit /etc/firewalld/firewalld.conf
+: 1644196070:0;screstart firewalld.service
+: 1644196076:0;scstatus firewalld
+: 1644196102:0;scstatus libvirtd.service
+: 1644196115:0;screstart libvirtd
+: 1644196120:0;scstatus libvirtd.service
+: 1644196397:0;ser iptables-nft
+: 1644196573:0;ser python
+: 1644196761:0;firewall-cmd --get-active-zones
+: 1644196764:0;sudo firewall-cmd --get-active-zones
+: 1644196831:0;scstop firewalld.service
+: 1644196838:0;sudoedit /etc/firewalld/firewalld.conf
+: 1644196858:0;scstart firewalld
+: 1644196867:0;scstatus firewalld
+: 1644196875:0;firewall-cmd --get-active-zones
+: 1644196877:0;sudo firewall-cmd --get-active-zones
+: 1644197285:0;scstatus firewalld
+: 1644197415:0;sa
+: 1644197424:0;sa blame
+: 1644197573:0;zcat /proc/config.gz > running.config
+: 1644197575:0;l
+: 1644197604:0;cp /usr/src/linux-lts/.config lts.config
+: 1644197606:0;l
+: 1644197625:0;diff lts.config running.config > diff.config
+: 1644197630:0;vim diff.config
+: 1644197645:0;v diff.config
+: 1644198085:0;c /usr/src/linux-5.16.7-MiniBeast
+: 1644198090:0;sudo make menuconfig
+: 1644198425:0;reboot
+: 1644198475:0;kernel -m 5.16.7-MiniBeast
+: 1644198571:0;kernel
+: 1644198596:0;c /usr/src/linux-5.16.7-MiniBeast
+: 1644198617:0;sudo make menuconfig
+: 1644199167:0;.config/kernel/hooks
+: 1644199253:0;v .config/kernel/hooks
+: 1644199302:0;.config/kernel/hooks 5.16.7-MiniBeast
+: 1644199318:0;v .config/kernel/hooks
+: 1644199354:0;.config/kernel/hooks 5.16.7-MiniBeast
+: 1644199371:0;sudo .config/kernel/hooks 5.16.7-MiniBeast
+: 1644199697:0;efibootmgr
+: 1644199704:0;l /boot
+: 1644199713:0;reboot
+: 1644199751:0;scstatus firewalld
+: 1644199789:0;scstatus libvirtd.service
+: 1644199845:0;sa
+: 1644199855:0;c /usr/src/linux-5.16.7-MiniBeast
+: 1644199860:0;sudo make menuconfig
+: 1644199935:0;l
+: 1644199936:0;c
+: 1644199940:0;v running.config
+: 1644199969:0;v lts.config
+: 1644200211:0;sudo cp running.config /usr/src/linux-5.16.7-MiniBeast/.config
+: 1644200220:0;kernel
+: 1644200238:0;kernel -r 5.16.3-MiniBeast
+: 1644200246:0;kernel
+: 1644200254:0;kernel -r 5.16.4-MiniBeast
+: 1644200278:0;kernel -r 5.16.5-MiniBeast
+: 1644200431:0;kernel -r 5.16.7-MiniBeast
+: 1644200445:0;kernel -m 5.16.7-MiniBeast
+: 1644200544:0;c /boot
+: 1644200562:0;sudo rm -rf 5.16.7-MiniBeast.efi
+: 1644201658:0;reboot
+: 1644202155:0;scstatus libvirtd.service
+: 1644202193:0;scstatus firewalld
+: 1644202593:0;sa
+: 1644274995:0;scstatus libvirtd.service
+: 1644275018:0;scstatus firewalld
+: 1644275023:0;sa
+: 1644276646:0;bash
+: 1644281333:0;ls
+: 1644281335:0;ll
+: 1644281345:0;ga *
+: 1644281366:0;ga .Xauthority .config/
