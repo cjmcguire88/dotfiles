@@ -243,7 +243,3 @@ super + shift + m
 # edex ui  (lol)
 super + shift + h
     edex-ui
-
-# qutebrowser
-super + b
-    qutebrowser

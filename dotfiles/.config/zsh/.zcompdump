@@ -1,4 +1,4 @@
-#files: 801	version: 5.8
+#files: 801	version: 5.8.1
 
 _comps=(
 '-' '_precommand'

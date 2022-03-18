@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-if paru -Sy > /dev/null 2>&1; then
-    paru -Qu | wc -l
+if sudo pacman -Sy > /dev/null 2>&1; then
+    sudo pacman -Qu | wc -l
 else
     echo DISCONNECTED
 fi
