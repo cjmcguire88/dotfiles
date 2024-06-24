@@ -1,3 +1,0 @@
-const EXTENSIONS = new Set(['js', 'ts', 'jsx', 'esm']);
-
-export { EXTENSIONS };

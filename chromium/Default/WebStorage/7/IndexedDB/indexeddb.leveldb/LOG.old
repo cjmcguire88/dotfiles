@@ -1,7 +1,0 @@
-2024/06/19-10:25:05.876 4af Reusing MANIFEST /home/jason/.config/chromium/Default/WebStorage/7/IndexedDB/indexeddb.leveldb/MANIFEST-000001
-2024/06/19-10:25:05.877 4af Recovering log #3
-2024/06/19-10:25:05.877 4af Reusing old log /home/jason/.config/chromium/Default/WebStorage/7/IndexedDB/indexeddb.leveldb/000003.log 
-2024/06/19-10:27:37.675 4b0 Level-0 table #5: started
-2024/06/19-10:27:37.676 4b0 Level-0 table #5: 3582 bytes OK
-2024/06/19-10:27:37.677 4b0 Delete type=0 #3
-2024/06/19-10:27:37.677 4b0 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

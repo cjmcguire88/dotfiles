@@ -1,7 +1,0 @@
-2024/06/21-15:43:14.800 88b4e Reusing MANIFEST /home/jason/.config/google-chrome/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/MANIFEST-000001
-2024/06/21-15:43:14.801 88b4e Recovering log #3
-2024/06/21-15:43:14.801 88b4e Reusing old log /home/jason/.config/google-chrome/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000003.log 
-2024/06/21-16:15:40.692 88b4f Level-0 table #5: started
-2024/06/21-16:15:40.703 88b4f Level-0 table #5: 1456854 bytes OK
-2024/06/21-16:15:40.705 88b4f Delete type=0 #3
-2024/06/21-16:15:40.706 88b4f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
