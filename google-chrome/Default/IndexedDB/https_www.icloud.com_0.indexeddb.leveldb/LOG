@@ -1,0 +1,6 @@
+2024/06/21-15:38:43.521 88b4e Creating DB /home/jason/.config/google-chrome/Default/IndexedDB/https_www.icloud.com_0.indexeddb.leveldb since it was missing.
+2024/06/21-15:38:43.531 88b4e Reusing MANIFEST /home/jason/.config/google-chrome/Default/IndexedDB/https_www.icloud.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/21-15:39:15.541 88b4f Level-0 table #5: started
+2024/06/21-15:39:15.542 88b4f Level-0 table #5: 850 bytes OK
+2024/06/21-15:39:15.543 88b4f Delete type=0 #3
+2024/06/21-15:39:15.543 88b4f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

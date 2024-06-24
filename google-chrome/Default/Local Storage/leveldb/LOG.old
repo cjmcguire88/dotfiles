@@ -1,0 +1,20 @@
+2024/06/23-15:28:52.489 4 Reusing MANIFEST /home/jason/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
+2024/06/23-15:28:52.503 4 Recovering log #571
+2024/06/23-15:28:52.505 4 Reusing old log /home/jason/.config/google-chrome/Default/Local Storage/leveldb/000571.log 
+2024/06/23-15:30:01.883 6 Level-0 table #575: started
+2024/06/23-15:30:01.900 6 Level-0 table #575: 46837 bytes OK
+2024/06/23-15:30:01.903 6 Delete type=0 #571
+2024/06/23-17:21:53.493 6 Level-0 table #577: started
+2024/06/23-17:21:53.503 6 Level-0 table #577: 24833 bytes OK
+2024/06/23-17:21:53.505 6 Delete type=0 #574
+2024/06/23-17:21:53.505 6 Compacting 4@0 + 2@1 files
+2024/06/23-17:21:53.546 6 Generated table #578@0: 256 keys, 2471165 bytes
+2024/06/23-17:21:53.555 6 Generated table #579@0: 943 keys, 378024 bytes
+2024/06/23-17:21:53.555 6 Compacted 4@0 + 2@1 files => 2849189 bytes
+2024/06/23-17:21:53.556 6 compacted to: files[ 0 2 1 0 0 0 0 ]
+2024/06/23-17:21:53.557 6 Delete type=2 #572
+2024/06/23-17:21:53.557 6 Delete type=2 #570
+2024/06/23-17:21:53.557 6 Delete type=2 #575
+2024/06/23-17:21:53.557 6 Delete type=2 #566
+2024/06/23-17:21:53.557 6 Delete type=2 #567
+2024/06/23-17:21:53.557 6 Delete type=2 #577

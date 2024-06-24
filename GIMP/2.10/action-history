@@ -1,0 +1,11 @@
+# GIMP action-history
+
+(history-item "layers-delete" 0)
+(history-item "image-resize-to-layers" 0)
+(history-item "image-merge-layers" 0)
+(history-item "layers-resize" 0)
+(history-item "tools-foreground-select" 0)
+(history-item "filters-color-balance" 0)
+(history-item "file-export-as" 1)
+
+# end of action-history

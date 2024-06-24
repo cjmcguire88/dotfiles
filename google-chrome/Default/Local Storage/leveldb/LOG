@@ -1,0 +1,6 @@
+2024/06/23-20:35:07.534 4 Reusing MANIFEST /home/jason/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
+2024/06/23-20:35:07.541 4 Recovering log #576
+2024/06/23-20:35:07.543 4 Reusing old log /home/jason/.config/google-chrome/Default/Local Storage/leveldb/000576.log 
+2024/06/23-20:51:13.421 6 Level-0 table #582: started
+2024/06/23-20:51:13.430 6 Level-0 table #582: 24934 bytes OK
+2024/06/23-20:51:13.432 6 Delete type=0 #576

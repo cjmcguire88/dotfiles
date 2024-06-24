@@ -1,0 +1,7 @@
+2024/06/21-08:10:14.402 88b4e Reusing MANIFEST /home/jason/.config/google-chrome/Default/IndexedDB/https_www.office.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/21-08:10:14.402 88b4e Recovering log #3
+2024/06/21-08:10:14.404 88b4e Reusing old log /home/jason/.config/google-chrome/Default/IndexedDB/https_www.office.com_0.indexeddb.leveldb/000003.log 
+2024/06/21-09:45:40.779 88b4f Level-0 table #5: started
+2024/06/21-09:45:40.781 88b4f Level-0 table #5: 74190 bytes OK
+2024/06/21-09:45:40.781 88b4f Delete type=0 #3
+2024/06/21-09:45:40.782 88b4f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

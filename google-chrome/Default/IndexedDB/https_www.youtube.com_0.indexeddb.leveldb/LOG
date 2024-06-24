@@ -1,0 +1,21 @@
+2024/06/22-23:38:57.048 c86 Reusing MANIFEST /home/jason/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/22-23:38:57.048 c86 Recovering log #13
+2024/06/22-23:38:57.056 c86 Reusing old log /home/jason/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000013.log 
+2024/06/22-23:39:05.088 c77 Level-0 table #18: started
+2024/06/22-23:39:05.104 c77 Level-0 table #18: 1367224 bytes OK
+2024/06/22-23:39:05.106 c77 Delete type=0 #13
+2024/06/22-23:39:13.793 c76 Compacting 1@1 + 1@2 files
+2024/06/22-23:39:13.806 c76 Generated table #19@1: 366 keys, 56645 bytes
+2024/06/22-23:39:13.806 c76 Compacted 1@1 + 1@2 files => 56645 bytes
+2024/06/22-23:39:13.807 c76 compacted to: files[ 0 0 1 0 0 0 0 ]
+2024/06/22-23:39:13.807 c76 Delete type=2 #15
+2024/06/22-23:39:13.807 c76 Delete type=2 #18
+2024/06/22-23:46:36.104 c77 Level-0 table #21: started
+2024/06/22-23:46:36.111 c77 Level-0 table #21: 1103259 bytes OK
+2024/06/22-23:46:36.113 c77 Delete type=0 #17
+2024/06/22-23:47:05.043 c77 Compacting 1@1 + 1@2 files
+2024/06/22-23:47:05.065 c77 Generated table #22@1: 385 keys, 53494 bytes
+2024/06/22-23:47:05.065 c77 Compacted 1@1 + 1@2 files => 53494 bytes
+2024/06/22-23:47:05.066 c77 compacted to: files[ 0 0 1 0 0 0 0 ]
+2024/06/22-23:47:05.066 c77 Delete type=2 #21
+2024/06/22-23:47:05.066 c77 Delete type=2 #19

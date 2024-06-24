@@ -1,0 +1,194 @@
+{
+   "checksum": "87f415ba7fbb86c86db24e1d9dc2d14f",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13076694507968487",
+            "date_last_used": "0",
+            "guid": "a8d736c9-4a24-f31e-8960-cf109017dec2",
+            "id": "13",
+            "name": "Bookmarks",
+            "type": "url",
+            "url": "chrome://bookmarks/"
+         }, {
+            "date_added": "13229370605343734",
+            "date_last_used": "13363472594818218",
+            "guid": "72b7fa10-4d54-45db-a78c-8bb1e344c949",
+            "id": "14",
+            "name": "Gmail",
+            "type": "url",
+            "url": "https://accounts.google.com/b/0/AddMailService"
+         }, {
+            "date_added": "13363447629396299",
+            "date_last_used": "0",
+            "guid": "1bbbdce9-f8e6-4838-91f4-fd9d395e0204",
+            "id": "24",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Hannibal - Site Group",
+            "type": "url",
+            "url": "https://teams.microsoft.com/v2/"
+         }, {
+            "date_added": "13363445357353097",
+            "date_last_used": "13363445458507083",
+            "guid": "879b43b1-6fa7-43f1-9327-c0e21d53fe30",
+            "id": "20",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Nektar-Dashboard",
+            "type": "url",
+            "url": "https://app.nektar.io/dashboard"
+         }, {
+            "date_added": "13363445384082814",
+            "date_last_used": "0",
+            "guid": "8693c929-ea4a-40df-9b9d-eca65012e861",
+            "id": "21",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Foreman Dashboard",
+            "type": "url",
+            "url": "https://dashboard.foreman.mn/dashboard/"
+         }, {
+            "date_added": "13363445420632330",
+            "date_last_used": "0",
+            "guid": "6743b512-963b-47ec-a082-b0bfa379b836",
+            "id": "22",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Home | Microsoft 365",
+            "type": "url",
+            "url": "https://www.office.com/?auth=2"
+         }, {
+            "date_added": "13363446432813515",
+            "date_last_used": "13363447147158477",
+            "guid": "ecf8ea96-fc82-410e-808c-0c78b8382c3b",
+            "id": "23",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Vimium-Keys",
+            "type": "url",
+            "url": "https://github.com/philc/vimium/blob/master/README.md"
+         }, {
+            "date_added": "13229370605344071",
+            "date_last_used": "13363400137483887",
+            "guid": "b202c7d3-948e-4c3f-bddf-3c8e1e6f937c",
+            "id": "15",
+            "name": "YouTube",
+            "type": "url",
+            "url": "https://youtube.com/"
+         } ],
+         "date_added": "13363303208867291",
+         "date_last_used": "0",
+         "date_modified": "13363447665322860",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13363445312221454",
+            "date_last_used": "0",
+            "guid": "68a6833f-8eec-43eb-a934-4d9908840329",
+            "id": "19",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Dashboard - Nektar",
+            "type": "url",
+            "url": "https://app.nektar.io/dashboard"
+         } ],
+         "date_added": "13363303208867294",
+         "date_last_used": "0",
+         "date_modified": "13363445312221454",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [ {
+            "date_added": "13089675900424560",
+            "date_last_used": "0",
+            "guid": "602419b8-8907-41dc-8213-c9c38697ce1e",
+            "id": "5",
+            "name": "Netgear WNDR3400 - DD-WRT Wiki",
+            "type": "url",
+            "url": "http://www.dd-wrt.com/wiki/index.php/Netgear_WNDR3400"
+         }, {
+            "date_added": "13089487452905571",
+            "date_last_used": "0",
+            "guid": "679035ec-04a6-4b63-a72a-57c428b87a55",
+            "id": "6",
+            "name": "Ubuntu Forums",
+            "type": "url",
+            "url": "http://ubuntuforums.org/showthread.php?t=1484242"
+         }, {
+            "date_added": "13088140108727194",
+            "date_last_used": "0",
+            "guid": "044240e8-8bf6-4c2b-a8af-6b349de159e8",
+            "id": "7",
+            "name": "Guide: Anonymity and Privacy for Advanced Linux Users - Deep Dot Web",
+            "type": "url",
+            "url": "https://www.deepdotweb.com/2015/06/15/guide-anonymity-and-privacy-for-advanced-linux-users/"
+         }, {
+            "date_added": "13087805254074243",
+            "date_last_used": "0",
+            "guid": "d37e546d-4c2f-4c52-b6d8-d751f75ce13c",
+            "id": "8",
+            "name": "20 things to do after installing Kali Linux 1.x - Page 4 of 4 - blackMORE Ops",
+            "type": "url",
+            "url": "http://www.blackmoreops.com/2014/03/03/20-things-installing-kali-linux/4/"
+         }, {
+            "date_added": "13099726869109725",
+            "date_last_used": "0",
+            "guid": "799694e9-fd57-4e1c-8e79-c1225992fba1",
+            "id": "9",
+            "name": "Chrome for Android tips and tricks: 10 ways to boost your browser - AndroidPIT",
+            "type": "url",
+            "url": "https://www.androidpit.com/chrome-android-tips-and-tricks"
+         }, {
+            "date_added": "13189367645404233",
+            "date_last_used": "0",
+            "guid": "85edd7c8-4cc4-4c2c-ad7a-70f17afb1855",
+            "id": "10",
+            "meta_info": {
+               "last_visited_desktop": "13189367645404304"
+            },
+            "name": "Watch The Gymkhana Files 1×6 Online | GoStream | 123Movies",
+            "type": "url",
+            "url": "http://foreverwellcentre.com/episodes/the-gymkhana-files-1x6/?watch-token=zNUnErPeJkJnu2Le"
+         }, {
+            "date_added": "13210657564079790",
+            "date_last_used": "0",
+            "guid": "66e4d89a-04fe-4b66-8388-580053cf91be",
+            "id": "11",
+            "name": "Hulu",
+            "type": "url",
+            "url": "https://www.hulu.com/"
+         }, {
+            "date_added": "13218155380089166",
+            "date_last_used": "0",
+            "guid": "24c4781d-d087-4817-acd3-aa0dbfb59fe4",
+            "id": "12",
+            "name": "YouTube TV - Watch & DVR Live Sports, Shows & News",
+            "type": "url",
+            "url": "https://tv.youtube.com/watch/MOmML1cEKY0?vpp=2AHwDw%3D%3D&vp=0gEEEgIwBA%3D%3D"
+         } ],
+         "date_added": "13363303208867298",
+         "date_last_used": "0",
+         "date_modified": "13218155380089166",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CqoBCokBCIiBAhKCASAAkgF9CjQKDmNocm9tZV9zeW5jX2JtEgU1MSFibRoSCU/V2vhrGwYAEU/V2vhrGwYAKdi/2/hrGwYACkUKFmFubm90YXRpb25fY2hyb21lX3N5bmMSBTUxIWJkGhIJgNYJ9GsbBgARgNYJ9GsbBgApui/b+GsbBgAwgK2noL/thgMSACoYTHZQMWJGS1FmZThhaVpjVkVzb3hSZz09SAMS6wEIExLmAQocYXJGMkp4SlBGaHdkNmk3RmQxQ3d5aWJiK0NvPRJmWjpBRHF0QVp5Y2NIZ0x2R2hhWXlqeEFxdGNTNkF1TDBoVXQzYmxHbXZKMktlV2hCMVFwZjhqOUJkSytvek1rem8rWU5WdDEyY0JsVDgvZlgxcFYwVmFwRE1FQXBhSFFCaVNwUT09GAAgAigCMOziwNXU7IYDON2Fy9WDMkDshcvVgzJKHEwrRnNOZ2wrQUFVSVlKVzAvdTIzdDdjS0ppTT1aHiIcT0tKZklvanlINTNqNElMTE5zMTFxVnVvNkdRPWWExsJcEuwBCBgS5wEKHGtyZ3NqdFI4QmFUVmkvR1RFOTlUU2MrZ21VRT0SZlo6QURxdEFaeWNjSGdMdkdoYVl5anhBcXRjUzZBdTAzMzJrQTQzbysvM28vREprTDd2NFhrRDAyUXowWlpiTWJ2ZHFhbWRoQWlCVnRnekU3dGJwVEhwQWdUaWNIdHhubzFHZ2c9PRgAIAQoBDDP7Luz3eyGAzjUvNjWgzJAqJLa1oMyShxrcUh5MlIxeGJRQ3NGcW1sNXBWZldWWllpS1k9Wh8iHfFPbXI2TUMyQWFuaTN6eklPUkRzekx6Z1ZkZWc9ZcCi/V4S7AEIFRLnAQoccWVEdThiMjA3aFFIOXV5dEYyZVVRQ1lNbmx3PRJmWjpBRHF0QVp5Y2NIZ0x2R2hhWXlqeEFxdGNTNkF1WmtQUXlkUXMyMTdnSG5kZGRKUFF3ZmxoRHZJL21TRVkxS0lOaXNvSyt3dFNFL24yZW1WSTlWWWZlZTNNUGt4cENNTm81dz09GAAgAigCMOHE3/fU7IYDOJO3z9WDMkCWt8/VgzJKHHBCa2lIbGFNcndzcnRtd0ZyM0NGNFZtRCtnWT1aHyId+2U5eXVrL21aNDlCWWJXbXk2ekpqUWJiUWc3bz1lx2YoGxLDAQgCEr4BChxZY1NUb252RVNQd3FDczRMMmNyVmh2NjhMOTg9EmZaOkFEcXRBWnpzdk5vSk02Tk16RXlrYXg1WGZ6TWphektYdlhuMVVSN01MQTRaajRVekJkZWN2bVZNUjVWQlpmQVZxS1FuV2ZYTmZtSjU2Y3RtWTcrb0RPN0FKYTYzUEtieTZ3PT0YACAAKAAwm8/y0MPohgM4AEAAShxvUFZraHdCUmJWNjVLQ1dSMitJT05IV29PdTg9WgBlAAAAABL/AQgNEvoBChxzM29LbGxhY0lDL1N2N294MTk4V0dCUmdOeVE9EnpaOkFEcXRBWndNeDRBSHhDeGxadG42aHhuRGRhQ1FCTXlKSUtIT1dXcGxVYWZ5aW9FUGMwOVF4a3FJWnZ1MGN5aUJwM2tPVGhWU2U0dFBZNVZ2YnRtTDRiWm9rNlhrREpTREVWS1Y2RkFXMjhFd3FoUEhGSkxJMlZzPRgAIAEoATC0st7Rw+iGAzjB85K41ylAuNXvkYMyShxpajdkOCtyeDBXdWhwZWRHQXEwRDZZU08xQk09Wh4iHGQ3U3VLRGFLdHBxckFXTFhKckZIV0VoNDFadz1lLZO4jxLsAQgUEucBChxoQWVtZGNKK1FPNkxPVS8wSytsS1FMcS9veFE9EmZaOkFEcXRBWnljY0hnTHZHaGFZeWp4QXF0Y1M2QXUzQkRjamhtUW14SDUwNlFiYnRoN1I4MWNwemVQSXIzOGhET0NoN2kwaEczOW80TkwwMXlKM0RKcHV4Y3Z5dGU3cklNbWdBPT0YACACKAIwjZyA69TshgM4qebN1YMyQKzmzdWDMkoceUE5ZVlYWjNsTlFRVzMzTUZPWVlMdmJyc0E0PVofIh32Q044b0pRZHduRllxWjRyZk1sWXFZclFwbk5FPWWExsJcEq0CCA4SqAIKHC94VkQ2eHp5NjZQNGgvdFdNTlQ5aWZxM3VIbz0SpgFaOkFEcXRBWndNeDRBSHhDeGxadG42aHhuRGRhQ1FhQ0ZiNjVtQUdwQittU2tOVC9BOFJINkdTN1oyejhIYWRCRzVMN2NxOWs4K1pqYm9oT1NuVGl0RzVjbUs0L3R1czQwVHZuL3Y0UmdjOGlWQWF1Q1pFWW82bXJiQlMvMllKbWRwVjFkd0lQR3FORExRaStEZjZFaFdmN2dqaWtrT1o3cndGUT09GAAgASgBMMyu0qe67YYDOKis6ZmQLkDvp8zigzJKHG9ZRHlVRkJ4ZjdpbGVPdWxMRWE3dnBlR2tzbz1aHyId2TRmL3RSV0I0MFNMcXMvNHRGdGtneTZuTzdtZz1lmz2FthKtAggMEqgCChxYZ0x0Y2tNV25uUysyQVEyRWI3aTFXUkVuTnM9EqYBWjpBRHF0QVp3TXg0QUh4Q3hsWnRuNmh4bkRkYUNRUG5zQlZaK3pZSlkvVUFkQWsxK21FYzAxcXBKSWFvNVhySW9vSUdjcmZ4eVVlQ2dSOGJubnpabnBPZnRJYU0yd0pMWVEwOGxvYUs5SWFUb2s4b2pJNzV3eCtaaGFGTW9aRVBYalpvaUhlNzNhVG1IMjJwSFN0Y2kwQ3dsNzV5WWZCN3czYWc9PRgAIAAoADDNs/2njYP+Ajj5qvm15i1A+ar5teYtShxKNytqUlhRMTk4bEdobmR6N0ZCaGtDd3Vna289Wh8iHfdsMTBSMW03c0xIcjdyNVgwOVVjakl2QkkyYm89ZVPmSoYSrQIIDxKoAgocdWEzdG5nRGdIb0pHUWYzOCtkQ3B2WElneWpjPRKmAVo6QURxdEFad014NEFIeEN4bFp0bjZoeG5EZGFDUWFDRmI2NW1BR3BCK21Ta05UL0E4UkZzUUd1NTZXTGIrSE1xeFQvQWpMNXFKa0tZdHFnRG5ZMmJWemhUZTJZR2VtUHgwT0prTXk3ZnMxcWN0V0dDVnZCc2dyMzBuUGxKZzV2ZzNPaXJOb08rSzB6TDA0T1JRNTNQUWZLcUUybjBwUkFPb3RBPT0YACABKAEwtPPFt93shgM4qazpmZAuQKvV2taDMkoceTFuUTI2SmJoaGkvRlVhbnpyVlc1b0JWSVNZPVofIh3/MWlYck1TU0NwYi8xUjRzQTJjNWZmQS9lN2NrPWU4+TkzEqsBCAESpgEKHHl4Si82ZnZrZWNyN2twNUVRekI0dFdMcGRiRT0STlo6QURxdEFaeDlmL0h5QWY1aEpFRmZ5QlE1OGNzVDQwaFlDTXpkUWxGNVlKcGxickxaT1lBZVlxOExzeUJvT0NPQ2Z3M1BtUlhuU0JXQxgAIAAoADCbz/LQw+iGAzgAQABKHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAEq0CCAsSqAIKHFFVMFJxOFp1aGlrbE9RbDF6dW9OTkkydnpGYz0SpgFaOkFEcXRBWndNeDRBSHhDeGxadG42aHhuRGRhQ1FQbnNCVlorellKWS9VQWRBazErbUVVOVl6Rnd1RWZjWEVMZVFRVERpUlV2U1Yxb0RtakM1N1paeFJEM0V1VXc3UmU2Q0pQd2RFR3A5RXhrQ1F3d0graTJwQng2REVFS3BSVkgvVFZmejA4bk9NWkZ1ZlRtZUltNytSclhEam1rdklQeWlWUT09GAAgACgAMM2z/aeNg/4COK/72r7KLUCv+9q+yi1KHEF5R0E2aS96ajJXeDVKU3psUXZxUXZER1RyZz1aHyId709pU1JORTdzTWhmdFdHdjViSWJLRVdGbk13OD1lf3/jyRLsAQgXEucBChx4NEtDS3YrMWVPRHNYQXhZZGkwdVBZOE1GZDA9EmZaOkFEcXRBWnljY0hnTHZHaGFZeWp4QXF0Y1M2QXVlSGZWN2ZOcWFJVWxWRDBQRUdkOC84QXp2TDY2Rmw5S3ZpT2FxM00zdlErbDBHVERjZVZLc1p0K1BxTFd3dktWMzdBd3JBPT0YACADKAMwx6zN9NjshgM4rbiP1oMyQIrIkNaDMkocNUdJWlBPNkxLNHpRU2ZETFlhM0tpdFUrb1N3PVofIh3+Ui9KbGVYWDVQcFNKQVVpbGFKcmJ0OFZ1ZTRVPWXApSi6EuwBCBYS5wEKHHdWRG56N3pGM3dlU1U5NEorRUExN243WXJTdz0SZlo6QURxdEFaeWNjSGdMdkdoYVl5anhBcXRjUzZBdXpxS3VHVk5oSTVtd3lqRWdHTytmbTJDMXNkcU56cDIwVjRsYmRMZVM4YlFGYXlPeVdjZ2VEQzcvMU9tUE5rdWFzOVJ0TEE9PRgAIAIoAjCf05aJ1eyGAzjY1NHVgzJA29TR1YMyShxHNWlDcFhVaDdBaDVGT1c5NWpvd0FEMHUwQ0U9Wh8iHf1NSDJtMTFCMTZsdmlGQTEyNzZwakU0Rk5PM3c9ZRp5gvASrQIICRKoAgocTkx0Yk1CUTJsNEF2QWVQZ2tjUnlqZGlLdFM4PRKmAVo6QURxdEFad014NEFIeEN4bFp0bjZoeG5EZGFDUW9ZU2tGUEF0NEJVc3ZXNUlDN3QzcS9VUE1Pb0NUcktwMVlNWXhRNzdPbUhUbFk2YmxMRUd3eGY1ZExXaGxBNnQ5UHBqSVpScXNKUmJvZDU3MXozbUdzd2RBc3Vzcld5TGgyODB2QjdFMFNRNk9HMDA5b2cyOEFiR1BJNTdRYWJNaGlGUURnPT0YACAAKAAwzbP9p42D/gI4/9Tqnq0qQP/U6p6tKkoceHlkQXJlZTgzczF6WTNWbk5idjVnOEUxV01jPVofIh29UE0raWdraGJFVTNRTlR4U2lvWUVtYUVyUmNzPWWtPwmaEqwCCAYSpwIKHHQ5VjZWMnFUNzlLRm1MRUtQcmpxRTViaEtscz0SpgFaOkFEcXRBWndNeDRBSHhDeGxadG42aHhuRGRhQ1FpVU5IeWNwL25TVmtsZ25Nbm1DNUk0MjY2THFFc1liZlpaWUQ4UE5DbVBSblNqRE1CaUt5bGVra1pXV1NuL3EwckNNY2dpOWI1cU1ESml4d3BURGovSVNmazBPZGd0Y3hxV2VKUkFCbUtkQ21WV1RBOWZlVllYU25XbEpSOU5LTXAvRmtoQT09GAAgACgAMM2z/aeNg/4COO+lpoyHKkDvpaaMhypKHElnY0s2Slo5Z1NVSlM5cjRrc3p1eDJKcWdBdz1aHiIcR29nT2liTmhWTUVMcllUMEdRL0ZRMHR0aW5BPWUHQH8WEqwCCAgSpwIKHFBXaks5Qmw5VlY4cDFtRzk5VVBXOTl6UGMzUT0SpgFaOkFEcXRBWndNeDRBSHhDeGxadG42aHhuRGRhQ1FpVU5IeWNwL25TVmtsZ25Nbm1DNUk4QnU3QXh5Zk43NjVtNEZjTCtTeUs0QmZWdm5vNUlZNzBrZElXZkVJYzBkOFc5dzI2NXZwUWNWZlRwSmg0NDF6cEhHSm5ldTJqVmIzUUdYMCtHWWlFbUd3dGZOTjhMS1cvZE4vK3BocmlZTSs5bzRudz09GAAgACgAMM2z/aeNg/4COPaDleqAKkD2g5XqgCpKHGdHZFF2MUVVbHhVYzVzUlZmUHQ2cnVFQ25WZz1aHiIcei9tVk52SDZPSExEOTd4OWY0a1dyMnVsZXZFPWVIXbzGEqwCCAcSpwIKHGttUmd0bG9wL3g5SlU1aituZVhLVTV5MnlCVT0SpgFaOkFEcXRBWndNeDRBSHhDeGxadG42aHhuRGRhQ1FpVU5IeWNwL25TVmtsZ25Nbm1DNUkzSFVjc1BSV3BHVUlFVmltYVRpdlArRURJSmt3dHBOYXU1RDNDZU9ON2MyaFBUZ0xDZnNPV1ljVWJWSDhadk9YN0cyVS9JRmdzVlIzeFludW9Hb1ZjTU5tRkJmLy84dllBcGFtazBjcmpiKzJTcGFIZz09GAAgACgAMM2z/aeNg/4COMX36omCKkDF9+qJgipKHFlmMUJFazQ5dVFEVE5zdFl3OE5PZVg0S2ZkOD1aHiIcTThuS3ZKV0hsdmxWMXFpSWN0dC95dUd3b3pFPWV1JP1bEq0CCAoSqAIKHEkvRWN2ODkvM1ZJZ1JucWdxUlFFdGNDZ3hvZz0SpgFaOkFEcXRBWndNeDRBSHhDeGxadG42aHhuRGRhQ1FQbnNCVlorellKWS9VQWRBazErbUVUb0FDM2g3cmRsY1k1ZUFCeDd4TGxidldVVkYxeUt5NW5McWhnNkxleFhZTTRtQTV6VmdqNHlVdVl3UXp2V1ZBdEZQMjhrVzBEUnZ2VjdBamhaczdVcnN4d3U1bnhkTUdTOUhESUQvMTlkVzJZWDRaZz09GAAgACgAMM2z/aeNg/4CONy58Zb7LEDcufGW+yxKHDlOaGlDdGVZc2VSWDVweXhCR1FXMU9xMWxYUT1aHyId3jFEYUJxMXJWbHFPMW1rZ2QvQ21PSUtnNStnWT1lX6AL/BLDAQgDEr4BChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EmZaOkFEcXRBWncrZHlOdU5Wak9aRUp5a1VVanF0YUp1VExzcGprRzFYRU55eitvVnl6Zzc4dkZJOXhwZ3h2dFBrRzI5NjJuS25UZk0rNXpCc0pTSXlhQys5ait4THRwRHFMZG5RPT0YACAAKAAwm8/y0MPohgM4AEAAShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAABKtAggFEqgCChxmTGMvV0lveklQTXJFa0tZdjdYb2s0SGo1WXc9EqYBWjpBRHF0QVp3TXg0QUh4Q3hsWnRuNmh4bkRkYUNRaVVOSHljcC9uU1ZrbGduTW5tQzVJNUJhMk42cFJwMHNxTEhSMU9EcXZlNS9XQ0E1blRRZHkvT0U3VWxxcjNYc0R0ZFQ2ZVQwWXBsNFZFRUhGSnB1Mk1qSjVld2xSN21Oa0hoTUErTGE3MXh6SW5QWlp0Rm4zejF0OERlMEJkbzQ3SGQzZVE9PRgAIAAoADDNs/2njYP+AjiMnJTmhypAjJyU5ocqShxOcHM3eDcvOGYzV3BZM0tEQ0F1RkJPWUJmdGs9Wh8iHSN3SWhuZWdodVg3c2kwdUxyd1pRMk9uVU5kcmc9ZReo6CYwATgA",
+   "version": 1
+}

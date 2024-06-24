@@ -1,0 +1,15 @@
+import './onboarding.js';
+import './autoconsent.js';
+import './adblocker.js';
+import './dnr.js';
+import './paused.js';
+import './session.js';
+import './stats.js';
+import './serp.js';
+import './helpers.js';
+import './external.js';
+import './telemetry.js';
+import './reporting/index.js';
+import './devtools.js';
+import './custom-filters.js';
+import './exceptions.js';

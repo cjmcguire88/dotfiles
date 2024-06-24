@@ -1,0 +1,9 @@
+2024/06/21-15:58:35.486 4 Reusing MANIFEST /home/jason/.config/chromium/Default/Session Storage/MANIFEST-000001
+2024/06/21-15:58:35.487 4 Recovering log #31
+2024/06/21-15:58:35.488 4 Level-0 table #34: started
+2024/06/21-15:58:35.491 4 Level-0 table #34: 15020 bytes OK
+2024/06/21-15:58:35.495 4 Delete type=0 #31
+2024/06/21-15:58:35.496 6 Compacting 4@0 + 1@1 files
+2024/06/21-15:58:35.504 6 Generated table #36@0: 667 keys, 45151 bytes
+2024/06/21-15:58:35.504 6 Compacted 4@0 + 1@1 files => 45151 bytes
+2024/06/21-15:58:35.506 6 compacted to: files[ 0 1 1 0 0 0 0 ]

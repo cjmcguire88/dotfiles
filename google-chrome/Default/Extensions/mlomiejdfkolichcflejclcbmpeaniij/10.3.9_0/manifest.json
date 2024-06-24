@@ -1,0 +1,88 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "/icons/icon-128.png",
+         "64": "/icons/icon-64.png"
+      },
+      "default_popup": "pages/panel/index.html",
+      "default_title": "Ghostery"
+   },
+   "author": "Ghostery",
+   "background": {
+      "service_worker": "background/index.js",
+      "type": "module"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content_scripts/adblocker.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "js": [ "content_scripts/autoconsent.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "content_scripts/iframe.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "content_scripts/whotracksme/reporting.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "content_scripts/youtube.js" ],
+      "matches": [ "*://www.youtube.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": {
+   },
+   "declarative_net_request": {
+      "rule_resources": [ {
+         "enabled": false,
+         "id": "ads",
+         "path": "rule_resources/dnr-ads.json"
+      }, {
+         "enabled": false,
+         "id": "tracking",
+         "path": "rule_resources/dnr-tracking.json"
+      }, {
+         "enabled": false,
+         "id": "annoyances",
+         "path": "rule_resources/dnr-annoyances.json"
+      }, {
+         "enabled": false,
+         "id": "trackerdb",
+         "path": "rule_resources/dnr-trackerdb.json"
+      }, {
+         "enabled": false,
+         "id": "fixes",
+         "path": "rule_resources/dnr-fixes.json"
+      } ]
+   },
+   "default_locale": "en",
+   "description": "__MSG_manifest_short_description__",
+   "differential_fingerprint": "1.ff5af698fcfb90804ec1fcbd3ad13f4d0b1b2c8da05e44476df08b1261adf59c",
+   "host_permissions": [ "http://*/*", "https://*/*", "ws://*/*", "wss://*/*" ],
+   "icons": {
+      "128": "/icons/icon-128.png",
+      "64": "/icons/icon-64.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDWKbhv4tbugT5f8XlKtXmjzhsWjGX+ILAnBL9AOzUA2nYu9Y2P8PAxbOHSRKeLE9zHYD2MzsGgBE4LlLKGV7p5FhrtURBMJrkN5RooOH/RkAPbAvyfJ+sku5qgg2Ijrf10cxXqED39WsTaa4ZWnnkOXl9Y7XMGbuolzBz2m+SfSwIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_manifest_name__",
+   "optional_permissions": [ "offscreen" ],
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "pages/settings/index.html"
+   },
+   "permissions": [ "alarms", "cookies", "declarativeNetRequest", "declarativeNetRequestFeedback", "webNavigation", "storage", "scripting", "tabs", "webRequest" ],
+   "short_name": "Ghostery",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "10.3.9",
+   "web_accessible_resources": [ {
+      "all_frames": true,
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "content_scripts/whotracksme/ghostery-whotracksme.js", "content_scripts/trackers-preview.js", "content_scripts/prevent-serp-tracking.js", "pages/trackers-preview/index.html", "pages/onboarding/index.html", "pages/onboarding/iframe.html", "pages/onboarding/opera-serp.html", "pages/youtube/index.html" ]
+   } ]
+}
