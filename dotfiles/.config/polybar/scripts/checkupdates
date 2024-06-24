@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-if sudo pacman -Sy > /dev/null 2>&1; then
-    sudo pacman -Qu | wc -l
-else
-    echo DISCONNECTED
-fi
