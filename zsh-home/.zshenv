@@ -39,9 +39,6 @@ export MAKEFLAGS="-j$((`nproc` - `nproc` / 4))"
 # makepkg flags
 export PACKAGER="Jason McGuire <cjmcguire88@gmail.com>"
 
-# OpenAI API key
-export OPENAI_API_KEY="sk-proj-HOVw7xIB2bbXSe7y7GZzT3BlbkFJjyO7ATG9LgnHMis4pxKL"
-
 function command_not_found_handler {
     local purple='\e[1;35m' bright='\e[0;1m' green='\e[1;32m' reset='\e[0m'
     printf 'zsh: command not found: %s\n' "$1"
