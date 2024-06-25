@@ -16,6 +16,10 @@
 super + p
     ~/.config/rofi/powermenu/powermenu.sh
 
+# lockscreen
+super + y
+    lockscreen
+
 # poweroff
 super + ctrl + p
 	poweroff

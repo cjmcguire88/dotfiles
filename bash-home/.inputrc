@@ -1,0 +1,45 @@
+# ██████╗ ███████╗ █████╗ ██████╗ ██╗     ██╗███╗   ██╗███████╗
+# ██╔══██╗██╔════╝██╔══██╗██╔══██╗██║     ██║████╗  ██║██╔════╝
+# ██████╔╝█████╗  ███████║██║  ██║██║     ██║██╔██╗ ██║█████╗  
+# ██╔══██╗██╔══╝  ██╔══██║██║  ██║██║     ██║██║╚██╗██║██╔══╝  
+# ██║  ██║███████╗██║  ██║██████╔╝███████╗██║██║ ╚████║███████╗
+# ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝
+
+# 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
+
+$include /etc/inputrc
+set editing-mode vi
+set show-mode-in-prompt on
+set vi-cmd-mode-string on
+
+$if term=linux
+	set vi-ins-mode-string \1\e[?0c\2
+	set vi-cmd-mode-string \1\e[?8c\2
+$else
+	set vi-ins-mode-string \1\e[6 q\2
+	set vi-cmd-mode-string \1\e[2 q\2
+$endif
+
+$if mode=vi
+set keymap vi-command
+
+set bell-style visual
+set colored-completion-prefix on
+set colored-stats on
+set completion-ignore-case on
+
+# these are for vi-command mode
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+j: history-search-forward
+k: history-search-backward
+set keymap vi-insert
+
+# these are for vi-insert mode
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+$endif
+
+set show-all-if-ambiguous on
+TAB: menu-complete
+"\e[Z": menu-complete-backward
