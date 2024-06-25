@@ -31,6 +31,19 @@ ex () {
   fi
 }
 
+ls-src() {
+    exa -a --icons --group-directories-first ~/.build/sources
+}
+
+rm-src() {
+    if [ -d ~/.build/sources/$1 ]; then
+        trash-put ~/.build/sources/$1
+        trash-list
+    else
+        echo -e "\033[1;31m$1 source not found\033[0m"
+    fi
+}
+
 # zoxide into directory then exa
 zls() {
     z $1 && exa -a --icons --group-directories-first
