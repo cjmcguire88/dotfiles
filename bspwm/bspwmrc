@@ -61,7 +61,7 @@ bspc rule -a Gimp state=floating follow=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Steam state=floating border=off follow=on
 bspc rule -a Lutris state=floating border=off follow=on
-bspc rule -a Sxiv state=floating follow=on
+bspc rule -a ipreporter.exe state=floating
 bspc rule -a Kodi state=fullscreen
 
 #  ___         _      _

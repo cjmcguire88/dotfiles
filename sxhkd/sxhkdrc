@@ -56,7 +56,7 @@ super + b
 
 # terminal (Multiplex)
 super + shift + t
-    kitty tmux2
+    kitty tmuxinator arch
 
 # make sxhkd reload its configuration files:
 super + ctrl + Escape
