@@ -1,4 +1,4 @@
-#files: 845	version: 5.9
+#files: 855	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -341,6 +341,7 @@ _comps=(
 'fc' '_fc'
 'fc-list' '_xft_fonts'
 'fc-match' '_xft_fonts'
+'fd' '_fd'
 'feh' '_feh'
 'fetchmail' '_fetchmail'
 'ffmpeg' '_ffmpeg'
@@ -366,6 +367,7 @@ _comps=(
 'fixwpps' '_psutils'
 'fixwwps' '_psutils'
 'flac' '_flac'
+'flatpak' '_flatpak'
 'flex' '_flex'
 'flex++' '_flex'
 'flipdiff' '_patchutils'
@@ -492,6 +494,7 @@ _comps=(
 'gpatch' '_patch'
 'gpg' '_gpg'
 'gpg2' '_gpg'
+'gpg-tui' '_gpg-tui'
 'gpgv' '_gpg'
 'gpg-zip' '_gpg'
 'gphoto2' '_gphoto2'
@@ -805,6 +808,7 @@ _comps=(
 'mmove' '_mtools'
 'modinfo' '_modutils'
 'modprobe' '_modutils'
+'modprobed-db' '_modprobed-db'
 'module' '_module'
 'mogrify' '_imagemagick'
 'monasca' '_openstack'
@@ -863,6 +867,8 @@ _comps=(
 'nedit' '_nedit'
 'nedit-nc' '_nedit'
 'netcat' '_netcat'
+'netctl' '_netctl'
+'netctl-auto' '_netctl'
 'netrik' '_webbrowser'
 'netscape' '_netscape'
 'netstat' '_netstat'
@@ -926,6 +932,7 @@ _comps=(
 'pacstrap' '_archinstallscripts'
 'pactl' '_pulseaudio'
 'padsp' '_pulseaudio'
+'pamac' '_pamac'
 'pandoc' '_pandoc'
 'paplay' '_pulseaudio'
 'parallel' '_parallel'
@@ -1103,6 +1110,7 @@ _comps=(
 'resolvectl' '_resolvectl'
 'restart' '_initctl'
 'retawq' '_webbrowser'
+'rg' '_rg'
 'rgrep' '_grep'
 'rgview' '_vim'
 'rgvim' '_vim'
@@ -1128,6 +1136,7 @@ _comps=(
 'rubber-pipe' '_rubber'
 'ruby' '_ruby'
 'ruby-mri' '_ruby'
+'run0' '_run0'
 'run-help' '_run-help'
 'run-on-ac' '_tlp-run-on'
 'run-on-bat' '_tlp-run-on'
@@ -1143,6 +1152,8 @@ _comps=(
 'sadf' '_sysstat'
 'sahara' '_openstack'
 'sar' '_sysstat'
+'_sbctl' '_sbctl'
+'sbctl' '_sbctl'
 'scan' '_mh'
 'sccs' '_sccs'
 'sccsdiff' '_sccs'
@@ -1493,6 +1504,7 @@ _comps=(
 'whois' '_whois'
 'whom' '_mh'
 'wifi' '_tlp-radio-device'
+'wifi-menu' '_netctl'
 'wiggle' '_wiggle'
 'wipefs' '_wipefs'
 'wodim' '_cdrecord'
@@ -1540,6 +1552,7 @@ _comps=(
 'xsetbg' '_xloadimage'
 'xsetroot' '_x_utils'
 'xsltproc' '_xmlsoft'
+'xss-lock' '_xss-lock'
 'xterm' '_xterm'
 'xtightvncviewer' '_vnc'
 'xtp' '_imagemagick'
@@ -1750,20 +1763,22 @@ bindkey '^[~' _bash_complete-word
 
 autoload -Uz _archinstallscripts _bat _bluetoothctl _bootctl _bspc \
             _busctl _bwrap _cargo _coredumpctl _curl \
-            _devtools _dust _eza _hg _hostnamectl \
-            _img2sixel _journalctl _kernel-install _kitty _libinput \
-            _localectl _loginctl _machinectl _meson _mkinitcpio \
-            _mpv _msfconsole _msfvenom _networkctl _ninja \
-            _nvme _onefetch _oomctl _pacman _parallel \
-            _paru _pass _pip _pkgfile _polybar \
-            _polybar_msg _progress _psd _pulseaudio _qpdf \
-            _resolvectl _rustup _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes \
-            _sd_unit_files _systemctl _systemd _systemd-analyze _systemd-delta \
-            _systemd-inhibit _systemd-nspawn _systemd-path _systemd-run _systemd-tmpfiles \
-            _timedatectl _tlp _tlp-radio-device _tlp-rdw _tlp-run-on \
-            _tlp-stat _trash _trash-empty _trash-list _trash-put \
-            _trash-restore _udevadm _udiskie _udiskie-canonical_paths _udiskie-mount \
-            _udiskie-umount _udisks2 _wpctl _youtube-dl _zathura \
+            _devtools _dust _eza _fd _flatpak \
+            _gpg-tui _hg _hostnamectl _img2sixel _journalctl \
+            _kernel-install _kitty _libinput _localectl _loginctl \
+            _machinectl _meson _mkinitcpio _modprobed-db _mpv \
+            _msfconsole _msfvenom _netctl _networkctl _ninja \
+            _nvme _onefetch _oomctl _pacman _pamac \
+            _parallel _paru _pass _pip _pkgfile \
+            _polybar _polybar_msg _progress _psd _pulseaudio \
+            _qpdf _resolvectl _rg _run0 _rustup \
+            _sbctl _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes _sd_unit_files \
+            _systemctl _systemd _systemd-analyze _systemd-delta _systemd-inhibit \
+            _systemd-nspawn _systemd-path _systemd-run _systemd-tmpfiles _timedatectl \
+            _tlp _tlp-radio-device _tlp-rdw _tlp-run-on _tlp-stat \
+            _trash _trash-empty _trash-list _trash-put _trash-restore \
+            _udevadm _udiskie _udiskie-canonical_paths _udiskie-mount _udiskie-umount \
+            _udisks2 _wpctl _xss-lock _youtube-dl _zathura \
             _zoxide _cdr _all_labels _all_matches _alternative \
             _approximate _arg_compile _arguments _bash_completions _cache_invalid \
             _call_function _combination _complete _complete_debug _complete_help \

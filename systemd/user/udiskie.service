@@ -1,0 +1,11 @@
+[Unit]
+Description=Automatically mount removable media
+After=default.target
+
+[Service]
+ExecStart=/usr/bin/udiskie --no-config
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

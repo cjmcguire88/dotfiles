@@ -11,18 +11,18 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+ZSH_CACHE_DIR=$HOME/.cache/zsh
 autoload -Uz compinit
 compinit
-eval "$(zoxide init zsh)"
-
-ZSH_CACHE_DIR=$HOME/.cache/zsh
 setopt share_history
 setopt inc_append_history
+export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=100000
 export SAVEHIST=1000000
-export HISTFILE=$HOME/.zsh_history
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
+eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
 
 ZSH_THEME="powerlevel10k"
 plugins=(git sudo colorize zsh-vi-mode zsh-syntax-highlighting zsh-autosuggestions zsh-fzf-pass dirhistory)
@@ -40,7 +40,6 @@ for plugin ($plugins); do
 done
 
 source $XDG_CONFIG_HOME/zsh/.p10k.zsh
+source $XDG_CONFIG_HOME/shell/env_common
 source $XDG_CONFIG_HOME/shell/aliases
 source $XDG_CONFIG_HOME/shell/functions
-
-cursor_mode

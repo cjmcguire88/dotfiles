@@ -1,0 +1,11 @@
+[Unit]
+Description=Linux Notification Center
+After=default.target
+
+[Service]
+ExecStart=/usr/bin/deadd-notification-center -c /home/jason/.config/deadd/deadd.conf
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

@@ -10,6 +10,8 @@
 # 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
 
 SCRIPTS=$HOME/.config/bspwm/scripts
+HDMI="xrandr | awk '/HDMI*/ {print $1}'"
+STATUS="xrandr | awk '/HDMI*/ {print $2}'"
 
 #  __  __          _ _                  __  ___         _   _
 # |  \/  |___ _ _ (_) |_ ___ _ _ ___   / / |   \ ___ __| |_| |_ ___ _ __ ___
@@ -17,10 +19,30 @@ SCRIPTS=$HOME/.config/bspwm/scripts
 # |_|  |_\___/_||_|_|\__\___/_| /__/ /_/   |___/\___/__/_\_\\__\___/ .__/__/
 #                                                                  |_|
 
-HDMI1="xrandr | awk '/HDMI-1/ {print $2}'"
-
 bspc monitor eDP -d 1 2 3 4 5
-[[ $HDMI1 =~ connected ]] && bspc monitor HDMI-1 -d 6 7 8
+if [ "$STATUS" = connected ]; then
+    bspc monitor "$HDMI" -d 6 7 8
+fi
+
+#    _       _          _            _
+#   /_\ _  _| |_ ___ __| |_ __ _ _ _| |_
+#  / _ \ || |  _/ _ (_-<  _/ _` | '_|  _|
+# /_/ \_\_,_|\__\___/__/\__\__,_|_|  \__|
+
+sxhkd &
+picom -f &
+polybar_launch &
+pcmanfm --desktop &
+deadd-notification-center &
+polkit-gnome &
+
+#  ___         _      _
+# / __| __ _ _(_)_ __| |_ ___
+# \__ \/ _| '_| | '_ \  _(_-<
+# |___/\__|_| |_| .__/\__/__/
+#               |_|
+
+"$SCRIPTS"/bspswallow &
 
 #   ___       _   _
 #  / _ \ _ __| |_(_)___ _ _  ___
@@ -63,25 +85,3 @@ bspc rule -a Steam state=floating border=off follow=on
 bspc rule -a Lutris state=floating border=off follow=on
 bspc rule -a ipreporter.exe state=floating
 bspc rule -a Kodi state=fullscreen
-
-#  ___         _      _
-# / __| __ _ _(_)_ __| |_ ___
-# \__ \/ _| '_| | '_ \  _(_-<
-# |___/\__|_| |_| .__/\__/__/
-#               |_|
-
-$SCRIPTS/bspwm_floating &
-$SCRIPTS/bspswallow &
-
-#    _       _          _            _
-#   /_\ _  _| |_ ___ __| |_ __ _ _ _| |_
-#  / _ \ || |  _/ _ (_-<  _/ _` | '_|  _|
-# /_/ \_\_,_|\__\___/__/\__\__,_|_|  \__|
-
-sxhkd &
-picom -f &
-polybar_launch &
-pcmanfm --desktop &
-deadd-notification-center &
-polkit-bspwm &
-udiskie --tray

@@ -404,12 +404,12 @@ bar-empty = ─
 ;https://github.com/jaagr/polybar/wiki/Module:-battery
 type = internal/battery
 battery = BAT1
-adapter = ADP1
+adapter = ucsi-source-psy-USBC000:001
 full-at = 100
 
 format-charging = <label-charging>
 label-charging = %percentage%%
-format-charging-prefix = "  "
+format-charging-prefix = " 󰂄 "
 format-charging-prefix-font = 3
 format-charging-prefix-foreground = ${colors.color4}
 format-charging-foreground = ${colors.foreground}
@@ -417,13 +417,13 @@ format-charging-background = ${colors.background}
 
 format-discharging = <label-discharging>
 label-discharging =  %percentage%%
-format-discharging-prefix = "  "
+format-discharging-prefix = " 󱟤 "
 format-discharging-prefix-font = 3
 format-discharging-prefix-foreground = ${colors.color4}
 format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
 
-format-full-prefix = "  "
+format-full-prefix = "  "
 format-full-prefix-font = 3
 format-full-prefix-foreground = ${colors.color4}
 format-full-foreground = ${colors.foreground}

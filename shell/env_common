@@ -1,0 +1,51 @@
+# ███████╗███╗   ██╗██╗   ██╗██╗██████╗  ██████╗ ███╗   ██╗███╗   ███╗███████╗███╗   ██╗████████╗
+# ██╔════╝████╗  ██║██║   ██║██║██╔══██╗██╔═══██╗████╗  ██║████╗ ████║██╔════╝████╗  ██║╚══██╔══╝
+# █████╗  ██╔██╗ ██║██║   ██║██║██████╔╝██║   ██║██╔██╗ ██║██╔████╔██║█████╗  ██╔██╗ ██║   ██║
+# ██╔══╝  ██║╚██╗██║╚██╗ ██╔╝██║██╔══██╗██║   ██║██║╚██╗██║██║╚██╔╝██║██╔══╝  ██║╚██╗██║   ██║
+# ███████╗██║ ╚████║ ╚████╔╝ ██║██║  ██║╚██████╔╝██║ ╚████║██║ ╚═╝ ██║███████╗██║ ╚████║   ██║
+# ╚══════╝╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝
+
+# 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
+# Additions to path rvm is for metasploit
+export PATH=$HOME/.local/bin:$HOME/.rvm/bin:$PATH
+
+# User configuration
+export BROWSER='google-chrome-stable'
+
+# XDG directories
+export XDG_CONFIG_HOME='/home/jason/.config'
+export XDG_CACHE_HOME='/home/jason/.cache'
+export XDG_DATA_HOME='/home/jason/.local/share'
+export XDG_RUNTIME_DIR='/run/user/1000'
+export XDG_STATE_HOME='/home/jason/.local/state'
+
+# Preferred editor for local and remote sessions
+export EDITOR='nvim'
+export VISUAL='nvim'
+export MANPAGER='nvim +Man!'
+# export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
+
+# Compilation flags
+export CFLAGS="-march=znver4 -O2 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"
+export CPPFLAGS="-D_FORTIFY_SOURCE=2"
+export CXXFLAGS="$CFLAGS -Wp,-D_GLIBCXX_ASSERTIONS"
+export LDFLAGS="-Wl,-O4 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,-z,pack-relative-relocs"
+export MAKEFLAGS="-j$((`nproc` - `nproc` / 4))"
+export LTOFLAGS="-flto=auto"
+
+# makepkg flags
+export PACKAGER="Jason McGuire <cjmcguire88@gmail.com>"
+
+# fzf
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:#edfefe,fg+:#ffffff,bg:#202124,bg+:#263238
+  --color=hl:#f39c12,hl+:#f1c40f,info:#27ae60,marker:#16a085
+  --color=prompt:#2980b9,spinner:#2ecc71,pointer:#c0392b,header:#16a085
+  --color=border:#333333,label:#aeaeae,query:#edfefe
+  --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="󰣇 "
+  --marker=">" --pointer="󰁕" --separator="─" --scrollbar="│"'
+
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+# export FZF_DEFAULT_OPTS="--tmux center"

@@ -21,6 +21,7 @@ alias rmt="trash-put"
 alias rst="trash-restore"
 alias v="nvim"
 alias chmod="chmod --preserve-root"
+alias _="run0 "
 
 # navigation
 alias c="zls"
@@ -59,26 +60,28 @@ alias scumask="systemctl --user mask"
 
 # boot commands
 alias uefi="systemctl reboot --firmware-setup"
-alias grub="sudo efibootmgr -n 1 && reboot"
 
 # package management
 alias ins="paru -S"
 alias download="paru -Sw"
 alias ifd="paru -U"
 alias ser="paru -Ss"
+alias cache="paru -Scd"
 alias info="paru -Si "
 alias info_all="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias upd="paru -Syu"
 alias rem="paru -Rsu"
 alias query="pacman -Q"
 alias files="pacman -Ql"      # either belonging to a specific package or the whole system
-alias cache="pacman -Sc"
 alias pb="pacman -Gc"
 alias pkglist="sudo pacman -Qqe > /home/jason/.build/git/config-files/pkglist.txt"
 
 # iwd
 alias wifiscan="iwctl station wlan0 scan && iwctl station wlan0 get-networks"
-alias wificon="iwctl station connect"
+alias wificon="iwctl station wlan0 connect"
+
+# networking
+alias port_scan="nmap -p- --open -T4 "
 
 # etc
 alias matrix="unimatrix"
@@ -90,3 +93,4 @@ alias bashrc="nvim ~/.bashrc"
 alias sa="systemd-analyze"
 alias gitdir="/home/jason/.build/git"
 alias dmesg="sudo dmesg"
+alias mux="tmuxinator arch"
