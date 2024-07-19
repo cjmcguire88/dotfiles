@@ -1,4 +1,4 @@
-#files: 855	version: 5.9
+#files: 860	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -605,6 +605,8 @@ _comps=(
 'hostnamectl' '_hostnamectl'
 'hotjava' '_webbrowser'
 'htop' '_htop'
+'hyprctl' '_hyprctl'
+'hyprpm' '_hyprpm'
 'iceweasel' '_mozilla'
 'icombine' '_ispell'
 'iconv' '_iconv'
@@ -995,6 +997,7 @@ _comps=(
 'pkginfo' '_pkginfo'
 'pkgrm' '_pkgrm'
 'pkill' '_pgrep'
+'playerctl' '_playerctl'
 'pldd' '_pids'
 'pmake' '_make'
 'pman' '_perl_modules'
@@ -1507,6 +1510,8 @@ _comps=(
 'wifi-menu' '_netctl'
 'wiggle' '_wiggle'
 'wipefs' '_wipefs'
+'wl-copy' '_wl-copy'
+'wl-paste' '_wl-paste'
 'wodim' '_cdrecord'
 'wpa_cli' '_wpa_cli'
 'wpctl' '_wpctl'
@@ -1764,21 +1769,22 @@ bindkey '^[~' _bash_complete-word
 autoload -Uz _archinstallscripts _bat _bluetoothctl _bootctl _bspc \
             _busctl _bwrap _cargo _coredumpctl _curl \
             _devtools _dust _eza _fd _flatpak \
-            _gpg-tui _hg _hostnamectl _img2sixel _journalctl \
-            _kernel-install _kitty _libinput _localectl _loginctl \
-            _machinectl _meson _mkinitcpio _modprobed-db _mpv \
-            _msfconsole _msfvenom _netctl _networkctl _ninja \
-            _nvme _onefetch _oomctl _pacman _pamac \
-            _parallel _paru _pass _pip _pkgfile \
-            _polybar _polybar_msg _progress _psd _pulseaudio \
-            _qpdf _resolvectl _rg _run0 _rustup \
-            _sbctl _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes _sd_unit_files \
-            _systemctl _systemd _systemd-analyze _systemd-delta _systemd-inhibit \
-            _systemd-nspawn _systemd-path _systemd-run _systemd-tmpfiles _timedatectl \
-            _tlp _tlp-radio-device _tlp-rdw _tlp-run-on _tlp-stat \
-            _trash _trash-empty _trash-list _trash-put _trash-restore \
-            _udevadm _udiskie _udiskie-canonical_paths _udiskie-mount _udiskie-umount \
-            _udisks2 _wpctl _xss-lock _youtube-dl _zathura \
+            _gpg-tui _hg _hostnamectl _hyprctl _hyprpm \
+            _img2sixel _journalctl _kernel-install _kitty _libinput \
+            _localectl _loginctl _machinectl _meson _mkinitcpio \
+            _modprobed-db _mpv _msfconsole _msfvenom _netctl \
+            _networkctl _ninja _nvme _onefetch _oomctl \
+            _pacman _pamac _parallel _paru _pass \
+            _pip _pkgfile _playerctl _polybar _polybar_msg \
+            _progress _psd _pulseaudio _qpdf _resolvectl \
+            _rg _run0 _rustup _sbctl _sd_hosts_or_user_at_host \
+            _sd_machines _sd_outputmodes _sd_unit_files _systemctl _systemd \
+            _systemd-analyze _systemd-delta _systemd-inhibit _systemd-nspawn _systemd-path \
+            _systemd-run _systemd-tmpfiles _timedatectl _tlp _tlp-radio-device \
+            _tlp-rdw _tlp-run-on _tlp-stat _trash _trash-empty \
+            _trash-list _trash-put _trash-restore _udevadm _udiskie \
+            _udiskie-canonical_paths _udiskie-mount _udiskie-umount _udisks2 _wl-copy \
+            _wl-paste _wpctl _xss-lock _youtube-dl _zathura \
             _zoxide _cdr _all_labels _all_matches _alternative \
             _approximate _arg_compile _arguments _bash_completions _cache_invalid \
             _call_function _combination _complete _complete_debug _complete_help \
