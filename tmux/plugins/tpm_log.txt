@@ -1,6 +1,6 @@
-[2024-07-18 11:40:31.425]	 List of discovered tpm plugins: tmux-plugins/tmux-cpu
-[2024-07-18 11:40:31.437]	 Invoking /home/jason/.config/tmux/plugins/tpm/bin/install_plugins
-[2024-07-18 11:40:31.475]	 Installing "tmux-cpu"
-[2024-07-18 11:40:31.917]	   "tmux-cpu" download success
-[2024-07-18 11:40:31.930]	 Done.
+[2024-07-25 23:37:30.656]	 List of discovered tpm plugins: tmux-plugins/tmux-cpu
+[2024-07-25 23:37:30.668]	 Invoking /home/jason/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-07-25 23:37:30.694]	 Installing "tmux-cpu"
+[2024-07-25 23:37:31.017]	   "tmux-cpu" download success
+[2024-07-25 23:37:31.029]	 Done.
 

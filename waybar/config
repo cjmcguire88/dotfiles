@@ -7,22 +7,20 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/mode",
-        "hyprland/scratchpad",
-        "custom/media"
+        "custom/arch",
+        "custom/pacman",
+        "hyprland/workspaces"
     ],
     "modules-center": [
         "hyprland/window"
     ],
     "modules-right": [
-        "idle_inhibitor",
         "pulseaudio",
         "network",
         "cpu",
         "memory",
         "temperature",
-        "backlight",
+        "idle_inhibitor",
         "battery",
         "clock",
         "tray",
@@ -37,7 +35,7 @@
         "format-icons": {
             "1": "",
             "2": "",
-            "3": "",
+            "3": "",
             "4": "󱂵",
             "5": "󱃵",
             "urgent": "",
@@ -54,42 +52,6 @@
             "unlocked": ""
         }
     },
-    "hyprland/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "hyprland/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 5,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -102,16 +64,26 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "timezone": "America/New_York",
+        "format": "{:%I:%M %p}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}",
+        "calendar": {
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#1793d1'><b>{}</b></span>",
+                              "days":       "<span color='#edfefe'><b>{}</b></span>",
+                              "weekdays":   "<span color='#27ae60'><b>{}</b></span>",
+                              "today":      "<span color='#c0392b'><b><u>{}</u></b></span>"
+                              }
+                    }
     },
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% 󰍛"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -134,7 +106,7 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% 󰂄",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -173,6 +145,7 @@
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
+        "on-click": "pavucontrol",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -182,23 +155,25 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
     },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    "custom/arch": {
+        "format": " 󰣇 ",
+        "tooltip": false,
+        "on-click": "rofi -show drun"
     },
     "custom/power": {
         "format" : "⏻ ",
 		"tooltip": false,
         "on-click": "$HOME/.config/rofi/powermenu/powermenu.sh"
+    },
+    "custom/pacman": {
+        "format": "{icon}{}",
+        "return-type": "json",
+        "format-icons": {
+          "pending-updates": "",
+          "updated": " "
+        },
+        "exec-if": "which waybar-updates",
+        "exec": "waybar-updates"
     }
 }

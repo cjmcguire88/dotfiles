@@ -27,12 +27,13 @@ export MANPAGER='nvim +Man!'
 # export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 # Compilation flags
-export CFLAGS="-march=znver4 -O2 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"
+export CFLAGS="-march=znver2 -O3 -pipe -fno-plt -fexceptions -U_FORTIFY_SOURCE -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"
 export CPPFLAGS="-D_FORTIFY_SOURCE=2"
 export CXXFLAGS="$CFLAGS -Wp,-D_GLIBCXX_ASSERTIONS"
 export LDFLAGS="-Wl,-O4 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,-z,pack-relative-relocs"
 export MAKEFLAGS="-j$((`nproc` - `nproc` / 4))"
 export LTOFLAGS="-flto=auto"
+export RUSTFLAGS="-C force-frame-pointers=yes -C target-cpu=znver2 -C opt-level=3"
 
 # makepkg flags
 export PACKAGER="Jason McGuire <cjmcguire88@gmail.com>"

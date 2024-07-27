@@ -1,11 +1,18 @@
 # GIMP action-history
 
+(history-item "file-quit" 1)
+(history-item "file-export-as" 1)
+(history-item "filters-color-balance" 0)
+(history-item "image-crop-to-selection" 1)
 (history-item "layers-delete" 0)
 (history-item "image-resize-to-layers" 0)
 (history-item "image-merge-layers" 0)
 (history-item "layers-resize" 0)
 (history-item "tools-foreground-select" 0)
-(history-item "filters-color-balance" 0)
-(history-item "file-export-as" 1)
+(history-item "filters-saturation" 0)
+(history-item "select-invert" 0)
+(history-item "select-sharpen" 0)
+(history-item "image-scale" 0)
+(history-item "file-save" 1)
 
 # end of action-history

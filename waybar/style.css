@@ -1,13 +1,13 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: FontAwesome, Fira Sans;
     font-size: 13px;
 }
 
 window#waybar {
     background-color: #202124;
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    border-bottom: 2px solid #333333;
+    color: #edfefe;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -56,7 +56,7 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: #edfefe;
 }
 
 #workspaces button:hover {
@@ -87,7 +87,8 @@ button:hover {
 #network,
 #pulseaudio,
 #wireplumber,
-#custom-media,
+#custom-arch,
+#custom-power,
 #tray,
 #mode,
 #idle_inhibitor,
@@ -114,30 +115,31 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: #333333;
+    color: #edfefe;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: transparent;
+    color: #edfefe;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
+    color: #30d475;
+    background-color: transparent;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: transparent;
+        color: #e74c3c;
     }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    background-color: transparent;
+    color: #edfefe;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -161,7 +163,7 @@ button:hover {
 
 #power-profiles-daemon.power-saver {
     background-color: #2ecc71;
-    color: #000000;
+    color: #edfefe;
 }
 
 label:focus {
@@ -169,73 +171,104 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
+    border-radius: 10px;
+    background-color: #16a085;
     color: #000000;
 }
 
 #memory {
-    background-color: #9b59b6;
+    border-radius: 10px;
+    background-color: #8e44ad;
 }
 
 #disk {
+    border-radius: 10px;
     background-color: #964B00;
 }
 
 #backlight {
-    background-color: #90b1b1;
+    background-color: transparent;
+    color: #f1c40f;
 }
 
 #network {
+    border-radius: 10px;
     background-color: #2980b9;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    border-radius: 10px;
+    background-color: #c0392b;
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
+    border-radius: 10px;
+    background-color: #f39c12;
     color: #000000;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
+    border-radius: 10px;
+    background-color: #202124;
     color: #2a5c45;
 }
 
 #wireplumber {
+    border-radius: 10px;
     background-color: #fff0f5;
     color: #000000;
 }
 
 #wireplumber.muted {
+    border-radius: 10px;
     background-color: #f53c3c;
 }
 
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
+#custom-arch {
+    font-size: 20px;
+    background-color: transparent;
+    color: #1793d1;
 }
 
-#custom-media.custom-spotify {
-    background-color: #66cc99;
+@keyframes blink-update {
+	to {
+		background-color: transparent;
+    color: #1793d1;
+	}
 }
 
-#custom-media.custom-vlc {
-    background-color: #ffa000;
+#custom-pacman {
+  background-color: transparent;
+  color: #edfefe;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#custom-pacman.pending-updates {
+	animation-name: blink-update;
+	animation-duration: 3s;
+}
+
+#custom-power {
+    font-size: 20px;
+    background-color: transparent;
+    color: #c0392b;
 }
 
 #temperature {
-    background-color: #f0932b;
+    border-radius: 10px;
+    background-color: #27ae60;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    border-radius: 10px;
+    background-color: #e74c3c;
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: transparent;
 }
 
 #tray > .passive {
@@ -248,12 +281,12 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background-color: #263238;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    background-color: #edfefe;
+    color: #333333;
 }
 
 #mpd {

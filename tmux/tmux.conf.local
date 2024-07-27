@@ -310,7 +310,13 @@ tmux_conf_theme_clock_style="12"
 #   - false (default)
 # on macOS, this requires installing reattach-to-user-namespace, see README.md
 # on Linux, this requires xsel or xclip
+
+# X11
 tmux_conf_copy_to_os_clipboard=true
+
+# Wayland
+bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "wl-copy && wl-paste -n | wl-copy -p"
+bind-key p run "wl-paste -n | tmux load-buffer - ; tmux paste-buffer"
 
 
 # -- user customizations -------------------------------------------------------

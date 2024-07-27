@@ -45,7 +45,7 @@ case $chosen in
         fi
         ;;
     $lock)
-        lockscreen
+        loginctl lock-session
         ;;
     $hibernate)
 		ans=$(confirm_exit &)
@@ -58,7 +58,7 @@ case $chosen in
     $logout)
 		ans=$(confirm_exit &)
 		if [[ $ans == "Yes" ]]; then
-			bspc quit
+			hyprctl exit
         else
 			exit 0
         fi
