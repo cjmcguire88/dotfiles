@@ -2,11 +2,11 @@
 /* Notification center */
 
 .deadd-noti-center {
-    font-family: Noto Sans;
+    font-family: Fira Sans;
 }
 
 .blurredBG, #main_window, .blurredBG.low, .blurredBG.normal {
-    background: rgba(32, 33, 36, 0.8);
+    background: #202124;
 }
 
 .noti-center.time {
@@ -29,15 +29,15 @@
 }
 
 .blurredBG.notification {
-    background:  rgb(32, 33, 36);
+    background: #333333;
 }
 
 .blurredBG.notification.critical {
-    background: rgb(32, 33, 36);
+    background: #333333;
 }
 
 .notificationInCenter.critical {
-    background: rgb(32, 33, 36);
+    background: #333333;
 }
 
 /* Labels */
@@ -71,11 +71,11 @@ button {
 
 button:hover {
     border-radius: 3px;
-    background: rgba(0, 20, 20, 0.2);
+    background: #89b4fa;
     border-width: 0px;
     border-top: transparent;
-    border-color: #f00;
-    color: #fee;
+    border-color: #333333;
+    color: #edfefe;
 }
 
 
