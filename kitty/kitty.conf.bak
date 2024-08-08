@@ -34,9 +34,9 @@ color6       #16a085
 color14      #94E2D5
 # White
 color7       #edfefe
-color15      #ffffff
+color15      #edfefe
 selection_foreground #000000
-selection_background #f9e2af
+selection_background #f39c12
 background_opacity 1.0
 background_image none
 background_image_linear no
@@ -45,11 +45,13 @@ cursor #edfefe
 cursor_text_color #202124
 cursor_shape beam
 cursor_blink_interval -1
-font_family      family="FiraCode Nerd Font"
+
+font_family      JetBrainsMono Nerd Font
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
 font_size 10.0
+#symbol_map MesloLGS NF
 
 scrollback_lines 20000
 scrollback_pager less --chop-long-lines --RAW-CONTROL-CHARS +INPUT_LINE_NUMBER
@@ -91,6 +93,4 @@ enabled_layouts tall:bias=50;full_size=1;mirrored=false
 mouse_map ctrl+shift+left release grabbed,ungrabbed mouse_click_url
 mouse_map left press ungrabbed mouse_selection normal
 mouse_map left doublepress ungrabbed mouse_selection line
-
-
 

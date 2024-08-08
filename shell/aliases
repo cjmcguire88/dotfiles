@@ -75,6 +75,7 @@ alias query="pacman -Q"
 alias files="pacman -Ql"      # either belonging to a specific package or the whole system
 alias pb="pacman -Gc"
 alias pkglist="sudo pacman -Qqe > /home/jason/.build/git/config-files/pkglist.txt"
+alias rm-orphan="pacman -Qtdq | pacman -Rns -"
 
 # iwd
 alias wifiscan="iwctl station wlan0 scan && iwctl station wlan0 get-networks"
