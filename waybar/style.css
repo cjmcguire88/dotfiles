@@ -5,17 +5,18 @@
    ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
     ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ */
 
+
 /* ALL */
-* { 
+* {
     font-family: FontAwesome, Fira Sans;
     font-size: 13px;
 }
+
 /* Title Bar */
 window#waybar {
     background: linear-gradient(to bottom, #11111b 30%, #202124);
     color: #edfefe;
-    transition-property: background-color;
-    transition-duration: .5s;
+    transition: background-color 0.5s;
 }
 
 window#waybar.hidden {
@@ -23,23 +24,12 @@ window#waybar.hidden {
 }
 
 #window {
-  margin: 0 4px;
+    margin: 0 4px;
 }
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
 
 /* Button (attribute) */
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
 }
@@ -52,8 +42,8 @@ button:hover {
 #workspaces {
     font-size: 18px;
     border-style: inset;
-    border-color: #11111b;
     border-width: 2px 1px;
+    border-color: #11111b;
     border-radius: 20px;
     margin: 0 4px;
     padding: 0 5px;
@@ -64,7 +54,7 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #000;
     color: #edfefe;
 }
 
@@ -83,176 +73,107 @@ button:hover {
     background-color: #f38ba8;
 }
 
-#workspaces button:nth-child(1) label {
-    color: #89b4fa;
-    text-shadow: 2px 2px 2px #000000;
+#workspaces button:nth-child(1) label { color: #89b4fa; }
+#workspaces button:nth-child(2) label { color: #a6e3a1; }
+#workspaces button:nth-child(3) label { color: #f38ba8; }
+#workspaces button:nth-child(4) label { color: #f9e2af; }
+#workspaces button:nth-child(5) label { color: #f5c2e7; }
+#workspaces button:nth-child(6) label { color: #fab387; }
+#workspaces button:nth-child(7) label { color: #89dceb; }
+#workspaces button:nth-child(8) label { color: #eba0ac; }
+#workspaces button:nth-child(9) label { color: #74c7ec; }
+
+#workspaces button label {
+    text-shadow: 2px 2px 3px #000;
 }
 
-#workspaces button:nth-child(2) label {
-    color: #a6e3a1;
-    text-shadow: 2px 2px 2px #000000;
-}
-
-#workspaces button:nth-child(3) label {
-    color: #f38ba8;
-    text-shadow: 2px 2px 2px #000000;
-}
-
-#workspaces button:nth-child(4) label {
-    color: #f9e2af;
-    text-shadow: 2px 2px 2px #000000;
-}
-
-#workspaces button:nth-child(5) label {
-    color: #f5c2e7;
-    text-shadow: 2px 2px 2px #000000;
-}
-
-#workspaces button:nth-child(6) label {
-    color: #fab387;
-    text-shadow: 2px 2px 2px #000000;
-}
-
-#workspaces button:nth-child(7) label {
-    color: #89dceb;
-    text-shadow: 2px 2px 2px #000000;
-}
-
-#workspaces button:nth-child(8) label {
-    color: #eba0ac;
-    text-shadow: 2px 2px 2px #000000;
-}
-
-#workspaces button:nth-child(9) label {
-    color: #74c7ec;
-    text-shadow: 2px 2px 2px #000000;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
+/* Modules Margins */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
 }
 
 /* Mode */
-#mode {
+#submap {
     background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    box-shadow: inset 0 -3px #fff;
 }
 
 /* Defaults for misc */
-#clock,
-#battery,
-#cpu,
-#memory,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-arch,
-#custom-power,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#mpd {
+#clock, #battery, #cpu, #memory, #temperature, #backlight, 
+#network, #pulseaudio, #wireplumber, #custom-arch, #custom-power, 
+#tray, #mode, #idle_inhibitor, #scratchpad, #power-profiles-daemon, #mpd {
     padding: 0 10px;
-    color: #ffffff;
+    color: #fff;
 }
 
 /* Clock */
 #clock {
     background: radial-gradient(circle, #313244 60%, #1e1e2e);
-    text-shadow: 2px 2px 4px #000000;
-    color: #edfefe;
+    text-shadow: 2px 2px 4px #000;
 }
 
 #clock:hover {
     background: radial-gradient(circle, #45475a 60%, #1e1e2e);
-    text-shadow: 0px 2px 6px #000000;
-    color: #edfefe;
+    text-shadow: 0 2px 6px #000;
 }
 
 /* Battery */
 #battery {
     background-color: transparent;
-    color: #edfefe;
 }
 
 #battery:hover {
-    background-color: transparent;
-    color: #edfefe;
     text-shadow: 0 0 4px #edfefe;
 }
 
 @keyframes blink1 {
     to {
-        background-color: transparent;
         color: #a6e3a1;
-        text-shadow: 0 0 4px #27ae60;
+        text-shadow: 0 0 6px #27ae60;
+    }
+}
+
+@keyframes blink2 {
+    to {
+        color: #e74c3c;
     }
 }
 
 #battery.charging, #battery.plugged {
     color: #30d475;
-    text-shadow: 0 0 4px #000000;
-    background-color: transparent;
-    animation-name: blink1;
-    animation-duration: 1.0s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    text-shadow: 0 0 4px #000;
+    animation: blink1 1.0s steps(12) infinite alternate;
 }
 
-@keyframes blink2 {
-    to {
-        background-color: transparent;
-        color: #e74c3c;
-    }
-}
-
-/* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: transparent;
-    color: #edfefe;
-    animation-name: blink2;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation: blink2 0.5s steps(12) infinite alternate;
 }
 
 label:focus {
-    background-color: #000000;
+    background-color: #000;
 }
 
-/* CPU */
-#cpu {
+/* CPU & Memory */
+#cpu, #memory, #network, #pulseaudio, #temperature {
     border-radius: 10px;
-    background: radial-gradient(circle, #333333 70%, #1e1e2e);
+    background: radial-gradient(circle, #333 70%, #1e1e2e);
     box-shadow: inset 0 0 8px #11111b, 0 1px 3px rgba(0, 0, 0, 0.2);
-    text-shadow: 2px 2px 4px #000000;
-    color: #94e2d5;
+    text-shadow: 2px 2px 4px #000;
 }
+
+#cpu { color: #94e2d5; }
+#memory { color: #f5c2e7; }
+#network { color: #89b4fa; }
+#pulseaudio { color: #f9e2af; }
+#temperature { color: #a6e3a1; }
 
 #cpu:hover {
-    background-color: #16a085;
     background: radial-gradient(circle, #94e2d5, #16a085);
     color: #202124;
-}
-
-#memory {
-    border-radius: 10px;
-    background: radial-gradient(circle, #333333 70%, #1e1e2e);
-    box-shadow: inset 0 0 8px #11111b, 0 1px 3px rgba(0, 0, 0, 0.2);
-    text-shadow: 2px 2px 4px #000000;
-    color: #f5c2e7;
 }
 
 #memory:hover {
@@ -260,33 +181,9 @@ label:focus {
     color: #202124;
 }
 
-/* Network */
-#network {
-    border-radius: 10px;
-    background: radial-gradient(circle, #333333 70%, #1e1e2e);
-    box-shadow: inset 0 0 8px #11111b, 0 1px 3px rgba(0, 0, 0, 0.2);
-    text-shadow: 2px 2px 4px #000000;
-    color: #89b4fa;
-}
-
 #network:hover {
     background: radial-gradient(circle, #89b4fa, #2980b9);
     color: #202124;
-}
-
-#network.disconnected {
-    border-radius: 10px;
-    background-color: #333333;
-    color: #f38ba8
-}
-
-/* Audio */
-#pulseaudio {
-    border-radius: 10px;
-    background: radial-gradient(circle, #333333 70%, #1e1e2e);
-    box-shadow: inset 0 0 8px #11111b, 0 1px 3px rgba(0, 0, 0, 0.2);
-    text-shadow: 2px 2px 4px #000000;
-    color: #f9e2af;
 }
 
 #pulseaudio:hover {
@@ -294,10 +191,24 @@ label:focus {
     color: #202124;
 }
 
+#temperature:hover {
+    background: radial-gradient(circle, #a6e3a1, #27ae60);
+    color: #202124;
+}
+
+#network.disconnected {
+    color: #f38ba8;
+}
+
+#network.disconnected:hover {
+    background: radial-gradient(circle, #f38ba8, #e74c3c);
+    color: #202124;
+}
+
+/* Audio */
 #pulseaudio.muted {
-    border-radius: 10px;
-    background-color: #333333;
-    color: #000000;
+    background-color: #333;
+    color: #000;
 }
 
 /* Arch Stuff */
@@ -305,35 +216,35 @@ label:focus {
     font-size: 20px;
     background-color: transparent;
     color: #1793d1;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #000;
 }
 
 #custom-arch:hover {
-    font-size: 20px;
-    background-color: transparent;
     color: #89b4fa;
-    text-shadow: 0px 2px 4px #1793d1;
+    text-shadow: 0 2px 4px #1793d1;
 }
 
 @keyframes blink-update {
-	to {
-		background-color: transparent;
-    color: #1793d1;
-	}
+    to {
+        color: #89b4fa;
+        text-shadow: 0 0 4px #1793d1;
+    }
 }
 
 #custom-pacman {
-  background-color: transparent;
-  color: #a6e3a1;
-  }
+    margin: 0 10px 0 0;
+    background-color: transparent;
+    color: #27ae60;
+}
+
+#custom-pacman:hover {
+    color: #a6e3a1;
+    text-shadow: 0 2px 4px #27ae60;
+}
 
 #custom-pacman.pending-updates {
-  color: #edfefe;
-	animation-timing-function: steps(6);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-name: blink-update;
-	animation-duration: 1.5s;
+    color: #333;
+    animation: blink-update 1.0s steps(6) infinite alternate;
 }
 
 #custom-power {
@@ -344,32 +255,17 @@ label:focus {
 
 #custom-power:hover {
     color: #f38ba8;
-    text-shadow: 0px 2px 4px #c0392b;
+    text-shadow: 0 2px 4px #c0392b;
 }
 
 /* CPU Temperature */
-#temperature {
-    border-radius: 10px;
-    background: radial-gradient(circle, #333333 70%, #1e1e2e);
-    box-shadow: inset 0 0 8px #11111b, 0 1px 3px rgba(0, 0, 0, 0.2);
-    text-shadow: 2px 2px 4px #000000;
-    color: #a6e3a1;
-}
-
-#temperature:hover {
-    background: radial-gradient(circle, #a6e3a1, #27ae60);
-    color: #202124;
-}
-
 #temperature.critical {
-    border-radius: 10px;
-    background-color: #333333;
+    background-color: #333;
     color: #e74c3c;
 }
 
 #temperature.critical:hover {
     background: radial-gradient(circle, #f38ba8, #e74c3c);
-    color: #202124;
 }
 
 /* Systray */
@@ -389,11 +285,11 @@ label:focus {
 /* Idle Inhibitor */
 #idle_inhibitor {
     background-color: transparent;
-    color: #666666
+    color: #666;
 }
 
 #idle_inhibitor.activated {
-    background-color: transparent;
     color: #a6e3a1;
-    text-shadow: 0px 2px 4px #27ae60;
+    text-shadow: 0 2px 4px #27ae60;
 }
+
