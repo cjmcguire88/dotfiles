@@ -1,7 +1,8 @@
 # GIMP user context
 
-(tool "gimp-rect-select-tool")
+(tool "gimp-move-tool")
 (paint-info "gimp-paintbrush")
+(foreground (color-rgb 0.011764707043766975 0.63137257099151611 0.92156869173049927))
 (brush "2. Hardness 050")
 (dynamics "Dynamics Off")
 (mybrush "100% Opaque")

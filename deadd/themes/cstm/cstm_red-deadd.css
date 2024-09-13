@@ -1,0 +1,133 @@
+
+/* Notification center */
+
+.deadd-noti-center {
+    font-family: Fira Sans;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.blurredBG, #main_window, .blurredBG.low, .blurredBG.normal {
+    background: linear-gradient(to bottom, #11111b 30%, #202124);
+}
+
+.noti-center.time {
+    font-size: 48px;
+    color: #f38ba8;
+    background: transparent;
+    text-shadow: 2px 2px 5px #e74c3c;
+}
+
+.noti-center.date {
+    font-size: 24px;
+    color: #a6e3a1;
+}
+
+.notificationInCenter {
+    margin: 0 5px;
+    background: linear-gradient(130deg, #202124, #333333, #202124);
+    border-radius: 5px;
+    box-shadow: inset 0 0 8px #11111b, 0 0 4px #000000;
+}
+
+.notificationInCenter.critical {
+    margin: 5px;
+    background: #202124;
+    border-radius: 5px;
+    box-shadow: inset 0 0 8px #11111b, 0 0 4px #000000;
+}
+
+
+/* Notifications */
+
+.title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.appname {
+    font-size: 12px;
+}
+
+.time {
+    font-size: 12px;
+}
+
+.blurredBG.notification {
+    background: linear-gradient(130deg, #202124, #333333, #202124);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.blurredBG.notification.critical {
+    background: linear-gradient(130deg, #202124, #333333, #202124);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Labels */
+
+label {
+    color: #edfefe;
+}
+
+label.notification {
+    color: #edfefe;
+}
+
+label.critical {
+    color: #f39c12;
+}
+.notificationInCenter label.critical {
+    color: #f39c12;
+}
+
+
+/* Buttons */
+
+button {
+    background: radial-gradient(#333333 60%, #202124);
+    border-radius: 3px;
+    border-width: 0px;
+    text-shadow: 2px 2px 4px #000000;
+    box-shadow: inset 0 0 4px #11111b, 0 0 2px #000000;
+}
+
+button:hover {
+    background: radial-gradient(#f38ba8, #e74c3c);
+    color: #edfefe;
+}
+
+button.deadd-noti-center.in-center.button-close:hover {
+    background: radial-gradient(#f38ba8, #e74c3c);
+}
+
+/* Custom Buttons */
+.userbutton {
+    border-radius: 10px;
+    background: radial-gradient(#f38ba8, #e74c3c);
+    box-shadow: inset 0 2px 8px #11111b, 2px 2px 4px #000000;
+}
+
+.userbuttonlabel {
+    color: #edfefe;
+    font-size: 12px;
+    text-shadow: 0 2px 4px #000000;
+}
+
+.userbutton:hover {
+    border-radius: 10px;
+    background: radial-gradient(#f38ba8 60%, #e74c3c);
+    box-shadow: inset 1px 1px 4px #11111b, 0 0 2px #e74c3c;
+}
+
+.userbuttonlabel:hover {
+    color: #edfefe;
+}
+
+/* Images */
+
+image.deadd-noti-center.notification.image {
+    margin-left: 20px;
+}

@@ -1,0 +1,65 @@
+* {
+    background-color:  transparent ;
+    border-color:  #89b4fa;
+    text-color: #cdd6f4;
+    separator-color: @border-color;
+    font: "Fira Sans 14";
+    show-icons: true;
+}
+
+window {
+    border: 0px;
+    padding: 5px;
+    height: 850px;
+    width: 350px;
+    background-image: linear-gradient(to bottom, #1e1e2e, #313244, #1e1e2e);
+}
+
+mainbox {
+    padding: 5px;
+}
+
+inputbar {
+    border: 1px;
+    children: [prompt,entry];
+}
+
+prompt {
+    background-color: @border-color;
+    padding: 5px 5px 0px;
+    text-color: #11111b;
+}
+
+// Not used
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 5px;
+}
+
+listview {
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    columns: 1;
+}
+
+element {
+    padding: 5px;
+}
+
+element-icon {
+    size: 35;
+}
+
+element selected {
+    text-color: #11111b;
+    background-image: linear-gradient(#89b4fa, #89dceb, #89b4fa);
+}
+
+element active {
+    background-color: #89b4fa;
+    text-color: #11111b;
+}

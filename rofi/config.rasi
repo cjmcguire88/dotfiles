@@ -9,13 +9,13 @@
 
 configuration {
 	modi: "drun";
-/*	font: "Noto Sans 12";*/
+	font: "Fira Sans 12";
 	location: 1;
 	yoffset: 22;
 	xoffset: 0;
 /*	fixed-num-lines: true;*/
 	show-icons: true;
-	terminal: "st";
+	terminal: "kitty";
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
 /*	run-command: "{cmd}";*/

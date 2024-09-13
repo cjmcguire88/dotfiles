@@ -8,7 +8,7 @@
 # 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
 
 # Additions to path rvm is for metasploit
-export PATH=$HOME/.local/bin:$HOME/.rvm/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.rvm/bin:$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH
 
 # User configuration
 export BROWSER='google-chrome-stable'
@@ -37,6 +37,9 @@ export RUSTFLAGS="-C force-frame-pointers=yes -C target-cpu=znver2 -C opt-level=
 
 # makepkg flags
 export PACKAGER="Jason McGuire <cjmcguire88@gmail.com>"
+
+# iPython directory
+export IPYTHON_CONFIG_DIR="$XDG_CONFIG_HOME/ipython"
 
 # fzf
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'

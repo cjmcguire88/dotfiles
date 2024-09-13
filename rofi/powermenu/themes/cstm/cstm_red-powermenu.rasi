@@ -1,0 +1,138 @@
+/*
+ *
+ * Author  : Aditya Shakya
+ * Mail    : adi1090x@gmail.com
+ * Github  : @adi1090x
+ * Twitter : @adi1090x
+ *
+ */
+
+configuration {
+    show-icons:                     true;
+	  font:                      		  "FiraCode Nerd Font 14";
+    disable-history:                false;
+  	sidebar-mode: 					        false;
+}
+
+@import "colors.rasi"
+
+* {
+    background-color:               #202124;
+    text-color:                     @foreground;
+}
+
+window {
+    transparency:                   "real";
+    border-radius:                  20px;
+    location:                       center;
+    width:                          800px;
+    x-offset:                       0px;
+    y-offset:                       0px;
+}
+
+prompt {
+    enabled: 						            true;
+    padding:                        10px;
+	  background-color: 				      #333333;
+	  text-color: 					          #c0392b;
+    border:                  		    2px 2px 4px 2px;
+    border-radius:                  0px;
+    border-color:                  	#c0392b;
+}
+
+textbox-prompt-colon {
+  	expand: 						            false;
+  	str: 							              " System ";
+    background-image: 				      linear-gradient(#c0392b, #f38ba8, #c0392b);
+  	text-color: 					          #202124;
+    padding:                        12px 10px 0px 10px;
+}
+
+inputbar {
+  	children: 						          [ textbox-prompt-colon, prompt ];
+    spacing:                        0px;
+    background-color:               #202124;
+    text-color:                     @foreground;
+    expand:                         false;
+    border:                  		    0px;
+    border-radius:                  0px;
+    border-color:                  	#c0392b;
+    margin:                         0px 0px 0px 0px;
+    padding:                        0px;
+    position:                       center;
+}
+
+listview {
+    columns:						5;
+    lines:							1;
+    spacing:                        15px;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               #202124;
+    children:                       [ inputbar, listview ];
+    spacing:                        15px;
+    margin:                         40px;
+}
+
+element {
+    background-image:               linear-gradient(#202124, #333333, #202124);
+    text-color:                     @foreground;
+    orientation:                    vertical;
+    border-radius:                  3px;
+}
+
+element-text {
+    background-image:               linear-gradient(#202124, #333333, #202124);
+    text-color:       				      inherit;
+	  font:							              "feather 32";
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         20px 0px 30px 0px;
+}
+
+element-text selected {
+    background-image: 				      linear-gradient(#c0392b, #f38ba8, #c0392b);
+    text-color:       				      inherit;
+	  font:							              "feather 32";
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         20px 0px 30px 0px;
+}
+
+
+element normal.urgent,
+element alternate.urgent {
+    background-color:               @off;
+    text-color:                     #202124;
+    border-radius:                  0px;
+}
+
+element normal.active,
+element alternate.active {
+    background-color:               @on;
+    text-color:                     #202124;
+}
+
+element selected {
+    background-image: 				      linear-gradient(#c0392b, #f38ba8, #c0392b);
+    text-color:                     #202124;
+    border:                  		    0px;
+    border-radius:                  0px;
+    border-color:                  	@border;
+}
+
+element selected.urgent {
+    background-color:               @on;
+    text-color:                     #202124;
+}
+
+element selected.active {
+    background-color:               @off;
+    color:                          #202124;
+}

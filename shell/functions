@@ -55,6 +55,10 @@ zls() {
     z $1 && exa --icons --group-directories-first
 }
 
+mem() {
+    ps aux | awk '{print $6/1024 " MB\t\t" $11}' | sort -n
+}
+
 #   _  _     _                  _   _
 #  | \| |___| |___ __ _____ _ _| |_(_)_ _  __ _
 #  | .` / -_)  _\ V  V / _ \ '_| / / | ' \/ _` |
@@ -104,6 +108,29 @@ arch_news() {
     w3m https://www.archlinux.org/ | sed -n "/Latest News/,/Older News/p" | head -n -1
 }
 
+tv() {
+    case $1 in
+      off)
+        lgtv system turnOff
+        ;;
+      on)
+        lgtv wakeonlan
+        ;;
+      apple)
+        lgtv tv switchInput HDMI_1
+        ;;
+      xbox)
+        lgtv tv switchInput HDMI_3
+        ;;
+      message)
+        lgtv system.notifications createToast "$2"
+        ;;
+      *)
+        lgtv wakeonlan
+        ;;
+    esac
+}
+
 # fzf: use fd
 _fzf_compgen_path() {
     fd --hidden --exclude .git . "$1"
@@ -111,4 +138,35 @@ _fzf_compgen_path() {
 
 _fzf_compgen_dir() {
     fd --type=d --hidden --exclude .git . "$1"
+}
+
+stripes() {
+    while :; do printf "\e[48;2;$((RANDOM % 256));$((RANDOM % 256));$((RANDOM % 256))m%*s\e[0m" $(tput cols) ""; sleep 0.1; done
+}
+
+dnc() {
+    while getopts ":r" opt; do
+      case $opt in
+        r)
+          notify-send.py a --hint boolean:deadd-notification-center:true \
+                 string:type:reloadStyle && \
+                 notify-send.py "Reloaded Red" \
+                        --hint string:image-path:file://home/jason/Pictures/lulz.jpg
+          ;;
+        b)
+          notify-send.py a --hint boolean:deadd-notification-center:true \
+                 string:type:reloadStyle && \
+                 notify-send.py "Reloaded Blue" \
+                        --hint string:image-path:file://home/jason/Pictures/lulz.jpg
+          ;;
+        :)
+          notify-send.py "All your base belong to Jason" \
+               --hint string:image-path:file://home/jason/Pictures/lulz.jpg
+          ;;
+        *)
+          notify-send.py "All your base belong to Jason" \
+               --hint string:image-path:file://home/jason/Pictures/lulz.jpg
+          ;;
+      esac
+    done
 }

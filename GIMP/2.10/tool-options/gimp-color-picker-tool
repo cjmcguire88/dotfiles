@@ -1,4 +1,8 @@
 # GIMP gimp-color-picker-tool options
 
+(foreground (color-rgb 0.011764707043766975 0.63137257099151611 0.92156869173049927))
+(average-radius 5)
+(sample-average yes)
+(pick-target palette)
 
 # end of gimp-color-picker-tool options

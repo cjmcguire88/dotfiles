@@ -1,0 +1,289 @@
+/* ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ 
+   ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+   ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝
+   ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+   ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
+    ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ */
+@import url("themes/mocha/mocha.css");
+
+/* Global Settings */
+* {
+    font-family: "FontAwesome", "Fira Sans";
+    font-size: 13px;
+}
+
+/* Waybar */
+window#waybar {
+    background: linear-gradient(to bottom, @mantle 30%, @base);
+    color: @text;
+    transition: background-color 0.5s ease;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#window {
+    margin: 0 4px;
+}
+
+/* Buttons */
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: @surface1;
+}
+
+/* Workspaces */
+#workspaces {
+    font-size: 18px;
+    border: inset 1px @crust;
+    border-radius: 20px;
+    margin: 0 4px;
+    padding: 0 5px;
+    background: @surface0;
+    box-shadow: inset 2px 2px 4px 2px @crust;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: none;
+    color: @text;
+    text-shadow: 2px 2px 4px black;
+}
+
+#workspaces button:hover {
+    background-color: @surface2;
+    border-radius: 20px;
+}
+
+#workspaces button.active {
+    background-color: @mantle;
+    border-radius: 20px;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+}
+
+/* Workspaces Labels */
+#workspaces button:nth-child(1) label { color: @blue; }
+#workspaces button:nth-child(2) label { color: @green; }
+#workspaces button:nth-child(3) label { color: @red; }
+#workspaces button:nth-child(4) label { color: @yellow; }
+#workspaces button:nth-child(5) label { color: @pink; }
+#workspaces button:nth-child(6) label { color: @peach; }
+#workspaces button:nth-child(7) label { color: @sky; }
+#workspaces button:nth-child(8) label { color: @maroon; }
+#workspaces button:nth-child(9) label { color: @sapphire; }
+
+#workspaces button label {
+    text-shadow: 2px 2px 3px black;
+}
+
+/* Modules Margins */
+.modules-left > widget:first-child > #workspaces,
+.modules-right > widget:last-child > #workspaces {
+    margin: 0;
+}
+
+/* Common Module Styles */
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#custom-arch,
+#custom-power,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 10px;
+    color: white;
+}
+
+/* Clock */
+#clock {
+    background: radial-gradient(circle, @surface0 60%, @base);
+    text-shadow: 2px 2px 4px black;
+    transition: background 0.5s ease;
+}
+
+#clock:hover {
+    background: radial-gradient(circle, @surface1 60%, @base);
+    text-shadow: 0 2px 6px black;
+}
+
+/* Battery */
+#battery {
+    background: none;
+    transition: text-shadow 0.5s ease;
+}
+
+#battery:hover {
+    text-shadow: 0 0 6px @text;
+}
+
+@keyframes blink1 {
+    to {
+        color: @green;
+        text-shadow: 0 0 6px @green;
+    }
+}
+
+@keyframes blink2 {
+    to {
+        color: @red;
+    }
+}
+
+#battery.charging, #battery.plugged {
+    color: @green;
+    text-shadow: 0 0 4px black;
+    animation: blink1 1s infinite alternate;
+}
+
+#battery.critical:not(.charging) {
+    animation: blink2 0.5s steps(12) infinite alternate;
+}
+
+label:focus {
+    background-color: black;
+}
+
+#cpu, #memory, #network, #pulseaudio, #temperature {
+    border-radius: 10px;
+    background: radial-gradient(@surface0, @base);
+    box-shadow: inset 2px 2px 8px @crust, 0 1px 6px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px black;
+    transition: background 0.1s ease, color 0.1s ease, font-size 0.1s ease;
+}
+
+#cpu { color: @teal; }
+#memory { color: @mauve; }
+#network { color: @blue; }
+#pulseaudio { color: @yellow; }
+#temperature { color: @green; }
+
+#cpu:hover, #memory:hover, #network:hover, #pulseaudio:hover, #temperature:hover {
+    font-size: 15px;
+    color: @crust;
+}
+
+#cpu:hover { background: radial-gradient(@sky, @teal); }
+#memory:hover { background: radial-gradient(@lavender, @mauve); }
+#network:hover { background: radial-gradient(@sapphire, @blue); }
+#pulseaudio:hover { background: radial-gradient(@yellow, @peach); }
+#temperature:hover { background: radial-gradient(@teal, @green); }
+
+#network.disconnected {
+    color: @red;
+}
+
+#network.disconnected:hover {
+    background: radial-gradient(@maroon, @red);
+    font-size: 15px;
+    color: @crust;
+}
+
+/* Audio */
+#pulseaudio.muted {
+    background: @surface0;
+    color: black;
+}
+
+/* Arch Linux Customizations */
+#custom-arch {
+    font-size: 20px;
+    background: none;
+    color: @blue;
+    text-shadow: 2px 2px 4px black;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+#custom-arch:hover {
+    color: @sapphire;
+    text-shadow: 0 2px 6px @blue;
+    font-size: 21px;
+}
+
+@keyframes blink-update {
+    to {
+        color: @blue;
+        text-shadow: 0 0 4px @blue;
+    }
+}
+
+#custom-pacman {
+    margin: 0 10px 0 0;
+    background: none;
+    color: @green;
+}
+
+#custom-pacman:hover {
+    color: @green;
+    text-shadow: 0 2px 4px @green;
+}
+
+#custom-pacman.pending-updates {
+    color: @surface0;
+    animation: blink-update 1s infinite alternate;
+}
+
+#custom-power {
+    font-size: 20px;
+    background: none;
+    color: @red;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+#custom-power:hover {
+    color: @maroon;
+    text-shadow: 0 2px 4px @red;
+}
+
+/* CPU Temperature Critical */
+#temperature.critical {
+    background: @surface0;
+    color: @red;
+}
+
+#temperature.critical:hover {
+    background: radial-gradient(@maroon, @red);
+    color: @crust;
+}
+
+/* Systray */
+#tray {
+    background: none;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @red;
+}
+
+/* Idle Inhibitor */
+#idle_inhibitor {
+    background: none;
+    color: @overlay0;
+}
+
+#idle_inhibitor.activated {
+    color: @green;
+    text-shadow: 0 2px 4px @green;
+}

@@ -8,8 +8,6 @@
 # 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
 
 # cmd replacement
-alias cpp="rsync -HAX"
-alias cpr='rsync -rah --info=progress2'
 alias cat="bat --style=changes"
 alias l="exa --icons --group-directories-first "
 alias ll="exa -a --icons --group-directories-first"
@@ -75,7 +73,6 @@ alias query="pacman -Q"
 alias files="pacman -Ql"      # either belonging to a specific package or the whole system
 alias pb="pacman -Gc"
 alias pkglist="sudo pacman -Qqe > /home/jason/.build/git/config-files/pkglist.txt"
-alias rm-orphan="pacman -Qtdq | pacman -Rns -"
 
 # iwd
 alias wifiscan="iwctl station wlan0 scan && iwctl station wlan0 get-networks"
@@ -87,12 +84,13 @@ alias port_scan="nmap -p- --open -T4 "
 # etc
 alias matrix="unimatrix"
 alias nf="fastfetch"
-alias nfk="fastfetch --chafa ~/Pictures/fastfetch.jpg"
+alias nfk="fastfetch --logo ~/Pictures/wallpaper/blackarch/logo/logo-cyberpunks.png"
+alias nfa="fastfetch --logo ~/Pictures/icons/blue_theme-icon.png"
 alias cpu="sudo i7z"
 alias zshrc="nvim ~/.config/zsh/.zshrc"
 alias bashrc="nvim ~/.bashrc"
 alias sa="systemd-analyze"
 alias gitdir="/home/jason/.build/git"
 alias dmesg="sudo dmesg"
-alias mux="tmuxinator arch"
+alias mux="tmux new-session \; split-window -h \; split-window -v \; attach"
 alias code="tokei"

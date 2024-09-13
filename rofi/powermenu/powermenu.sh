@@ -15,52 +15,48 @@ logout="󰗽 "
 
 # Confirmation
 confirm_exit() {
-	echo -e "Yes\nNo" | rofi -dmenu\
-		-i\
-		-no-fixed-num-lines\
-		-p "Are You Sure?"\
-		-theme $HOME/.config/rofi/powermenu/dialog.rasi
+  echo -e "Yes\nNo" | rofi -dmenu -i -no-fixed-num-lines -p "Are You Sure?" \
+    -theme $HOME/.config/rofi/powermenu/dialog.rasi
 }
-
 
 # Variable passed to rofi
 options="$shutdown\n$reboot\n$lock\n$hibernate\n$logout"
 
-chosen="$(echo -e "$options" | $rofi_command -p " $kernel  祥 $uptime " -dmenu -selected-row 2)"
+chosen="$(echo -e "$options" | $rofi_command -p " $kernel   $uptime " -dmenu -selected-row 2)"
 case $chosen in
-    $shutdown)
-		ans=$(confirm_exit &)
-		if [[ $ans == "Yes" ]]; then
-			systemctl poweroff
-        else
-			exit 0
-        fi
-        ;;
-    $reboot)
-		ans=$(confirm_exit &)
-		if [[ $ans == "Yes" ]]; then
-			systemctl reboot
-        else
-			exit 0
-        fi
-        ;;
-    $lock)
-        loginctl lock-session
-        ;;
-    $hibernate)
-		ans=$(confirm_exit &)
-		if [[ $ans == "Yes" ]]; then
-            systemctl hibernate
-        else
-            exit 0
-        fi
-        ;;
-    $logout)
-		ans=$(confirm_exit &)
-		if [[ $ans == "Yes" ]]; then
-			hyprctl exit
-        else
-			exit 0
-        fi
-        ;;
+$shutdown)
+  ans=$(confirm_exit &)
+  if [[ $ans == "Yes" ]]; then
+    systemctl poweroff
+  else
+    exit 0
+  fi
+  ;;
+$reboot)
+  ans=$(confirm_exit &)
+  if [[ $ans == "Yes" ]]; then
+    systemctl reboot
+  else
+    exit 0
+  fi
+  ;;
+$lock)
+  loginctl lock-session
+  ;;
+$hibernate)
+  ans=$(confirm_exit &)
+  if [[ $ans == "Yes" ]]; then
+    systemctl hibernate
+  else
+    exit 0
+  fi
+  ;;
+$logout)
+  ans=$(confirm_exit &)
+  if [[ $ans == "Yes" ]]; then
+    hyprctl exit
+  else
+    exit 0
+  fi
+  ;;
 esac

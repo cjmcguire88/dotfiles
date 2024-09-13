@@ -6,17 +6,17 @@
     ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ */
 
 
-/* ALL */
+/* Global Settings */
 * {
-    font-family: FontAwesome, Fira Sans;
+    font-family: "FontAwesome", "Fira Sans";
     font-size: 13px;
 }
 
-/* Title Bar */
+/* Waybar */
 window#waybar {
     background: linear-gradient(to bottom, #11111b 30%, #202124);
     color: #edfefe;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s ease;
 }
 
 window#waybar.hidden {
@@ -27,11 +27,12 @@ window#waybar.hidden {
     margin: 0 4px;
 }
 
-/* Button (attribute) */
+/* Buttons */
 button {
     box-shadow: inset 0 -3px transparent;
     border: none;
     border-radius: 0;
+    transition: background 0.3s ease;
 }
 
 button:hover {
@@ -41,38 +42,36 @@ button:hover {
 /* Workspaces */
 #workspaces {
     font-size: 18px;
-    border-style: inset;
-    border-width: 2px 1px;
-    border-color: #11111b;
+    border: inset 1px #11111b;
     border-radius: 20px;
-    margin: 0 4px;
+    margin: 2px 4px;
     padding: 0 5px;
-    background: #313244;
-    box-shadow: inset 0 0 2px 1px #181825;
+    background: #45475a;
+    box-shadow: inset 2px 2px 4px 2px #181825;
 }
 
 #workspaces button {
     padding: 0 5px;
-    background-color: transparent;
-    text-shadow: 2px 2px 4px #000;
+    background: none;
     color: #edfefe;
+    text-shadow: 2px 2px 4px #000;
 }
 
 #workspaces button:hover {
-    background: inherit;
-    border-radius: 20px;
     background-color: #585b70;
+    border-radius: 20px;
 }
 
 #workspaces button.active {
-    box-shadow: inset 0 0 6px #202124;
+    background-color: #181825;
+    border-radius: 20px;
 }
 
 #workspaces button.urgent {
-    border-radius: 20px;
     background-color: #f38ba8;
 }
 
+/* Workspaces Labels */
 #workspaces button:nth-child(1) label { color: #89b4fa; }
 #workspaces button:nth-child(2) label { color: #a6e3a1; }
 #workspaces button:nth-child(3) label { color: #f38ba8; }
@@ -84,28 +83,33 @@ button:hover {
 #workspaces button:nth-child(9) label { color: #74c7ec; }
 
 #workspaces button label {
+    font-size: 15px;
     text-shadow: 2px 2px 3px #000;
 }
 
 /* Modules Margins */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
+.modules-left > widget:first-child > #workspaces,
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+    margin: 0;
 }
 
-/* Mode */
-#submap {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #fff;
-}
-
-/* Defaults for misc */
-#clock, #battery, #cpu, #memory, #temperature, #backlight, 
-#network, #pulseaudio, #wireplumber, #custom-arch, #custom-power, 
-#tray, #mode, #idle_inhibitor, #scratchpad, #power-profiles-daemon, #mpd {
+/* Common Module Styles */
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#custom-arch,
+#custom-power,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    margin: 2px 0;
     padding: 0 10px;
     color: #fff;
 }
@@ -114,6 +118,7 @@ button:hover {
 #clock {
     background: radial-gradient(circle, #313244 60%, #1e1e2e);
     text-shadow: 2px 2px 4px #000;
+    transition: background 0.5s ease;
 }
 
 #clock:hover {
@@ -123,11 +128,12 @@ button:hover {
 
 /* Battery */
 #battery {
-    background-color: transparent;
+    background: none;
+    transition: text-shadow 0.5s ease;
 }
 
 #battery:hover {
-    text-shadow: 0 0 4px #edfefe;
+    text-shadow: 0 0 6px #edfefe;
 }
 
 @keyframes blink1 {
@@ -146,7 +152,7 @@ button:hover {
 #battery.charging, #battery.plugged {
     color: #30d475;
     text-shadow: 0 0 4px #000;
-    animation: blink1 1.0s steps(12) infinite alternate;
+    animation: blink1 1s infinite alternate;
 }
 
 #battery.critical:not(.charging) {
@@ -157,12 +163,12 @@ label:focus {
     background-color: #000;
 }
 
-/* CPU & Memory */
 #cpu, #memory, #network, #pulseaudio, #temperature {
-    border-radius: 10px;
-    background: radial-gradient(circle, #333 70%, #1e1e2e);
-    box-shadow: inset 0 0 8px #11111b, 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background: radial-gradient(#444, #333 60%, #1e1e2e);
+    box-shadow: inset 2px 2px 6px #050505, 0 1px 6px rgba(0, 0, 0, 0.3);
     text-shadow: 2px 2px 4px #000;
+    transition: background 0.1s ease, color 0.1s ease, font-size 0.1s ease;
 }
 
 #cpu { color: #94e2d5; }
@@ -171,57 +177,46 @@ label:focus {
 #pulseaudio { color: #f9e2af; }
 #temperature { color: #a6e3a1; }
 
-#cpu:hover {
-    background: radial-gradient(circle, #94e2d5, #16a085);
+#cpu:hover, #memory:hover, #network:hover, #pulseaudio:hover, #temperature:hover {
+    font-size: 15px;
     color: #202124;
 }
 
-#memory:hover {
-    background: radial-gradient(circle, #f5c2e7, #8e44ad);
-    color: #202124;
-}
-
-#network:hover {
-    background: radial-gradient(circle, #89b4fa, #2980b9);
-    color: #202124;
-}
-
-#pulseaudio:hover {
-    background: radial-gradient(circle, #f9e2af, #f39c12);
-    color: #202124;
-}
-
-#temperature:hover {
-    background: radial-gradient(circle, #a6e3a1, #27ae60);
-    color: #202124;
-}
+#cpu:hover { background: radial-gradient(#94e2d5, #16a085); }
+#memory:hover { background: radial-gradient(#f5c2e7, #8e44ad); }
+#network:hover { background: radial-gradient(#89b4fa, #2980b9); }
+#pulseaudio:hover { background: radial-gradient(#f9e2af, #f39c12); }
+#temperature:hover { background: radial-gradient(#a6e3a1, #27ae60); }
 
 #network.disconnected {
     color: #f38ba8;
 }
 
 #network.disconnected:hover {
-    background: radial-gradient(circle, #f38ba8, #e74c3c);
+    background: radial-gradient(#f38ba8, #e74c3c);
+    font-size: 15px;
     color: #202124;
 }
 
 /* Audio */
 #pulseaudio.muted {
-    background-color: #333;
+    background: #333;
     color: #000;
 }
 
-/* Arch Stuff */
+/* Arch Linux Customizations */
 #custom-arch {
     font-size: 20px;
-    background-color: transparent;
+    background: none;
     color: #1793d1;
     text-shadow: 2px 2px 4px #000;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
 }
 
 #custom-arch:hover {
     color: #89b4fa;
-    text-shadow: 0 2px 4px #1793d1;
+    text-shadow: 0 2px 6px #1793d1;
+    font-size: 21px;
 }
 
 @keyframes blink-update {
@@ -233,7 +228,7 @@ label:focus {
 
 #custom-pacman {
     margin: 0 10px 0 0;
-    background-color: transparent;
+    background: none;
     color: #27ae60;
 }
 
@@ -243,14 +238,15 @@ label:focus {
 }
 
 #custom-pacman.pending-updates {
-    color: #333;
-    animation: blink-update 1.0s steps(6) infinite alternate;
+    color: #333333;
+    animation: blink-update 1s infinite alternate;
 }
 
 #custom-power {
     font-size: 20px;
-    background-color: transparent;
+    background: none;
     color: #c0392b;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
 }
 
 #custom-power:hover {
@@ -258,19 +254,20 @@ label:focus {
     text-shadow: 0 2px 4px #c0392b;
 }
 
-/* CPU Temperature */
+/* CPU Temperature Critical */
 #temperature.critical {
-    background-color: #333;
+    background: #333;
     color: #e74c3c;
 }
 
 #temperature.critical:hover {
-    background: radial-gradient(circle, #f38ba8, #e74c3c);
+    background: radial-gradient(#f38ba8, #e74c3c);
+    color: #202124;
 }
 
 /* Systray */
 #tray {
-    background-color: transparent;
+    background: none;
 }
 
 #tray > .passive {
@@ -284,7 +281,7 @@ label:focus {
 
 /* Idle Inhibitor */
 #idle_inhibitor {
-    background-color: transparent;
+    background: none;
     color: #666;
 }
 

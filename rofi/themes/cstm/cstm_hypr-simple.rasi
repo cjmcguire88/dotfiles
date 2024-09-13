@@ -1,0 +1,65 @@
+* {
+    background-color:  transparent ;
+    border-color:  #1793d1;
+    text-color: #edfefe;
+    separator-color: @border-color;
+    font: "Fira Sans 14";
+    show-icons: true;
+}
+
+window {
+    border: 0px;
+    padding: 5px;
+    height: 850px;
+    width: 350px;
+    background-image: linear-gradient(to bottom, #202124, #333333, #202124);
+}
+
+mainbox {
+    padding: 5px;
+}
+
+inputbar {
+    border: 1px;
+    children: [prompt,entry];
+}
+
+prompt {
+    background-image: linear-gradient(130deg, #cba6f7, #b4befe, #89b4fa, #74c7ec, #89dceb, #94e2d5);
+    padding: 5px 5px 0px;
+    text-color: #202124;
+}
+
+// Not used
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 5px;
+}
+
+listview {
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    columns: 1;
+}
+
+element {
+    padding: 5px;
+}
+
+element-icon {
+    size: 35;
+}
+
+element selected {
+    background-image: linear-gradient(130deg, #cba6f7, #b4befe, #89b4fa, #74c7ec, #89dceb, #94e2d5);
+    text-color: #000000;
+}
+
+element active {
+    background-color: #1793d1;
+    text-color: #000000;
+}

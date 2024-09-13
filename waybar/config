@@ -4,6 +4,7 @@
   "position": "top",
   "height": 30,
   "spacing": 4,
+  "reload_style_on_change": true,
   "modules-left": [
     "custom/arch",
     "hyprland/workspaces",
@@ -19,12 +20,15 @@
     "cpu",
     "memory",
     "idle_inhibitor",
-    "hyprland/submap",
     "battery",
     "clock",
     "tray",
     "custom/power"
   ],
+  "hyprland/window": {
+    "icon": true,
+    "icon-size": 20
+  },
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
@@ -40,25 +44,19 @@
       "7": "󰎶",
       "8": "󰎹",
       "9": "󰎼",
-      "urgent": "",
+      "urgent": "󰀧",
       "focused": "",
       "default": ""
-    }
-  },
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "locked": "",
-      "unlocked": ""
+    },
+    "persistent-workspaces": {
+      "*": 3
     }
   },
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "",
-      "deactivated": ""
+      "activated": "󰷛",
+      "deactivated": "󰷛"
     }
   },
   "tray": {
@@ -68,25 +66,29 @@
     "timezone": "America/New_York",
     "format": "{:%I:%M %p}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}",
     "calendar": {
       "on-scroll": 1,
       "format": {
-        "months": "<span color='#1793d1'><b>{}</b></span>",
-        "days": "<span color='#edfefe'><b>{}</b></span>",
-        "weekdays": "<span color='#c0392b'><b>{}</b></span>",
-        "today": "<span color='#27ae60'><b><u>{}</u></b></span>"
+        "months": "<span color='#89b4fa'><b>{}</b></span>",
+        "days": "<span color='#cdd6f4'><b>{}</b></span>",
+        "weekdays": "<span color='#f38ba8'><b>{}</b></span>",
+        "today": "<span color='#a6e3a1'><b><u>{}</u></b></span>"
       }
-    }
+    },
+    "on-click": "kill -s USR1 $(pidof deadd-notification-center)"
   },
   "cpu": {
     "format": "{usage}% ",
-    "format-alt": "{avg_frequency} GHz ",
-    "tooltip": false
+    "format-alt": "{avg_frequency} GHz 󰾆",
+    "tooltip": false,
+    "on-click-middle": "set-theme cyan",
+    "on-click-right": "kitty btop"
   },
   "memory": {
-    "format": "{percentage}% 󰍛",
-    "format-alt": "Swap: {swapPercentage}% 󰍛"
+    "format": "{percentage}% ",
+    "format-alt": "Swap: {swapPercentage}% 󰿡",
+    "on-click-middle": "set-theme magenta",
+    "on-click-right": ""
   },
   "temperature": {
     "critical-threshold": 80,
@@ -96,20 +98,21 @@
       "",
       "",
       "󰈸"
-    ]
+    ],
+    "on-click-middle": "set-theme green"
   },
   "backlight": {
     "format": "{percent}% {icon}",
     "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "󱩎",
+      "󱩏",
+      "󱩐",
+      "󱩑",
+      "󱩒",
+      "󱩓",
+      "󱩔",
+      "󱩕",
+      "󱩖"
     ]
   },
   "battery": {
@@ -119,46 +122,49 @@
     },
     "format": "{capacity}% {icon}",
     "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% 󰂄",
+    "format-charging": "{capacity}% {icon}󰉁",
     "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
     "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
+      "󰂃",
+      "󰁻",
+      "󰁾",
+      "󰂀",
+      "󰁹"
     ]
   },
   "network": {
     "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr}/{cidr} 󰩠",
+    "format-ethernet": "{ipaddr}/{cidr} ",
     "tooltip-format": "{ifname} via {gwaddr} 󰩠",
-    "format-linked": "{ifname} (No IP) 󰩠",
-    "format-disconnected": "Disconnected ⚠",
-    "format-alt": "󰛶 {bandwidthUpBits} | 󰛴 {bandwidthDownBits}"
+    "format-linked": "{ifname} (No IP) 󰲊",
+    "format-disconnected": "Disconnected 󰌙",
+    "format-alt": "󰛶 {bandwidthUpBits} | 󰛴 {bandwidthDownBits}",
+    "on-click-middle": "set-theme blue",
+    "on-click-right": "iwgtk"
   },
   "pulseaudio": {
     "format": "{volume}% {icon}",
     "format-alt": "{format_source}",
-    "format-bluetooth": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
     "format-bluetooth-muted": "󰝟 {icon}",
     "format-muted": "󰝟 {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
+      "headphone": "󱡏 ",
+      "hands-free": "󰋎 ",
+      "headset": "󱀞 ",
+      "portable": " ",
+      "car": " ",
       "default": [
         "",
         "",
         ""
       ]
-    }
+    },
+    "on-click-middle": "set-theme yellow",
+    "on-click-right": "pavucontrol"
   },
   "user": {
     "format": " (↑{work_H} Hrs)",
@@ -181,7 +187,7 @@
     "return-type": "json",
     "format-icons": {
       "pending-updates": "",
-      "updated": ""
+      "updated": " "
     },
     "on-click": "kitty pacwrap",
     "exec-if": "which waybar-updates",
