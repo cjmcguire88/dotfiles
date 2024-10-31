@@ -1,16 +1,16 @@
 [Unit]
-Description=Deadd Notification Center
-PartOf=graphical-session.target
+Description=Polkit Authentication Agent for GNOME
 Requires=graphical-session.target
+PartOf=graphical-session.target
 After=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/deadd-notification-center
+ExecStart=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+Type=simple
 Restart=on-failure
-Environment=XDG_CONFIG_HOME=%h/.config
-Slice=session.slice
 StandardOutput=journal
 StandardError=journal
+Slice=session.slice
 
 [Install]
 WantedBy=graphical-session.target
