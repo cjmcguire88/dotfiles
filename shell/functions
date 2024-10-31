@@ -83,16 +83,6 @@ ytdl () {
     cat $1 | while read line; do youtube-dl --external-downloader aria2c --external-downloader-args '-c -j 3 -x 3 -s 3 -k 1M' --extract-audio --audio-format mp3 -o "~/Music/%(title)s.%(ext)s" ytsearch:"$line" ;done
 }
 
-# download audio only
-ytd() {
-    youtube-dl --external-downloader aria2c --external-downloader-args '-c -j 3 -x 3 -s 3 -k 1M' --extract-audio --audio-format mp3 -o "~/Music/%(title)s.%(ext)s" ytsearch:"$1"
-}
-
-# download video
-ytv() {
-    youtube-dl --external-downloader aria2c --external-downloader-args '-c -j 3 -x 3 -s 3 -k 1M' -o "~/Videos/%(title)s.%(ext)s" ytsearch:"$1"
-}
-
 # play first yt search result in mpv
 yt() {
   mpv ytdl://ytsearch:"$*"
@@ -111,22 +101,22 @@ arch_news() {
 tv() {
     case $1 in
       off)
-        lgtv system turnOff
+        lgtv system turnOff | jq
         ;;
       on)
-        lgtv wakeonlan
+        lgtv wakeonlan | jq
         ;;
       apple)
-        lgtv tv switchInput HDMI_1
+        lgtv tv switchInput HDMI_1 | jq
         ;;
       xbox)
-        lgtv tv switchInput HDMI_3
+        lgtv tv switchInput HDMI_3 | jq
         ;;
       message)
-        lgtv system.notifications createToast "$2"
+        lgtv system.notifications createToast "$2" | jq
         ;;
       *)
-        lgtv wakeonlan
+        lgtv wakeonlan | jq
         ;;
     esac
 }

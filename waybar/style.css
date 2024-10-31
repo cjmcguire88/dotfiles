@@ -229,12 +229,12 @@ label:focus {
 #custom-pacman {
     margin: 0 10px 0 0;
     background: none;
-    color: #27ae60;
+    color: #f39c12;
 }
 
 #custom-pacman:hover {
-    color: #a6e3a1;
-    text-shadow: 0 2px 4px #27ae60;
+    color: #f9e2af;
+    text-shadow: 0 2px 4px #f39c12;
 }
 
 #custom-pacman.pending-updates {

@@ -68,10 +68,12 @@ alias cache="paru -Scd"
 alias info="paru -Si "
 alias info_all="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias upd="paru -Syu"
+alias upd_pac="sudo pacman -Syu"
+alias upd_aur="paru -Syua"
 alias rem="paru -Rsu"
 alias query="pacman -Q"
 alias files="pacman -Ql"      # either belonging to a specific package or the whole system
-alias pb="pacman -Gc"
+alias get_pb="paru -Gc"
 alias pkglist="sudo pacman -Qqe > /home/jason/.build/git/config-files/pkglist.txt"
 
 # iwd
