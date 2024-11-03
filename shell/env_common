@@ -24,7 +24,7 @@ export XDG_STATE_HOME='/home/jason/.local/state'
 export EDITOR='nvim'
 export VISUAL='nvim'
 export MANPAGER='nvim +Man!'
-# export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
+export LESS='-R'
 
 # Compilation flags
 export CFLAGS="-march=znver2 -O3 -pipe -fno-plt -fexceptions -U_FORTIFY_SOURCE -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"
