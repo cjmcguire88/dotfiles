@@ -1,5 +1,5 @@
 [Unit]
-Description=Hyprland - Tiling compositor with the looks
+Description=Hyprland - Wayland compositor
 Documentation=man:Hyprland(1)
 BindsTo=graphical-session.target
 Before=graphical-session.target

@@ -5,6 +5,7 @@ Requires=graphical-session.target
 After=graphical-session.target
 
 [Service]
+Type=simple
 ExecStart=/usr/bin/udiskie --no-config
 Restart=on-failure
 RestartSec=5

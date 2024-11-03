@@ -1,12 +1,12 @@
 [Unit]
-Description=Hyprland Wallpaper Setter
-Requires=hyprland.service
+Description=iwgtk
+Documentation=man:iwgtk(1)
+Wants=iwd.service
 PartOf=graphical-session.target
 After=graphical-session.target
 
 [Service]
-Type=simple
-ExecStart=/usr/bin/hyprpaper
+ExecStart=iwgtk -i
 Restart=on-failure
 Slice=session.slice
 StandardOutput=journal
@@ -14,4 +14,3 @@ StandardError=journal
 
 [Install]
 WantedBy=graphical-session.target
-

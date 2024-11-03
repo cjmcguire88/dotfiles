@@ -6,9 +6,12 @@ After=graphical-session.target
 
 [Service]
 ExecStart=/usr/bin/deadd-notification-center
-Restart=on-failure
+Environment="DISPLAY=:0"
+Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus"
 Environment=XDG_CONFIG_HOME=%h/.config
+PIDFile=/run/notification-center.pid
 Slice=session.slice
+Restart=on-failure
 StandardOutput=journal
 StandardError=journal
 
