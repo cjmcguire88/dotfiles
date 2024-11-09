@@ -41,6 +41,7 @@ alias 9='cd -9'
 # administration
 # system
 alias sctl="sudo systemctl"
+alias scunits="sudo systemctl list-units"
 alias scfiles="sudo systemctl list-unit-files"
 alias scstatus="sudo systemctl status"
 alias scenv="sudo systemctl show-environment"
@@ -53,6 +54,7 @@ alias scdisable="sudo systemctl disable"
 alias scmask="sudo systemctl mask"
 # user
 alias sctlu="systemctl --user"
+alias scuunits="systemctl --user list-units"
 alias scufiles="systemctl --user list-unit-files"
 alias scustatus="systemctl --user status"
 alias scuenv="systemctl --user show-environment"
@@ -64,17 +66,22 @@ alias scustop="systemctl --user stop"
 alias scudisable="systemctl --user disable"
 alias scumask="systemctl --user mask"
 
-#journalctl
+# journalctl
 # system
 alias jctl="journalctl"
 alias jclog="journalctl -b"
-alias jcunit="journalctl -xb -r -u"
+alias jcunit="journalctl -b -r -u"
 alias jcunitf="journalctl -f -u"
 # user
 alias jctlu="journalctl --user"
 alias jculog="journalctl --user -b"
-alias jcuunit="journalctl --user -xb -r -u"
+alias jcuunit="journalctl --user -b -r -u"
 alias jcuunitf="journalctl --user -f -u"
+
+# networkctl
+alias nctl="networkctl"
+alias ncstatus="networkctl status"
+alias nclist="networkctl list"
 
 # boot commands
 alias uefi="systemctl reboot --firmware-setup"
