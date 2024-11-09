@@ -1,5 +1,5 @@
 [Unit]
-Description=iwgtk
+Description=iwgtk - GUI for iwd
 Documentation=man:iwgtk(1)
 Wants=iwd.service
 PartOf=graphical-session.target

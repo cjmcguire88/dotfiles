@@ -1,5 +1,5 @@
 [Unit]
-Description=Automatically mount removable media
+Description=udiskie - Automount removable media
 PartOf=graphical-session.target
 Requires=graphical-session.target
 After=graphical-session.target
@@ -9,6 +9,7 @@ Type=simple
 ExecStart=/usr/bin/udiskie --no-config
 Restart=on-failure
 RestartSec=5
+Slice=session.slice
 StandardOutput=journal
 StandardError=journal
 
