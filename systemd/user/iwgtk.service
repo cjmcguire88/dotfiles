@@ -8,6 +8,9 @@ After=graphical-session.target
 [Service]
 ExecStart=iwgtk -i
 Restart=on-failure
+RestartSec=1
+RestartSteps=3
+RestartMaxDelaySec=3
 Slice=session.slice
 StandardOutput=journal
 StandardError=journal

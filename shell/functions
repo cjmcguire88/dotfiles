@@ -101,22 +101,22 @@ arch_news() {
 tv() {
     case $1 in
       off)
-        lgtv system turnOff | jq
+        lgtv system turnOff 1> /dev/null
         ;;
       on)
-        lgtv wakeonlan | jq
+        lgtv wakeonlan 1> /dev/null
         ;;
       apple)
-        lgtv tv switchInput HDMI_1 | jq
+        lgtv tv switchInput HDMI_1 1> /dev/null
         ;;
       xbox)
-        lgtv tv switchInput HDMI_3 | jq
+        lgtv tv switchInput HDMI_3 1> /dev/null
         ;;
       message)
-        lgtv system.notifications createToast "$2" | jq
+        lgtv system.notifications createToast "$2" 1> /dev/null
         ;;
       *)
-        lgtv wakeonlan | jq
+        lgtv wakeonlan 1> /dev/null
         ;;
     esac
 }

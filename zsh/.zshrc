@@ -25,7 +25,7 @@ eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 
 ZSH_THEME="powerlevel10k"
-plugins=(git sudo colorize zsh-vi-mode zsh-syntax-highlighting zsh-autosuggestions zsh-fzf-pass dirhistory)
+plugins=(git sudo colorize zsh-vi-mode zsh-syntax-highlighting zsh-autosuggestions dirhistory)
 
 if [[ -n "$ZSH_THEME"  ]]; then
     source "$ZDOTDIR/themes/$ZSH_THEME/$ZSH_THEME.zsh-theme"

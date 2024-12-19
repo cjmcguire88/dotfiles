@@ -1,9 +1,16 @@
 # Colors
 
-background-color=#1e1e2e
-text-color=#cdd6f4
-border-color=#89b4fa
+font=Fira Sans 10
+icons=1
+icon-path=/usr/share/icons/la-capitaine/
+background-color=#202124
+text-color=#edfefe
+border-color=#1793d1
 progress-color=over #313244
+default-timeout=5000
+max-icon-size=64
+border-radius=10
 
 [urgency=high]
-border-color=#fab387
+border-color=#c0392b
+

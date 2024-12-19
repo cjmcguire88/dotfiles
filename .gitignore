@@ -1,0 +1,27 @@
+Bitcoin/
+cachyos/
+dconf/
+gnome-boxes/
+GNS3/
+go/
+google-chrome/
+kraken/
+Kvantum/
+libreoffice/
+libvirt/
+'LuxOS Commander/'
+menus/
+mpv/
+nautilus/
+octopi/
+opensnitch/
+pulse/
+sniffnet/
+teams-for-linux/
+termshark/
+torbrowser/
+mimeapps.list
+pavucontrol.ini
+QtProject.conf
+user-dirs.dirs
+user-dirs.locale

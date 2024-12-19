@@ -1,0 +1,12 @@
+{
+	"licenseKey": "",
+	"configs": {
+		"timeout": 5,
+		"retriesPerIp": 2,
+		"autoSync": true,
+		"autoSyncInterval": 5,
+		"maxParallelMachinesToInstall": 10
+	},
+	"ipRanges": {},
+	"columnsVisibility": {}
+}

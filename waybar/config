@@ -163,7 +163,7 @@
       ]
     },
     "on-click-middle": "set-theme yellow",
-    "on-click-right": "pavucontrol"
+    "on-click-right": "pwvucontrol"
   },
   "user": {
     "format": " (↑{work_H} Hrs)",
