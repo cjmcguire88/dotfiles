@@ -1,0 +1,1 @@
+root=UUID=8a145a50-040c-4add-8473-8f2e00805a59 rw rootflags=subvol=@ rootfstype=btrfs nowatchdog random.trust_cpu=on noresume tpm_tis.force=0 fsck.mode=skip zswap.enabled=1 zswap.compressor=zstd
