@@ -18,6 +18,7 @@ alias rmf="rm -rf"
 alias rmt="trash-put"
 alias rst="trash-restore"
 alias v="nvim"
+alias sv="sudoedit"
 alias chmod="chmod --preserve-root"
 alias _="run0 "
 
@@ -103,10 +104,11 @@ alias ncrenew="sudo networkctl renew" # renew DHCP lease
 # resolvectl
 alias rctl="resolvectl"
 alias rcstatus="resolvectl status"
+alias rcconfig="sudo systemd-resolve --status"
 alias rcquery="sudo resolvectl query"
 alias rcflush="sudo resolvectl flush-caches"
 alias rcmon="sudo resolvectl monitor"
-alias rcserver="sudo resolvectl show-server-status"
+alias rcserver="sudo resolvectl show-server-state"
 
 # boot commands
 alias uefi="systemctl reboot --firmware-setup"
@@ -126,7 +128,7 @@ alias rem="paru -Rsu"
 alias query="pacman -Q"
 alias files="pacman -Ql"      # either belonging to a specific package or the whole system
 alias get_pb="paru -Gc"
-alias pkglist="sudo pacman -Qqe > /home/jason/.build/git/config-files/pkglist.txt"
+alias pkglist="sudo pacman -Qqe > /home/jason/.config/.etc/pkglist.txt"
 
 # iwd
 alias wifiscan="iwctl station wlan0 scan && iwctl station wlan0 get-networks"
@@ -138,8 +140,7 @@ alias port_scan="nmap -p- --open -T4 "
 # etc
 alias matrix="unimatrix"
 alias nf="fastfetch"
-alias nfk="fastfetch --logo ~/Pictures/wallpaper/blackarch/logo/logo-cyberpunks.png"
-alias nfa="fastfetch --logo ~/Pictures/wallpapers/lock.png --logo-type kitty-direct"
+alias nfk="fastfetch --logo ~/.face"
 alias cpu="sudo i7z"
 alias zshrc="nvim ~/.config/zsh/.zshrc"
 alias bashrc="nvim ~/.bashrc"

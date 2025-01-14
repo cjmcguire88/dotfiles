@@ -25,3 +25,6 @@ pavucontrol.ini
 QtProject.conf
 user-dirs.dirs
 user-dirs.locale
+GIMP/
+zint/
+gcompris/
