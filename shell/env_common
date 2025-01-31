@@ -8,7 +8,7 @@
 # 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
 
 # Additions to path rvm is for metasploit
-export PATH=$HOME/.local/bin:$HOME/.rvm/bin:$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # User configuration
 export BROWSER='google-chrome-stable'
@@ -24,15 +24,26 @@ export XDG_STATE_HOME='/home/jason/.local/state'
 export EDITOR='nvim'
 export VISUAL='nvim'
 export MANPAGER='nvim +Man!'
-export LESS='-R'
+export LESS='-R --mouse --wheel-lines=3'
+export PICO_SDK_PATH='/home/jason/.pico-sdk'
 
 # Compilation flags
-export CFLAGS="-march=znver2 -O3 -pipe -fno-plt -fexceptions -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"
-export CXXFLAGS="$CFLAGS -Wp,-D_GLIBCXX_ASSERTIONS"
-export LDFLAGS="-Wl,-O4 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,-z,pack-relative-relocs"
-export MAKEFLAGS="-j$((`nproc` - `nproc` / 4))"
-export LTOFLAGS="-flto=auto"
-export RUSTFLAGS="-C force-frame-pointers=yes -C target-cpu=znver2 -C opt-level=3"
+pico_dir="/home/jason/.pico-sdk"
+if [[ $PWD == $pico_dir* ]]; then
+  export CFLAGS=""
+  export CXXFLAGS=""
+  export LDFLAGS=""
+  export MAKEFLAGS=""
+  export LTOFLAGS=""
+  export RUSTFLAGS=""
+else
+  export CXXFLAGS="$CFLAGS -Wp,-D_GLIBCXX_ASSERTIONS"
+  export LDFLAGS="-Wl,-O4 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,-z,pack-relative-relocs"
+  export MAKEFLAGS="-j$((`nproc` - `nproc` / 4))"
+  export LTOFLAGS="-flto=auto"
+  export RUSTFLAGS="-C force-frame-pointers=yes -C target-cpu=znver2 -C opt-level=3"
+  export CFLAGS="-march=znver2 -O3 -pipe -fno-plt -fexceptions -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"
+fi
 
 # makepkg flags
 export PACKAGER="Jason McGuire <cjmcguire88@gmail.com>"
