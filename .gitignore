@@ -1,16 +1,24 @@
+arduino-ide/
+Arduino IDE/
+autostart
 Bitcoin/
 cachyos/
+Code - OSS/
 dconf/
+Electron/
+GIMP/
 gnome-boxes/
 GNS3/
 go/
 google-chrome/
+kicad/
 kraken/
 Kvantum/
 libreoffice/
 libvirt/
 LuxOS\ Commander/
 menus/
+micro/
 mpv/
 nautilus/
 octopi/
@@ -25,6 +33,4 @@ pavucontrol.ini
 QtProject.conf
 user-dirs.dirs
 user-dirs.locale
-GIMP/
 zint/
-gcompris/
