@@ -28,7 +28,7 @@ export LESS='-R --mouse --wheel-lines=3'
 export PICO_SDK_PATH='/home/jason/.pico-sdk'
 
 # Compilation flags
-pico_dir="/home/jason/.pico-sdk"
+pico_dir="/home/jason/.build/pico"
 if [[ $PWD == $pico_dir* ]]; then
   export CFLAGS=""
   export CXXFLAGS=""

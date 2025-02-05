@@ -1,0 +1,55 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /home/jason/.config/ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+# Config syntax crash course
+# ==========================
+# # The config file consists of simple key-value pairs,
+# # separated by equals signs.
+command = zsh
+font-family = Fira Code
+background = #202124
+foreground = #edfefe
+# Black
+palette = 0=#263238
+palette = 8=#45475A
+# Red
+palette = 1=#c0392b
+palette = 9=#F38BA8
+# Green
+palette = 2=#27ae60
+palette = 10=#A6E3A1
+# Yellow
+palette = 3=#f39c12
+palette = 11=#F9E2AF
+# Blue
+palette = 4=#2980b9
+palette = 12=#89b4fa
+# Magenta
+palette = 5=#8e44ad
+palette = 13=#F5C2E7
+# Cyan
+palette = 6=#16a085
+palette = 14=#94E2D5
+# White
+palette = 7=#edfefe
+palette = 15=#ffffff
+cursor-color = #edfefe
+selection-background = #F9E2AF
+selection-foreground = #000000
+
+shell-integration = detect
+desktop-notifications = true
