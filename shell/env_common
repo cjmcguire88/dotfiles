@@ -10,9 +10,6 @@
 # Additions to path rvm is for metasploit
 export PATH=$HOME/.local/bin:$PATH
 
-# User configuration
-export BROWSER='google-chrome-stable'
-
 # XDG directories
 export XDG_CONFIG_HOME='/home/jason/.config'
 export XDG_CACHE_HOME='/home/jason/.cache'
@@ -37,12 +34,12 @@ if [[ $PWD == $pico_dir* ]]; then
   export LTOFLAGS=""
   export RUSTFLAGS=""
 else
+  export CFLAGS="-march=znver2 -O3 -pipe -fno-plt -fexceptions -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"
   export CXXFLAGS="$CFLAGS -Wp,-D_GLIBCXX_ASSERTIONS"
   export LDFLAGS="-Wl,-O4 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,-z,pack-relative-relocs"
   export MAKEFLAGS="-j$((`nproc` - `nproc` / 4))"
   export LTOFLAGS="-flto=auto"
   export RUSTFLAGS="-C force-frame-pointers=yes -C target-cpu=znver2 -C opt-level=3"
-  export CFLAGS="-march=znver2 -O3 -pipe -fno-plt -fexceptions -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"
 fi
 
 # makepkg flags

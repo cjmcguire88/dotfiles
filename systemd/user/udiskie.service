@@ -1,14 +1,21 @@
 [Unit]
 Description=udiskie - Automount removable media
-PartOf=graphical-session.target
+Documentation=man:udiskie(1)
 Requires=graphical-session.target
 After=graphical-session.target
+PartOf=graphical-session.target
 
 [Service]
 Type=simple
 ExecStart=/usr/bin/udiskie --no-config
 Restart=on-failure
-RestartSec=5
+TimeoutStartSec=30
+Restart=on-failure
+StartLimitIntervalSec=60
+StartLimitBurst=3
+RestartSec=3
+RestartSteps=2
+RestartMaxDelaySec=15
 Slice=session.slice
 StandardOutput=journal
 StandardError=journal

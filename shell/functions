@@ -37,19 +37,6 @@ ex () {
   fi
 }
 
-ls-src() {
-    exa -a --icons --group-directories-first ~/.build/sources
-}
-
-rm-src() {
-    if [ -d ~/.build/sources/$1 ]; then
-        trash-put ~/.build/sources/$1
-        trash-list
-    else
-        echo -e "\033[1;31m$1 source not found\033[0m"
-    fi
-}
-
 # zoxide into directory then exa
 zls() {
     z $1 && exa --icons --group-directories-first
@@ -75,28 +62,6 @@ myip () {
 #  |  \/  |___ __| (_)__ _
 #  | |\/| / -_) _` | / _` |
 #  |_|  |_\___\__,_|_\__,_|
-
-## YOUTUBE-DL
-
-# download and convert to .mp3 all YT urls in file
-ytdl () {
-    cat $1 | while read line; do youtube-dl --external-downloader aria2c --external-downloader-args '-c -j 3 -x 3 -s 3 -k 1M' --extract-audio --audio-format mp3 -o "~/Music/%(title)s.%(ext)s" ytsearch:"$line" ;done
-}
-
-# play first yt search result in mpv
-yt() {
-  mpv ytdl://ytsearch:"$*"
-}
-
-# play first yt search result in mpv (audio only)
-yta() {
-  mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
-}
-
-# arch news
-arch_news() {
-    w3m https://www.archlinux.org/ | sed -n "/Latest News/,/Older News/p" | head -n -1
-}
 
 tv() {
     case $1 in

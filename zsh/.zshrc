@@ -39,7 +39,7 @@ for plugin ($plugins); do
     source $ZDOTDIR/plugins/$plugin/$plugin.plugin.zsh
 done
 
-source $XDG_CONFIG_HOME/zsh/.p10k.zsh
-source $XDG_CONFIG_HOME/shell/env_common
-source $XDG_CONFIG_HOME/shell/aliases
-source $XDG_CONFIG_HOME/shell/functions
+source $HOME/.config/zsh/.p10k.zsh
+source $HOME/.config/shell/env_common
+source $HOME/.config/shell/aliases
+source $HOME/.config/shell/functions

@@ -1,0 +1,65 @@
+#1740071119
+c
+#1740071565
+source .bashrc
+#1740071568
+c
+#1740071581
+ll
+#1740071584
+l
+#1740071588
+nfk
+#1740281882
+zsh
+#1740071631
+zsh
+#1740071133
+zsh
+pacwrap
+zsh
+#1743743720
+zsh
+zsh
+systemctl --user Hyprland
+systemctl --user status Hyprland
+ins
+sudo pacman -R Hyprland-git
+sudo pacman -R hyprland-git
+zsh
+Hyprland
+cd /usr/lib
+lk *hypr*
+zsh
+rem hyprland
+bash
+lk *hypr*
+zsh
+clear
+scstatus hyprland
+source .config/shell/aliases 
+scstatus hyprland
+scustatus hyprland
+scustart hyprland
+#1745620391
+ll
+#1745620392
+l
+#1746056216
+nvim .bashrc
+#1746056316
+scustatus hyprland
+#1746056334
+scustart hyprland
+#1746056345
+Hyprland
+#1746056301
+bash
+#1746056367
+zsh
+#1746195480
+nfk
+#1746195491
+ll
+#1746195516
+c
