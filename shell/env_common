@@ -22,7 +22,7 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 export MANPAGER='nvim +Man!'
 export LESS='-R --mouse --wheel-lines=3'
-export PICO_SDK_PATH='/home/jason/.pico-sdk'
+export PICO_SDK_PATH='/home/jason/.build/pico/pico-sdk'
 
 # Compilation flags
 pico_dir="/home/jason/.build/pico"
