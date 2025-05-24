@@ -11,7 +11,7 @@ BusName=org.freedesktop.Notifications
 ExecCondition=/bin/sh -c '[ -n "$WAYLAND_DISPLAY" ]'
 ExecStart=/usr/bin/mako
 ExecReload=/usr/bin/makoctl reload
-Slice=session.slice
+Slice=background.slice
 
 [Install]
 WantedBy=graphical-session.target

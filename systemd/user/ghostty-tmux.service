@@ -1,0 +1,18 @@
+[Unit]
+Description=Ghostty terminal with tmux
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+ExecStart=/home/jason/.local/bin/ghostty -e tmuxinator arch
+ExecStopPost=/bin/zsh -c "tmux kill-session -t arch || true"
+Restart=on-failure
+RestartSec=3
+Slice=app.slice
+OOMScoreAdjust=500
+ManagedOOMMemoryPressure=kill
+ManagedOOMMemoryPressureLimit=50%
+ManagedOOMMemoryPressureDurationSec=30
+
+[Install]
+WantedBy=graphical-session.target

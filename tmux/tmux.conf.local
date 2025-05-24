@@ -325,8 +325,8 @@ bind-key p run "wl-paste -n | tmux load-buffer - ; tmux paste-buffer"
 set -g history-limit 30000
 set -g status-interval 5
 set -g mouse on
-#set -g status-keys vi
-#set -g mode-keys vi
+set -g status-keys vi
+set -g mode-keys vi
 set-option -g default-shell /usr/bin/zsh
 
 # set -gu prefix2
