@@ -10,7 +10,7 @@ Type=simple
 ExecStart=/usr/bin/udiskie --no-config
 Restart=on-failure
 TimeoutStartSec=30
-Restart=on-failure
+TimeoutStopSec=10
 StartLimitIntervalSec=60
 StartLimitBurst=3
 RestartSec=3
@@ -19,6 +19,7 @@ RestartMaxDelaySec=15
 Slice=session.slice
 StandardOutput=journal
 StandardError=journal
+UMask=0077
 
 [Install]
 WantedBy=graphical-session.target

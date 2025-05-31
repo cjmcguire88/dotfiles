@@ -81,7 +81,6 @@
     "format-alt": "{avg_frequency} GHz 󰾆",
     "tooltip": false,
     "on-click-middle": "set-theme cyan",
-    "on-click-right": "kitty btop"
   },
   "memory": {
     "format": "{percentage}% ",

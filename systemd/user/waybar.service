@@ -10,17 +10,23 @@ ConditionEnvironment=WAYLAND_DISPLAY
 [Service]
 ExecStart=/usr/bin/waybar
 ExecReload=kill -SIGUSR2 $MAINPID
+Slice=session.slice
 Restart=on-failure
 TimeoutStartSec=30
-Restart=on-failure
+TimeoutStopSec=10
 StartLimitIntervalSec=60
 StartLimitBurst=3
 RestartSec=3
 RestartSteps=2
 RestartMaxDelaySec=15
-Slice=session.slice
 StandardOutput=journal
 StandardError=journal
+MemoryMin=100M
+MemoryLow=250M
+OOMPolicy=continue
+OOMScoreAdjust=-250
+UMask=0077
+NoNewPrivileges=yes
 
 [Install]
 WantedBy=graphical-session.target

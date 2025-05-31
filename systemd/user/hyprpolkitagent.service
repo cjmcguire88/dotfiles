@@ -1,12 +1,13 @@
 [Unit]
-Description=Hyprland Wallpaper Setter
+Description=Hyprland Polkit Authentication Agent
 PartOf=graphical-session.target
 After=graphical-session.target
 ConditionEnvironment=WAYLAND_DISPLAY
-
+	
 [Service]
 Type=simple
-ExecStart=/usr/bin/hyprpaper
+ExecStart=/usr/lib/hyprpolkitagent/hyprpolkitagent
+Slice=session.slice
 Restart=on-failure
 TimeoutStartSec=30
 TimeoutStopSec=10
@@ -15,16 +16,10 @@ StartLimitBurst=3
 RestartSec=3
 RestartSteps=2
 RestartMaxDelaySec=15
-Slice=session.slice
+TimeoutStopSec=5sec
 StandardOutput=journal
 StandardError=journal
-MemoryMin=25M
-MemoryLow=50M
-OOMPolicy=continue
-OOMScoreAdjust=-100
-UMask=0077
-NoNewPrivileges=yes
+
 
 [Install]
 WantedBy=graphical-session.target
-

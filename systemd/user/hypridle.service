@@ -9,17 +9,20 @@ ConditionEnvironment=WAYLAND_DISPLAY
 [Service]
 Type=simple
 ExecStart=/usr/bin/hypridle
+Slice=background.slice
 Restart=on-failure
 TimeoutStartSec=30
-Restart=on-failure
+TimeoutStopSec=10
 StartLimitIntervalSec=60
 StartLimitBurst=3
 RestartSec=3
 RestartSteps=2
 RestartMaxDelaySec=15
-Slice=session.slice
 StandardOutput=journal
 StandardError=journal
+CPUWeight=idle
+OOMScoreAdjust=250
+UMask=0077
 
 [Install]
 WantedBy=graphical-session.target

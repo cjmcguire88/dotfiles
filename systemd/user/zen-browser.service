@@ -1,29 +1,26 @@
 [Unit]
-Description=Hyprland Wallpaper Setter
+Description=Zen Browser
 PartOf=graphical-session.target
 After=graphical-session.target
-ConditionEnvironment=WAYLAND_DISPLAY
 
 [Service]
-Type=simple
-ExecStart=/usr/bin/hyprpaper
+ExecStart=/opt/zen-browser-bin/zen-bin
 Restart=on-failure
+Slice=app.slice
 TimeoutStartSec=30
 TimeoutStopSec=10
-StartLimitIntervalSec=60
+StartLimitIntervalSec=30
 StartLimitBurst=3
 RestartSec=3
 RestartSteps=2
 RestartMaxDelaySec=15
-Slice=session.slice
+IPAccounting=yes
 StandardOutput=journal
 StandardError=journal
-MemoryMin=25M
-MemoryLow=50M
-OOMPolicy=continue
-OOMScoreAdjust=-100
-UMask=0077
+OOMScoreAdjust=200
 NoNewPrivileges=yes
+RestrictSUIDSGID=yes
+UMask=0077
 
 [Install]
 WantedBy=graphical-session.target

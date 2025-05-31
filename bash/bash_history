@@ -69,3 +69,9 @@ l
 pacwrap
 #1747730085
 cd
+#1748272473
+cd /
+#1748272483
+sudo pacman -Syu
+#1748289598
+scustatus

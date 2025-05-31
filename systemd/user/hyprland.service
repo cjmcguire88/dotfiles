@@ -12,18 +12,23 @@ Type=notify
 ExecStart=/usr/bin/Hyprland
 ExecStop=/usr/bin/hyprctl dispatch exit
 ExecStopPost=systemctl --user unset-environment DISPLAY WAYLAND_DISPLAY HYPRLAND_INSTANCE_SIGNATURE XDG_CURRENT_DESKTOP
+Slice=session.slice
 TimeoutStartSec=30
+TimeoutStopSec=15
 Restart=on-failure
 StartLimitIntervalSec=60
 StartLimitBurst=3
 RestartSec=3
 RestartSteps=2
 RestartMaxDelaySec=15
+CPUWeight=150
+MemoryMin=100M
+MemoryLow=250M
 OOMPolicy=continue
-OOMScoreAdjust=-900
-Slice=session.slice
+OOMScoreAdjust=-500
 StandardOutput=journal
 StandardError=journal
+UMask=0077
 
 [Install]
 WantedBy=graphical-session.target
