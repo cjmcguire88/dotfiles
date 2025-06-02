@@ -1,7 +1,6 @@
 [Unit]
 Description=Hyprland Idle Daemon
 Documentation=https://wiki.hyprland.org/Hypr-Ecosystem/hypridle
-BindsTo=hyprland.service
 PartOf=graphical-session.target
 After=graphical-session.target
 ConditionEnvironment=WAYLAND_DISPLAY

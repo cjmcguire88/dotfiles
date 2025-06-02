@@ -1,7 +1,6 @@
 [Unit]
 Description=Waybar - Wayland status bar
 Documentation=https://github.com/Alexays/Waybar/wiki/
-BindsTo=graphical-session.target
 After=graphical-session.target
 PartOf=graphical-session.target
 Requisite=graphical-session.target
