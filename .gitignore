@@ -4,14 +4,18 @@ autostart/
 Bitcoin/
 cachyos/
 Code - OSS/
+configstore/
 dconf/
+eDEX-UI/
 Electron/
 GIMP/
 gnome-boxes/
 GNS3/
 go/
 google-chrome/
+kde.org/
 kicad/
+Kitware/
 kraken/
 Kvantum/
 libreoffice/
@@ -21,13 +25,19 @@ menus/
 micro/
 mpv/
 nautilus/
+nwg-look/
 octopi/
 opensnitch/
+pamac/
 pulse/
+Raspberry\ Pi/
 sniffnet/
 teams-for-linux/
 termshark/
+tigervnc/
 torbrowser/
+unity3d/
+xsettingsd/
 mimeapps.list
 pavucontrol.ini
 QtProject.conf

@@ -1,65 +1,54 @@
--- [[ Setting options ]]
+--     ▗ ▘
+-- ▛▌▛▌▜▘▌▛▌▛▌▛▘
+-- ▙▌▙▌▐▖▌▙▌▌▌▄▌
+--   ▌
 
--- Make line numbers default
-vim.o.number = true
+vim.o.number = true -- Make line numbers default
+vim.o.relativenumber = true -- You can also add relative line numbers, to help with jumping.
 
--- You can also add relative line numbers, to help with jumping.
-vim.o.relativenumber = true
+vim.o.mouse = 'nv' -- Enable mouse mode, can be useful for resizing splits for example!
 
--- Enable mouse mode, can be useful for resizing splits for example!
-vim.o.mouse = 'a'
+vim.o.showmode = false -- Don't show the mode, since it's already in the status line
 
--- Don't show the mode, since it's already in the status line
-vim.o.showmode = false
-
--- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
-vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
+vim.schedule(function() --  Schedule the setting after `UiEnter` because it can increase startup-time.
+  vim.o.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim.
 end)
 
--- Enable break indent
-vim.o.breakindent = true
+vim.o.breakindent = true -- Enable break indent
 
--- Save undo history
-vim.o.undofile = true
+vim.o.undofile = true -- Save undo history
 
--- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
-vim.o.ignorecase = true
-vim.o.smartcase = true
+vim.o.ignorecase = true -- Case-insensitive searching
+vim.o.smartcase = true -- UNLESS \C or one or more capital letters in the search term
 
--- Keep signcolumn on by default
-vim.o.signcolumn = 'yes'
+vim.o.signcolumn = 'yes' -- Always show the sign column
 
--- Decrease update time
-vim.o.updatetime = 250
+vim.o.updatetime = 250 -- Decrease update time
 
--- Decrease mapped sequence wait time
-vim.o.timeoutlen = 300
+vim.o.timeoutlen = 300 -- Decrease mapped sequence wait time
 
--- Configure how new splits should be opened
-vim.o.splitright = true
+vim.o.splitright = true -- Configure how new splits should be opened
 vim.o.splitbelow = true
 
--- Tab settings
 vim.o.tabstop = 4 -- Tab width 4 spaces
+vim.o.softtabstop = 4 -- Backspace width 4 spaces
 vim.o.shiftwidth = 4 -- Indent width 4 spaces
 vim.o.expandtab = true -- Convert tabs to spaces
 
--- Whitespace
-vim.o.list = true
+vim.o.list = true -- Whitespace
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
--- Preview substitutions live, as you type!
-vim.o.inccommand = 'split'
+vim.o.inccommand = 'split' -- Preview substitutions live, as you type!
 
--- Show which line your cursor is on
-vim.o.cursorline = true
+vim.o.cursorline = true -- Show which line your cursor is on
 
--- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
+vim.o.scrolloff = 10 -- Minimal number of screen lines to keep above and below the cursor.
 
--- Raise a dialog asking if you wish to save the current file(s)
-vim.o.confirm = true
+vim.o.hlsearch = true -- Highlight search results
+vim.o.incsearch = true -- Incremental search
+
+vim.o.wildmenu = true -- Wildmenu
+
+vim.o.confirm = true -- Raise a dialog asking if you wish to save the current file(s)
 
 -- vim: ts=2 sts=2 sw=2 et
