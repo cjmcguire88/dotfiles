@@ -12,7 +12,6 @@ Slice=background.slice
 Restart=on-failure
 TimeoutStartSec=30
 TimeoutStopSec=10
-StartLimitIntervalSec=60
 StartLimitBurst=3
 RestartSec=3
 RestartSteps=2

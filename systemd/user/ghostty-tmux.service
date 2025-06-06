@@ -10,7 +10,6 @@ Restart=on-failure
 Slice=app.slice
 TimeoutStartSec=15
 TimeoutStopSec=10
-StartLimitIntervalSec=30
 StartLimitBurst=3
 RestartSec=3
 RestartSteps=2

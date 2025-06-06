@@ -30,7 +30,17 @@ return {
         end
       end,
       formatters_by_ft = {
+        bash = { 'shellharden' },
+        clang = { 'clang_format' },
+        css = { 'prettier' },
+        html = { 'prettier' },
+        javascript = { 'prettier' },
+        json = { 'prettier' },
         lua = { 'stylua' },
+        python = { 'black' },
+        rust = { 'rustfmt' },
+        sh = { 'shfmt' },
+        yaml = { 'prettier' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --

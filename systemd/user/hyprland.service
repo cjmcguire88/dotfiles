@@ -16,7 +16,6 @@ Slice=session.slice
 TimeoutStartSec=30
 TimeoutStopSec=15
 Restart=on-failure
-StartLimitIntervalSec=60
 StartLimitBurst=3
 RestartSec=3
 RestartSteps=2

@@ -27,13 +27,27 @@ require('lazy').setup {
 
   require 'plugins/mini',
 
+  require 'plugins/undo',
+
   require 'plugins/treesitter',
 
-  require 'plugins/catppuccin',
+  require 'plugins/onedark',
 
   require 'plugins/windsurf',
 
   require 'plugins/lualine',
+
+  require 'plugins/dashboard',
+
+  require 'plugins/yazi',
+
+  require 'plugins/colorizer',
+
+  require 'plugins/orgmode',
+
+  require 'plugins/zen',
+
+  require 'plugins/twilight',
 }
 
 -- vim: ts=2 sts=2 sw=2 et

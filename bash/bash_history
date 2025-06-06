@@ -75,3 +75,13 @@ cd /
 sudo pacman -Syu
 #1748289598
 scustatus
+#1748965601
+ll
+#1748965705
+nf
+#1748965716
+jclog
+#1748965746
+rem rio
+#1748965774
+ps aux | grep rio

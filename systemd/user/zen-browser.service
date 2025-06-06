@@ -9,7 +9,6 @@ Restart=on-failure
 Slice=app.slice
 TimeoutStartSec=30
 TimeoutStopSec=10
-StartLimitIntervalSec=30
 StartLimitBurst=3
 RestartSec=3
 RestartSteps=2
@@ -24,4 +23,3 @@ UMask=0077
 
 [Install]
 WantedBy=graphical-session.target
-

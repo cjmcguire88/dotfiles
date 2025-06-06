@@ -6,7 +6,7 @@ return {
     event = 'VeryLazy', -- Load after most plugins for performance
     opts = {
       options = {
-        theme = 'catppuccin', -- Match your Catppuccin theme
+        theme = 'onedark', -- Match your Catppuccin theme
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
         disabled_filetypes = { statusline = { 'dashboard', 'alpha' } },
@@ -19,7 +19,7 @@ return {
       },
       sections = {
         lualine_a = { 'mode' },
-        lualine_b = { 'branch', 'diff', 'diagnostics' },
+        lualine_b = { 'branch', 'diff', '%3{codeium#GetStatusString()}' },
         lualine_c = { { 'filename', path = 1 } }, -- Show relative path
         lualine_x = { 'encoding', 'fileformat', 'filetype' },
         lualine_y = { 'progress' },

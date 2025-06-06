@@ -40,7 +40,7 @@ return {
         color_overrides = {
           all = { -- Applies to all flavors
             base = '#202124', -- Set background color to #202124
-            mantle = '#111111', -- Optional: Set mantle (used in some UI elements) to match
+            mantle = '#333333', -- Optional: Set mantle (used in some UI elements) to match
             -- crust = '#202124', -- Optional: Set crust (used in some edge cases) to match
           },
         },
