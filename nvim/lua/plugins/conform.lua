@@ -13,6 +13,9 @@ return {
         desc = '[F]ormat buffer',
       },
     },
+    -- This will provide type hinting with LuaLS
+    ---@module "conform"
+    ---@type conform.setupOpts
     opts = {
       notify_on_error = false,
       format_on_save = function(bufnr)
@@ -30,22 +33,20 @@ return {
         end
       end,
       formatters_by_ft = {
-        bash = { 'shellharden' },
+        asm = { 'asmfmt' },
+        bash = { 'shellharden', 'shfmt', stop_after_first = true },
         clang = { 'clang_format' },
+        cmake = { 'cmakelang' },
         css = { 'prettier' },
         html = { 'prettier' },
         javascript = { 'prettier' },
         json = { 'prettier' },
         lua = { 'stylua' },
-        python = { 'black' },
+        python = { 'isort', 'black' },
         rust = { 'rustfmt' },
         sh = { 'shfmt' },
+        typescript = { 'prettier' },
         yaml = { 'prettier' },
-        -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
-        --
-        -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
     },
   },

@@ -1,0 +1,13 @@
+[Exec]
+Boot=yes
+PrivateUsers=pick
+PrivateUsersOwnership=chown
+Capability=CAP_IPC_LOCK CAP_NET_ADMIN
+DropCapability=CAP_SYS_ADMIN CAP_SYS_MODULE
+SystemCallFilter=~@mount
+Environment=TERM=xterm-256color
+
+[Files]
+
+[Network]
+Private=no

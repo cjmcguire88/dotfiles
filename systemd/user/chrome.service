@@ -1,10 +1,10 @@
 [Unit]
-Description=Zen Browser
+Description=Google Chrome
 PartOf=graphical-session.target
 After=graphical-session.target
 
 [Service]
-ExecStart=/opt/zen-browser-bin/zen-bin
+ExecStart=/usr/bin/google-chrome-stable
 Restart=on-failure
 Slice=app.slice
 TimeoutStartSec=30

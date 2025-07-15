@@ -1,0 +1,9 @@
+[Unit]
+Description=Copy kernel to EFI system partition
+
+[Path]
+PathChanged=/boot/initramfs-linux-cachyos-bore-lto-fallback.img
+
+[Install]
+WantedBy=multi-user.target
+WantedBy=system-update.target

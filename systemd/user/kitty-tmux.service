@@ -1,10 +1,10 @@
 [Unit]
-Description=Ghostty terminal with tmux
+Description=Kitty terminal with TMUX
 PartOf=graphical-session.target
 After=graphical-session.target
 
 [Service]
-ExecStart=/home/jason/.local/bin/ghostty -e tmuxinator arch
+ExecStart=/usr/bin/kitty -e tmuxinator arch
 ExecStopPost=/bin/zsh -c "tmux kill-session -t arch || true"
 Restart=on-failure
 Slice=app.slice

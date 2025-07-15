@@ -43,11 +43,11 @@ require('lazy').setup {
 
   require 'plugins/colorizer',
 
-  require 'plugins/orgmode',
-
   require 'plugins/zen',
 
   require 'plugins/twilight',
+
+  require 'plugins/markdown',
 }
 
 -- vim: ts=2 sts=2 sw=2 et

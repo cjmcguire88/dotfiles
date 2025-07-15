@@ -1,0 +1,8 @@
+[Unit]
+Description=Copy kernel to EFI system partition
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/cp -af /boot/vmlinuz-linux-cachyos-bore-lto /efi/
+ExecStart=/usr/bin/cp -af /boot/initramfs-linux-cachyos-bore-lto.img /efi/
+ExecStart=/usr/bin/cp -af /boot/initramfs-linux-cachyos-bore-lto-fallback.img /efi/

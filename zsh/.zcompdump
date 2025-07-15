@@ -1,4 +1,4 @@
-#files: 876	version: 5.9
+#files: 871	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -368,6 +368,7 @@ _comps=(
 'fixwpps' '_psutils'
 'fixwwps' '_psutils'
 'flac' '_flac'
+'flatpak' '_flatpak'
 'flex' '_flex'
 'flex++' '_flex'
 'flipdiff' '_patchutils'
@@ -737,6 +738,7 @@ _comps=(
 'ltrace' '_ltrace'
 'lua' '_lua'
 'luarocks' '_luarocks'
+'luarocks-admin' '_luarocks-admin'
 'lxc' '_lxc'
 'lynx' '_lynx'
 'lz4' '_lz4'
@@ -999,7 +1001,6 @@ _comps=(
 'pkgadd' '_pkgadd'
 'pkg-config' '_pkg-config'
 'pkgctl' '_devtools'
-'pkgfile' '_pkgfile'
 'pkginfo' '_pkginfo'
 'pkgrm' '_pkgrm'
 'pkill' '_pgrep'
@@ -1077,18 +1078,10 @@ _comps=(
 'qpdf' '_qpdf'
 'quilt' '_quilt'
 'r' '_fc'
-'r2' '_r2'
-'rabin2' '_rabin2'
-'radiff2' '_radiff2'
-'rafind2' '_rafind2'
-'ragg2' '_ragg2'
-'rahash2' '_rahash2'
 'rake' '_rake'
 'rankmirrors' '_rankmirrors'
 'ranlib' '_ranlib'
 'rar' '_rar'
-'rasm2' '_rasm2'
-'rax2' '_rax2'
 'rc' '_sh'
 'rclone' '_rclone'
 'rcp' '_rlogin'
@@ -1605,6 +1598,7 @@ _comps=(
 'zeal' '_zeal'
 'zed' '_zed'
 'zegrep' '_grep'
+'zellij' '_zellij'
 'zen' '_webbrowser'
 'zf_chgrp' '_chown'
 'zf_chmod' '_chmod'
@@ -1775,26 +1769,25 @@ bindkey '^[~' _bash_complete-word
 autoload -Uz _arch-chroot _bat _bluetoothctl _bootctl _busctl \
             _bwrap _cargo _checkupdates _chwd _coredumpctl \
             _curl _devtools _eza _fastfetch _fd \
-            _genfstab _glow _gum _hg _hostnamectl \
-            _hyprctl _hyprpm _img2sixel _insmod _journalctl \
-            _kernel-install _kitty _libinput _localectl _loginctl \
-            _lsmod _lxc _machinectl _mako _makoctl \
-            _meson _mkinitcpio _modprobed-db _mpv _msfconsole \
-            _msfvenom _networkctl _newsboat _ninja _oomctl \
-            _paccache _pacdiff _paclist _paclog-pkglist _pacman \
-            _pacscripts _pacsearch _pacsort _pacstrap _pactree \
-            _parallel _paru _pip _pkgfile _playerctl \
-            _pulseaudio _qpdf _r2 _rabin2 _radiff2 \
-            _rafind2 _ragg2 _rahash2 _rankmirrors _rasm2 \
-            _rax2 _resolvectl _rg _rmmod _run0 \
-            _sbctl _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes _sd_unit_files \
-            _sensors _sensors-detect _snapper _systemctl _systemd \
-            _systemd-analyze _systemd-delta _systemd-inhibit _systemd-nspawn _systemd-path \
-            _systemd-run _systemd-tmpfiles _timedatectl _tlp _tlp-radio-device \
-            _tlp-run-on _tlp-stat _udevadm _udiskie _udiskie-canonical_paths \
-            _udiskie-mount _udiskie-umount _udisks2 _updpkgsums _upower \
-            _varlinkctl _wl-copy _wl-paste _wpctl _yazi \
-            _zathura _zoxide _cdr _all_labels _all_matches \
+            _flatpak _genfstab _glow _gum _hg \
+            _hostnamectl _hyprctl _hyprpm _img2sixel _insmod \
+            _journalctl _kernel-install _kitty _libinput _localectl \
+            _loginctl _lsmod _luarocks _luarocks-admin _lxc \
+            _machinectl _mako _makoctl _meson _mkinitcpio \
+            _modprobed-db _mpv _msfconsole _msfvenom _networkctl \
+            _newsboat _ninja _oomctl _paccache _pacdiff \
+            _paclist _paclog-pkglist _pacman _pacscripts _pacsearch \
+            _pacsort _pacstrap _pactree _parallel _paru \
+            _pip _playerctl _pulseaudio _qpdf _rankmirrors \
+            _resolvectl _rg _rmmod _run0 _sbctl \
+            _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes _sd_unit_files _sensors \
+            _sensors-detect _snapper _systemctl _systemd _systemd-analyze \
+            _systemd-delta _systemd-inhibit _systemd-nspawn _systemd-path _systemd-run \
+            _systemd-tmpfiles _timedatectl _tlp _tlp-radio-device _tlp-run-on \
+            _tlp-stat _udevadm _udiskie _udiskie-canonical_paths _udiskie-mount \
+            _udiskie-umount _udisks2 _updpkgsums _upower _varlinkctl \
+            _wl-copy _wl-paste _wpctl _yazi _zathura \
+            _zellij _zoxide _cdr _all_labels _all_matches \
             _alternative _approximate _arg_compile _arguments _bash_completions \
             _cache_invalid _call_function _combination _complete _complete_debug \
             _complete_help _complete_help_generic _complete_tag _comp_locale _correct \

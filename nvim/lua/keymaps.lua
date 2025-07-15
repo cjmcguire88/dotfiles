@@ -3,26 +3,33 @@
 -- ▛▖▙▖▙▌▌▌▌█▌▙▌▄▌
 --     ▄▌     ▌
 
--- Clear highlights on search when pressing <Esc> in normal mode
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('n', '<F2>', 'gg0i#!/usr/bin/env bash<CR><Esc>', { desc = 'Insert shebang' })
 
--- Diagnostic keymaps
+vim.keymap.set('n', '<leader>n', ':enew<CR>', { desc = '[N]ewfile' })
+
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlights' })
+
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- Exit terminal mode in the builtin terminal with <Esc> <Esc>
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
---  Use CTRL+<hjkl> to switch between windows
-vim.keymap.set('n', '<C-H>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-L>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-J>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-K>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<M-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<M-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<M-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<M-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- Switch between tabs with Ctrl+Shift+<hjkl>
 vim.keymap.set('n', '<C-h>', ':tabprevious<CR>', { desc = 'Move to previous tab' })
 vim.keymap.set('n', '<C-l>', ':tabnext<CR>', { desc = 'Move to next tab' })
 vim.keymap.set('n', '<C-j>', ':tabprevious<CR>', { desc = 'Move to previous tab' })
-vim.keymap.set('n', '<C-k', ':tabnext<CR>', { desc = 'Move to next tab' })
+vim.keymap.set('n', '<C-k>', ':tabnext<CR>', { desc = 'Move to next tab' })
+
+vim.keymap.set('n', '<leader>z', ':ZenMode<CR>', { desc = '[Z]en mode' })
+vim.keymap.set('n', '<leader>m', ':Mason<CR>', { desc = '[M]ason' })
+vim.keymap.set('n', '<leader>l', ':Lazy<CR>', { desc = '[L]azy' })
+vim.keymap.set('n', '<leader>d', ':Dashboard<CR>', { desc = '[D]ashboard' })
+
+vim.keymap.set('n', 'gq', ':LspStop<CR>', { desc = 'LSP [Q}uit' })
+vim.keymap.set('n', 'gs', ':LspStart<CR>', { desc = 'LSP [S]tart' })
 
 -- [[ Basic Autocommands ]]
 

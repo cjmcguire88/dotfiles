@@ -6,7 +6,7 @@ return {
     event = 'VeryLazy', -- Load after most plugins for performance
     opts = {
       options = {
-        theme = 'onedark', -- Match your Catppuccin theme
+        theme = 'onedark', -- Select theme
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
         disabled_filetypes = { statusline = { 'dashboard', 'alpha' } },

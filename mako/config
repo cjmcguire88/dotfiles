@@ -1,16 +1,24 @@
-# Colors
+# ███╗   ███╗ █████╗ ██╗  ██╗ ██████╗ 
+# ████╗ ████║██╔══██╗██║ ██╔╝██╔═══██╗
+# ██╔████╔██║███████║█████╔╝ ██║   ██║
+# ██║╚██╔╝██║██╔══██║██╔═██╗ ██║   ██║
+# ██║ ╚═╝ ██║██║  ██║██║  ██╗╚██████╔╝
+# ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ 
 
 font=Fira Sans 10
+layer=overlay
 icons=1
-icon-path=/usr/share/icons/la-capitaine/
+icon-path=/usr/share/icons/Papirus/
 background-color=#202124
 text-color=#edfefe
 border-color=#1793d1
-progress-color=over #313244
+progress-color=over #333333
 default-timeout=5000
 max-icon-size=64
 border-radius=10
 
 [urgency=high]
+default-timeout=0
+text-color=#c0392b
 border-color=#c0392b
 
