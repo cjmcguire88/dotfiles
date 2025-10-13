@@ -4,7 +4,7 @@ PartOf=graphical-session.target
 After=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/google-chrome-stable
+ExecStart=/usr/bin/google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland
 Restart=on-failure
 Slice=app.slice
 TimeoutStartSec=30

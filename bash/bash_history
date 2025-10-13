@@ -113,3 +113,43 @@ zsh
 zsh
 #1751683561
 zsh
+#1758232081
+jclog
+#1758422559
+c
+#1759012586
+zsh
+#1759117121
+./u-boot_test 
+#1759715423
+cryptopen
+#1759715430
+zsh
+#1759000859
+zsh
+#1759858381
+rem hyprland
+#1759858404
+upd
+#1759858431
+rem hyprland hyprutils
+#1759858468
+ins hyprland
+#1759858505
+sudo pacman -Rscn hyprutils
+#1759858584
+c /usr/lib
+#1759858606
+lk *hypr*
+#1759858612
+c
+#1759858700
+ins hyprland hyprpaper hypridle hyprlock 
+#1759858827
+ins hyprland-git hyprpaper-git hyprlock-git 
+#1759858873
+ins hyprland-git hyprpaper-git hyprlock-git hypridle-git
+#1759859011
+ins hyprland-git hyprpaper-git hyprlock-git hypridle-git hyprpicker-git hyprpolkitagent-git xdg-desktop-portal-hyprland-git
+#1759859729
+scustart hyprland

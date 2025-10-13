@@ -23,7 +23,6 @@ $endif
 $if mode=vi
 set keymap vi-command
 
-set bell-style visual
 set colored-completion-prefix on
 set colored-stats on
 set completion-ignore-case on

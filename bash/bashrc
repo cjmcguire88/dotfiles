@@ -13,7 +13,6 @@ HISTFILESIZE=1000000
 BASH_THEME="pure"
 plugins=(sudo)
 BASH_DIR="$HOME/.config/bash"
-eval "$(zoxide init bash)"
 for config_file in $BASH_DIR/lib/*.sh; do
     source $config_file
 done
@@ -28,3 +27,4 @@ fi
 [[ $(tty) =~ /dev/tty* ]] && source $HOME/.config/bash/bash_welcome
 source $HOME/.config/shell/aliases
 source $HOME/.config/shell/functions
+eval "$(zoxide init bash)"

@@ -42,13 +42,9 @@ alias 9='cd -9'
 # administration
 # crypt
 alias cryptopen="sudo cryptsetup open --key-file=/etc/cryptkey --type luks /dev/nvme0n1p3 crypt"
-alias crypt2open="sudo cryptsetup open --key-file=/etc/cryptkey-ext --type luks /dev/sda crypt-ext"
 alias cryptclose="sudo cryptsetup close crypt"
-alias crypt2close="sudo cryptsetup close crypt-ext"
 alias cryptmnt="sudo mount -t btrfs -o defaults,noatime,compress=zstd /dev/mapper/crypt /mnt"
-alias crypt2mnt="sudo mount -t btrfs -o defaults,noatime,compress=zstd /dev/mapper/crypt-ext /mnt"
 alias cryptumnt="sudo umount /mnt"
-alias crypt2umnt="sudo umount /mnt"
 
 # system
 alias sctl="sudo systemctl"

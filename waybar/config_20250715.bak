@@ -15,7 +15,9 @@
   "modules-right": [
     "pulseaudio",
     "network",
-    "group/hardware",
+    "temperature",
+    "cpu",
+    "memory",
     "idle_inhibitor",
     "battery",
     "clock",
@@ -78,36 +80,12 @@
     "format": "{usage}% ",
     "format-alt": "{avg_frequency} GHz 󰾆",
     "tooltip": false,
-  },
-  "group/volume": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 500,
-      "children-class": "not-audio",
-      "transition-left-to-right": true,
-    },
-    "modules": [
-            "pulseaudio",
-            "pulseaudio-slider",
-            "backlight-slider",
-    ]
-  },
-  "group/hardware": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 500,
-      "children-class": "not-cpu",
-      "transition-left-to-right": true,
-    },
-    "modules": [
-            "cpu",
-            "memory",
-            "temperature",
-    ]
+    "on-click-middle": "set-theme cyan",
   },
   "memory": {
     "format": "{percentage}% ",
     "format-alt": "Swap: {swapPercentage}% 󰿡",
+    "on-click-middle": "set-theme magenta",
     "on-click-right": ""
   },
   "temperature": {
@@ -119,6 +97,7 @@
       "",
       "󰈸"
     ],
+    "on-click-middle": "set-theme green"
   },
   "backlight": {
     "format": "{percent}% {icon}",
@@ -133,12 +112,6 @@
       "󱩕",
       "󱩖"
     ]
-  },
-  "backlight/slider": {
-    "min": 0,
-    "max": 100,
-    "orientation": "horizontal",
-    "device": ""
   },
   "battery": {
     "states": {
@@ -165,6 +138,7 @@
     "format-linked": "{ifname} (No IP) 󰲊",
     "format-disconnected": "Disconnected 󰌙",
     "format-alt": "󰛶 {bandwidthUpBits} | 󰛴 {bandwidthDownBits}",
+    "on-click-middle": "set-theme blue",
     "on-click-right": "iwgtk"
   },
   "pulseaudio": {
@@ -187,12 +161,8 @@
         ""
       ]
     },
+    "on-click-middle": "set-theme yellow",
     "on-click-right": "pwvucontrol"
-  },
-  "pulseaudio/slider": {
-    "min": 0,
-    "max": 100,
-    "orientation": "horizontal"
   },
   "user": {
     "format": " (↑{work_H} Hrs)",

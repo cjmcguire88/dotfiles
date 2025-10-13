@@ -2,7 +2,6 @@
 -- ▙▘█▌▌▌▛▛▌▀▌▛▌▛▘
 -- ▛▖▙▖▙▌▌▌▌█▌▙▌▄▌
 --     ▄▌     ▌
-
 vim.keymap.set('n', '<F2>', 'gg0i#!/usr/bin/env bash<CR><Esc>', { desc = 'Insert shebang' })
 
 vim.keymap.set('n', '<leader>n', ':enew<CR>', { desc = '[N]ewfile' })

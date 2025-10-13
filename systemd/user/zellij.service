@@ -1,0 +1,23 @@
+[Unit]
+Description=Kitty terminal with Zellij
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/kitty -e zellij
+ExecStopPost=/bin/zsh -c "zellij kill-all-sessions"
+Restart=on-failure
+Slice=app.slice
+TimeoutStartSec=15
+TimeoutStopSec=10
+StartLimitBurst=3
+RestartSec=3
+RestartSteps=2
+RestartMaxDelaySec=15
+OOMScoreAdjust=100
+ManagedOOMMemoryPressure=kill
+ManagedOOMMemoryPressureLimit=50%
+ManagedOOMMemoryPressureDurationSec=30
+
+[Install]
+WantedBy=graphical-session.target

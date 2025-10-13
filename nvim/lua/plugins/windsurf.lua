@@ -2,6 +2,7 @@ return {
   {
     'Exafunction/windsurf.vim',
     config = function()
+      vim.g.codeium_disable_bindings = 1
       vim.keymap.set('i', '<C-g>', ':CodeiumToggle<CR>', { expr = true, silent = true })
       vim.keymap.set('i', '<c-h>', function()
         return vim.fn['codeium#Clear']()

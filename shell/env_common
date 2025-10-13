@@ -8,7 +8,7 @@
 # 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
 
 # Additions to path rvm is for metasploit
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/bin/toolchains:$PATH
 
 # XDG directories
 export XDG_CONFIG_HOME='/home/jason/.config'
@@ -22,7 +22,6 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 export MANPAGER='nvim +Man!'
 export LESS='-R --mouse --wheel-lines=3'
-export PICO_SDK_PATH='/home/jason/.build/pico/pico-sdk'
 
 # Compilation flags
 pico_dir="/home/jason/.build/pico"
@@ -33,8 +32,10 @@ if [[ $PWD == $pico_dir* ]]; then
   export MAKEFLAGS=""
   export LTOFLAGS=""
   export RUSTFLAGS=""
+  export PICO_SDK_PATH='/home/jason/.build/pico/pico-sdk/sdk/2.2.0/'
+  export PICO_TOOLCHAIN_PATH="/home/jason/.build/pico/pico-sdk/toolchain/13_3_Rel1/bin"
 else
-  export CFLAGS="-march=znver2 -O3 -pipe -fno-plt -fexceptions -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"
+  export CFLAGS="-march=znver2 -O3 -pipe -fno-plt -fexceptions -Wformat -Wno-error=format-security -fstack-clash-protection -fcf-protection -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"
   export CXXFLAGS="$CFLAGS -Wp,-D_GLIBCXX_ASSERTIONS"
   export LDFLAGS="-Wl,-O4 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,-z,pack-relative-relocs"
   export MAKEFLAGS="-j$((`nproc` - `nproc` / 4))"

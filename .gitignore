@@ -6,8 +6,12 @@ cachyos/
 Code - OSS/
 configstore/
 dconf/
+digikamrc
+digikam_systemrc
 eDEX-UI/
 Electron/
+fontconfig/
+font-manager/
 GIMP/
 glow/
 gnome-builder/
@@ -15,6 +19,7 @@ GNS3/
 go/
 google-chrome/
 grafx2/
+icon-explorer/
 kde.org/
 Kitware/
 Kvantum/
@@ -24,11 +29,16 @@ LuxOS\ Commander/
 menus/
 mpv/
 nautilus/
+nushell/
 nwg-look/
+obs-studio/
 octopi/
 pamac/
+posting/
 pulse/
 Raspberry\ Pi/
+retroarch/
+showfotorc
 sniffnet/
 teams-for-linux/
 termshark/

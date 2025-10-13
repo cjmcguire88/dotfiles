@@ -1,0 +1,17 @@
+# eza theme.yml - Custom icons and colors
+extensions:
+  tlv:
+    {
+  filename: { foreground: white, is_bold: true },
+      icon: { glyph: , style: { foreground: blue } },
+    }
+  v:
+    {
+  filename: { foreground: white, is_bold: true },
+      icon: { glyph: , style: { foreground: blue } },
+    }
+  sv:
+    {
+  filename: { foreground: white, is_bold: true },
+      icon: { glyph: , style: { foreground: blue } },
+    }

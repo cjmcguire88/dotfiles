@@ -98,30 +98,3 @@ _fzf_compgen_dir() {
 stripes() {
     while :; do printf "\e[48;2;$((RANDOM % 256));$((RANDOM % 256));$((RANDOM % 256))m%*s\e[0m" $(tput cols) ""; sleep 0.1; done
 }
-
-dnc() {
-    while getopts ":r" opt; do
-      case $opt in
-        r)
-          notify-send.py a --hint boolean:deadd-notification-center:true \
-                 string:type:reloadStyle && \
-                 notify-send.py "Reloaded Red" \
-                        --hint string:image-path:file://home/jason/Pictures/lulz.jpg
-          ;;
-        b)
-          notify-send.py a --hint boolean:deadd-notification-center:true \
-                 string:type:reloadStyle && \
-                 notify-send.py "Reloaded Blue" \
-                        --hint string:image-path:file://home/jason/Pictures/lulz.jpg
-          ;;
-        :)
-          notify-send.py "All your base belong to Jason" \
-               --hint string:image-path:file://home/jason/Pictures/lulz.jpg
-          ;;
-        *)
-          notify-send.py "All your base belong to Jason" \
-               --hint string:image-path:file://home/jason/Pictures/lulz.jpg
-          ;;
-      esac
-    done
-}

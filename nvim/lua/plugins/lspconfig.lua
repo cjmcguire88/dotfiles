@@ -201,6 +201,7 @@ return {
         rust_analyzer = {},
         systemd_ls = {},
         ts_ls = {},
+        verible = {},
         vimls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --

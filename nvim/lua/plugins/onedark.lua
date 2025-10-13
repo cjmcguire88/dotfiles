@@ -12,10 +12,10 @@ return {
       toggle_style_list = { 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light' },
       code_style = {
         comments = 'italic',
-        keywords = 'none',
+        keywords = 'italic',
         functions = 'none',
         strings = 'none',
-        variables = 'none',
+        variables = 'bold',
       },
       lualine = {
         transparent = false,
@@ -30,7 +30,18 @@ return {
         pink = '#eba0ac',
         yellow = '#f9e2af',
       },
-      highlights = {},
+      highlights = {
+        ['@lsp.type.keyword'] = { fg = '#f39c12', fmt = 'bold' },
+        ['@lsp.type.builtinType'] = { fg = '#f9e2af' },
+        ['@lsp.type.property'] = { fg = '#a6e3a1' },
+        ['@lsp.type.function'] = { fg = '#89b4fa' },
+        ['@lsp.type.method'] = { fg = '#89dceb' },
+        ['@lsp.type.enum'] = { fg = '#f5c2e7' },
+        ['@lsp.type.enumMember'] = { fg = '#fab387' },
+        ['@lsp.type.variable'] = { fg = '#f38ba8', fmt = 'bold' },
+        ['@lsp.type.parameter'] = { fg = '#edfefe' },
+        ['@lsp.type.number'] = { fg = '#a6e3a1' },
+      },
       diagnostics = {
         darker = true,
         undercurl = true,

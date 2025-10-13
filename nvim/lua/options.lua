@@ -7,7 +7,7 @@ vim.o.number = true -- Make line numbers default
 vim.o.relativenumber = true -- You can also add relative line numbers, to help with jumping.
 
 vim.o.mouse = 'nv' -- Enable mouse mode, can be useful for resizing splits for example!
-
+vim.o.laststatus = 3 -- Enable global statusline (Neovim 0.7+)
 vim.o.showmode = false -- Don't show the mode, since it's already in the status line
 
 vim.schedule(function() --  Schedule the setting after `UiEnter` because it can increase startup-time.
@@ -51,4 +51,11 @@ vim.o.wildmenu = true -- Wildmenu
 
 vim.o.confirm = true -- Raise a dialog asking if you wish to save the current file(s)
 
+-- Set filetype for *.tlv
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+  pattern = '*.tlv',
+  callback = function()
+    vim.bo.filetype = 'verilog'
+  end,
+})
 -- vim: ts=2 sts=2 sw=2 et
