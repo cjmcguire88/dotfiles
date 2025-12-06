@@ -24,7 +24,7 @@ export function ArchLauncher() {
 export function PowerMenu() {
     const handlePowerMenu = () => {
         // Check if the specific script exists, otherwise use a generic power menu
-        execAsync("$HOME/.config/rofi/powermenu/powermenu.sh")
+        execAsync("/home/jason/.config/rofi/powermenu/powermenu.sh")
             .catch(() => {
                 // Fallback power menu
                 execAsync([

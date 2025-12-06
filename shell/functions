@@ -86,6 +86,10 @@ tv() {
     esac
 }
 
+stripes() {
+    while :; do printf "\e[48;2;$((RANDOM % 256));$((RANDOM % 256));$((RANDOM % 256))m%*s\e[0m" $(tput cols) ""; sleep 0.1; done
+}
+
 # fzf: use fd
 _fzf_compgen_path() {
     fd --hidden --exclude .git . "$1"
@@ -93,8 +97,4 @@ _fzf_compgen_path() {
 
 _fzf_compgen_dir() {
     fd --type=d --hidden --exclude .git . "$1"
-}
-
-stripes() {
-    while :; do printf "\e[48;2;$((RANDOM % 256));$((RANDOM % 256));$((RANDOM % 256))m%*s\e[0m" $(tput cols) ""; sleep 0.1; done
 }

@@ -1,0 +1,124 @@
+// config.kdl
+
+input {
+    // Super (Windows key) as the main modifier, just like in Hyprland
+    mod-key "Super"
+
+    // Keyboard layout, repeat rate, etc. (adjust to your preference)
+    keyboard {
+        xkb {
+            layout "us"
+            // options "ctrl:nocaps" etc. if you use any
+        }
+        repeat-delay 300
+        repeat-rate 40
+    }
+
+    // Mouse scroll to switch workspaces (like your mouse_up/mouse_down)
+    workspace-scroll-direction "vertical" // default
+    scroll-workspace-up   mod+"MouseScrollUp"
+    scroll-workspace-down mod+"MouseScrollDown"
+}
+
+// ──────────────────────────────────────────────────────────────
+// Keybinds – almost 1:1 translation of your Hyprland config
+// ──────────────────────────────────────────────────────────────
+
+binds {
+    // === Desktop utilities ===
+    "Super+Ctrl+Escape"       { quit; }                                   // exit Niri
+    "Super+Escape"            { spawn "~/.config/rofi/powermenu/powermenu.sh"; }
+    "Super+Grave"             { spawn env->menu; }                         // assumes you have $menu in environment
+    "Super+T"                 { spawn env->terminal; }
+    "Super+Shift+T"           { spawn "systemctl" "--user" "start" "zellij.service"; }
+    "Super+Alt+T"             { spawn env->terminal_alt; }
+    "Super+F"                 { spawn env->fileManager; }
+    "Super+G"                 { spawn "hyprpicker"; }
+
+    // === Window control ===
+    "Super+X"                 { close-window; }
+    "Super+C"                 { toggle-floating; }                      // toggle floating for focused window
+    "Super+A"                 { fullscreen; }                             // true fullscreen
+    "Super+Shift+A"           { maximize; }                              // fullscreen mon (like Hyprland fullscreen 0)
+    "Super+V"                 { pin; }                                    // pin window (always-on-top + all workspaces)
+
+    // === Focus movement (h j k l) ===
+    "Super+H"                 { focus-left; }
+    "Super+L"                 { focus-right; }
+    "Super+K"                 { focus-up; }
+    "Super+J"                 { focus-down; }
+
+    // === Move window in tiling direction ===
+    "Super+Shift+H"           { move-left; }
+    "Super+Shift+L"           { move-right; }
+    "Super+Shift+K"           { move-up; }
+    "Super+Shift+J"           { move-down; }
+
+    // === Floating window movement (same as Hyprland) ===
+    "Super+Left"              { move -10 0; }
+    "Super+Right"             { move 10 0; }
+    "Super+Up"                { move 0 -10; }
+    "Super+Down"              { move 0 10; }
+    "Super+0"                 { center-window; }
+
+    // === Floating window resize ===
+    "Super+Shift+Left"        { resize width -10; }
+    "Super+Shift+Right"       { resize width 10; }
+    "Super+Shift+Up"          { resize height -10; }
+    "Super+Shift+Down"        { resize height 10; }
+
+    // === Workspaces ===
+    "Super+Q"                 { focus-workspace-previous; }
+    "Super+W"                 { focus-workspace-next; }
+    "Super+1"                 { focus-workspace 1; }
+    "Super+2"                 { focus-workspace 2; }
+    "Super+3"                 { focus-workspace 3; }
+    "Super+4"                 { focus-workspace 4; }
+    "Super+5"                 { focus-workspace 5; }
+    "Super+6"                 { focus-workspace 6; }
+    "Super+7"                 { focus-workspace 7; }
+    "Super+8"                 { focus-workspace 8; }
+    "Super+9"                 { focus-workspace 9; }
+
+    "Super+Shift+1"           { move-to-workspace 1; }
+    "Super+Shift+2"           { move-to-workspace 2; }
+    "Super+Shift+3"           { move-to-workspace 3; }
+    "Super+Shift+4"           { move-to-workspace 4; }
+    "Super+Shift+5"           { move-to-workspace 5; }
+    "Super+Shift+6"           { move-to-workspace 6; }
+    "Super+Shift+7"           { move-to-workspace 7; }
+    "Super+Shift+8"           { move-to-workspace 8; }
+    "Super+Shift+9"           { move-to-workspace 9; }
+    "Super+Shift+0"           { move-to-workspace 10; }
+
+    // === Scratchpad (your "special:magic") ===
+    "Super+Y"                 { toggle-workspace "magic"; }                // shows/hides the scratch workspace
+    "Super+Shift+Y"           { move-to-workspace "magic"; }
+
+    // === Mouse drag to move/resize (exact equivalent of bindm) ===
+    "Super+BtnLeft"           { move-window; }
+    "Super+BtnRight"          { resize-window; }
+
+    // === Programs ===
+    "Super+M"                 { spawn "grim" "-g" "$(slurp)"; }
+    "Super+B"                 { spawn "systemctl" "--user" "start" "chrome.service"; }
+    "Super+Shift+B"           { spawn "systemd-run" "--user" "--slice=app.slice" "--property=NoNewPrivileges=yes" "/usr/bin/zen-browser"; }
+    "Super+I"                 { spawn "wine" "~/.wine/drive_c/IPReporter.exe"; }
+    "Super+K"                 { spawn "cachyos-kernel-manager"; }
+    "Super+N"                 { spawn "neovide"; }
+
+    // === Multimedia keys (no modifier) ===
+    "XF86AudioRaiseVolume"    { spawn "notify-volume" "up"; }
+    "XF86AudioLowerVolume"    { spawn "notify-volume" "down"; }
+    "XF86AudioMute"           { spawn "notify-volume" "mute"; }
+    "XF86MonBrightnessUp"     { spawn "notify-brightness" "inc"; }
+    "XF86MonBrightnessDown"   { spawn "notify-brightness" "dec"; }
+    "XF86AudioMicMute"        { spawn "pamixer" "--source" "63" "-t"; }
+}
+
+// Optional: define your environment variables at the top if you want
+environment {
+    terminal      "kitty"
+    fileManager   "nautilus"
+    menu          "rofi -show drun"
+}

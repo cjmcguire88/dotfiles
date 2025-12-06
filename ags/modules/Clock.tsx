@@ -8,10 +8,9 @@ export default function Clock() {
         const now = GLib.DateTime.new_now(GLib.TimeZone.new("America/New_York"))
         return now?.format("%I:%M %p") || ""
     })
-    
+
     return (
         <menubutton css="
-            background: radial-gradient(circle, #313244 60%, #1e1e2e);
             text-shadow: 2px 2px 4px #000;
             transition: background 0.5s ease;
             margin: 2px 0;

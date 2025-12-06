@@ -1,35 +1,46 @@
-set font 'Fira Code'
+set font 'Fira Sans 12'
 
 set default-bg                  "#202124"
 set default-fg                  "#EDFEFE"
 
-set statusbar-fg                "#EDFEFE"
-set statusbar-bg                "#202124"
+set index-bg                    "#202124"
+set index-fg                    "#EDFEFE"
+set index-active-bg             "#89dceb"
+set index-active-fg             "#202124"
 
-set inputbar-bg                 "#202124"
+set statusbar-fg                "#EDFEFE"
+set statusbar-bg                "#11111b"
+
+set inputbar-bg                 "#1e1e2e"
 set inputbar-fg                 "#EDFEFE"
 
-set notification-bg             "#202124"
+set notification-bg             "#1e1e2e"
 set notification-fg             "#EDFEFE"
 
-set notification-error-bg       "#202124"
-set notification-error-fg       "#AC4142"
+set notification-error-bg       "#313244"
+set notification-error-fg       "#f38ba8"
 
-set notification-warning-bg     "#202124"
-set notification-warning-fg     "#AC4142"
+set notification-warning-bg     "#313244"
+set notification-warning-fg     "#f9e2af"
 
-set highlight-color             "#2980B9"
-set highlight-active-color      "#F4BF75"
+set highlight-fg                "#202124"
+set highlight-color             "#f9e2af"
+set highlight-active-color      "#89dceb"
 
-set completion-bg               "#333333"
+set completion-bg               "#313244"
 set completion-fg               "#EDFEFE"
-
+set completion-group-bg         "#1e1e2e"
+set completion-group-fg         "#a6adc8"
 set completion-highlight-fg     "#202124"
-set completion-highlight-bg     "#EDFEFE"
+set completion-highlight-bg     "#89dceb"
 
 set recolor-lightcolor          "#202124"
 set recolor-darkcolor           "#EDFEFE"
 
 set recolor                     "false"
-set recolor-keephue             "false"
+set recolor-keephue             "true"
 
+set statusbar-h-padding         8
+set statusbar-v-padding         8
+set selection-notification      "true"
+set selection-clipboard         "clipboard"

@@ -7,11 +7,11 @@ export default function Network() {
     const network = AstalNetwork.get_default()
     const wifi = createBinding(network, "wifi")
     const wired = createBinding(network, "wired")
-    
+
     // Sort access points by signal strength
-    const sortedAPs = (aps: AstalNetwork.AccessPoint[]) => 
+    const sortedAPs = (aps: AstalNetwork.AccessPoint[]) =>
         aps.filter(ap => ap.ssid).sort((a, b) => b.strength - a.strength)
-    
+
     const getNetworkDisplay = () => {
         if (network.wifi?.enabled && network.wifi?.activeAccessPoint) {
             const ap = network.wifi.activeAccessPoint
@@ -22,14 +22,14 @@ export default function Network() {
             return "Disconnected 󰌙"
         }
     }
-    
+
     const displayText = createBinding(network, "connectivity")(() => getNetworkDisplay())
-    
+
     const cssClasses = createBinding(network, "connectivity")((conn) => {
         if (conn === AstalNetwork.Connectivity.FULL) return "network"
         return "network disconnected"
     })
-    
+
     async function connectToAP(ap: AstalNetwork.AccessPoint) {
         try {
             await execAsync(`nmcli d wifi connect ${ap.bssid}`)
@@ -37,10 +37,9 @@ export default function Network() {
             console.error("Failed to connect to WiFi:", error)
         }
     }
-    
+
     return (
         <menubutton css="
-            border-radius: 20px;
             background: radial-gradient(#444, #333 60%, #1e1e2e);
             box-shadow: inset 2px 2px 6px #050505, 0 1px 6px rgba(0, 0, 0, 0.3);
             text-shadow: 2px 2px 4px #000;
@@ -55,8 +54,8 @@ export default function Network() {
                     {wifi((w) => w && (
                         <>
                             <label label="WiFi Networks" />
-                            <scrolledwindow 
-                                heightRequest={200} 
+                            <scrolledwindow
+                                heightRequest={200}
                                 widthRequest={250}
                                 hscrollPolicy={Gtk.ScrollablePolicy.NEVER}
                             >
@@ -66,13 +65,13 @@ export default function Network() {
                                             <button onClicked={() => connectToAP(ap)}>
                                                 <box spacing={8}>
                                                     <image iconName={createBinding(ap, "iconName")} />
-                                                    <label 
-                                                        label={createBinding(ap, "ssid")} 
-                                                        hexpand 
+                                                    <label
+                                                        label={createBinding(ap, "ssid")}
+                                                        hexpand
                                                         xalign={0}
                                                     />
-                                                    <label 
-                                                        label={createBinding(ap, "strength")((s) => `${s}%`)} 
+                                                    <label
+                                                        label={createBinding(ap, "strength")((s) => `${s}%`)}
                                                     />
                                                     <image
                                                         iconName="object-select-symbolic"
@@ -86,7 +85,7 @@ export default function Network() {
                             </scrolledwindow>
                         </>
                     ))}
-                    
+
                     {wired((w) => w && w.speed > 0 && (
                         <box spacing={8}>
                             <label label="Ethernet" />

@@ -4,7 +4,7 @@ PartOf=graphical-session.target
 After=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/kitty -e zellij
+ExecStart=/usr/bin/kitty -e zellij --layout /home/jason/.config/zellij/layouts/default.kdl
 ExecStopPost=/bin/zsh -c "zellij kill-all-sessions"
 Restart=on-failure
 Slice=app.slice

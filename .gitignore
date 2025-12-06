@@ -1,10 +1,14 @@
 arduino-ide/
 Arduino IDE/
+asm-lsp/
 autostart/
 Bitcoin/
+brutal-doom/
+buildroot.org/
 cachyos/
 Code - OSS/
 configstore/
+containers/
 dconf/
 digikamrc
 digikam_systemrc
@@ -19,14 +23,18 @@ GNS3/
 go/
 google-chrome/
 grafx2/
+gzdoom/
+helix/
 icon-explorer/
 kde.org/
+kdiskmark/
 Kitware/
 Kvantum/
 libreoffice/
 libvirt/
 LuxOS\ Commander/
 menus/
+mimeapps.list
 mpv/
 nautilus/
 nushell/
@@ -34,21 +42,23 @@ nwg-look/
 obs-studio/
 octopi/
 pamac/
+pavucontrol.ini
 posting/
 pulse/
 Raspberry\ Pi/
 retroarch/
 showfotorc
 sniffnet/
+solaar/
 teams-for-linux/
 termshark/
 tigervnc/
 torbrowser/
 unity3d/
 xsettingsd/
-mimeapps.list
 pavucontrol.ini
 QtProject.conf
 user-dirs.dirs
 user-dirs.locale
+zdoom/
 zint/

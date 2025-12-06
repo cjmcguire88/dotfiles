@@ -145,15 +145,19 @@ button:hover {
 .cpu {
   color: #94e2d5;
 }
+
 .memory {
   color: #f5c2e7;
 }
+
 .network {
   color: #89b4fa;
 }
+
 .pulseaudio {
   color: #f9e2af;
 }
+
 .temperature {
   color: #a6e3a1;
 }
@@ -170,15 +174,19 @@ button:hover {
 .cpu:hover {
   background: radial-gradient(#94e2d5, #16a085);
 }
+
 .memory:hover {
   background: radial-gradient(#f5c2e7, #8e44ad);
 }
+
 .network:hover {
   background: radial-gradient(#89b4fa, #2980b9);
 }
+
 .pulseaudio:hover {
   background: radial-gradient(#f9e2af, #f39c12);
 }
+
 .temperature:hover {
   background: radial-gradient(#a6e3a1, #27ae60);
 }

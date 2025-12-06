@@ -104,8 +104,8 @@ layout {
         }
     }
     tab name="Split" {
-        pane command="yazi"
-        pane command="yazi"
+        pane
+        pane
     }
     tab name="Mono" {
         pane command="btop"
