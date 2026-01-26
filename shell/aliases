@@ -138,7 +138,7 @@ alias port_scan="nmap -p- --open -T4 "
 # etc
 alias matrix="unimatrix"
 alias nf="fastfetch"
-alias nfk="fastfetch --logo ~/.face"
+alias nfk="fastfetch --logo ~/.face && ~/Scripts/panes"
 alias cpu="sudo i7z"
 alias zshrc="nvim ~/.config/zsh/.zshrc"
 alias bashrc="nvim ~/.bashrc"

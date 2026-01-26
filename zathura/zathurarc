@@ -1,12 +1,12 @@
 set font 'Fira Sans 12'
 
-set default-bg                  "#202124"
+set default-bg                  "#161817"
 set default-fg                  "#EDFEFE"
 
-set index-bg                    "#202124"
+set index-bg                    "#161817"
 set index-fg                    "#EDFEFE"
 set index-active-bg             "#89dceb"
-set index-active-fg             "#202124"
+set index-active-fg             "#161817"
 
 set statusbar-fg                "#EDFEFE"
 set statusbar-bg                "#11111b"
@@ -23,7 +23,7 @@ set notification-error-fg       "#f38ba8"
 set notification-warning-bg     "#313244"
 set notification-warning-fg     "#f9e2af"
 
-set highlight-fg                "#202124"
+set highlight-fg                "#161817"
 set highlight-color             "#f9e2af"
 set highlight-active-color      "#89dceb"
 
@@ -31,16 +31,16 @@ set completion-bg               "#313244"
 set completion-fg               "#EDFEFE"
 set completion-group-bg         "#1e1e2e"
 set completion-group-fg         "#a6adc8"
-set completion-highlight-fg     "#202124"
+set completion-highlight-fg     "#161817"
 set completion-highlight-bg     "#89dceb"
 
-set recolor-lightcolor          "#202124"
+set recolor-lightcolor          "#161817"
 set recolor-darkcolor           "#EDFEFE"
 
 set recolor                     "false"
 set recolor-keephue             "true"
 
-set statusbar-h-padding         8
-set statusbar-v-padding         8
+set statusbar-h-padding         "8"
+set statusbar-v-padding         "8"
 set selection-notification      "true"
 set selection-clipboard         "clipboard"

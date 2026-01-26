@@ -67,7 +67,7 @@ configuration {
 /*	display-windowcd: ;*/
 /*	display-run: ;*/
 /*	display-ssh: ;*/
-	display-drun: "Run";
+	display-drun: "Search";
 /*	display-combi: ;*/
 /*	display-keys: ;*/
 /*	display-filebrowser: ;*/

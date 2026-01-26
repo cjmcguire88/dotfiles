@@ -21,11 +21,11 @@
 # # separated by equals signs.
 command = zsh
 font-family = Fira Code
-background = #202124
+background = #161817
 foreground = #edfefe
 # Black
 palette = 0=#263238
-palette = 8=#45475A
+palette = 8=#333333
 # Red
 palette = 1=#c0392b
 palette = 9=#F38BA8

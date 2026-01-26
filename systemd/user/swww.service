@@ -1,12 +1,14 @@
 [Unit]
-Description=Hyprland Polkit Authentication Agent
+Description=SWWW Wallpaper Daemon
+Documentation=https://github.com/LGFae/swww
 PartOf=graphical-session.target
 After=graphical-session.target
 ConditionEnvironment=WAYLAND_DISPLAY
 	
 [Service]
 Type=simple
-ExecStart=/usr/lib/hyprpolkitagent/hyprpolkitagent
+Environment=RUST_BACKTRACE=1
+ExecStart=/usr/bin/swww-daemon --format argb
 Slice=session.slice
 Restart=on-failure
 TimeoutStartSec=30

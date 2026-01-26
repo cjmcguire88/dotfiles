@@ -13,7 +13,7 @@
 
 /* Waybar */
 window#waybar {
-  background: linear-gradient(to bottom, #11111b 30%, #202124);
+  background: linear-gradient(to bottom, #161817 30%, #202124);
   color: #edfefe;
   transition: background-color 0.5s ease;
 }

@@ -3,7 +3,7 @@
     border-color:  #1793d1;
     text-color: #edfefe;
     separator-color: @border-color;
-    font: "Fira Sans 14";
+    font: "Fira Sans 12";
     show-icons: true;
 }
 
@@ -11,8 +11,8 @@ window {
     border: 0px;
     padding: 5px;
     height: 850px;
-    width: 350px;
-    background-image: linear-gradient(to bottom, #202124, #333333, #202124);
+    width: 325px;
+    background-image: linear-gradient(to bottom, #161817, #202124, #333333);
 }
 
 mainbox {
@@ -20,14 +20,15 @@ mainbox {
 }
 
 inputbar {
-    border: 1px;
+    border: 2px;
+    border-radius: 12px;
     children: [prompt,entry];
 }
 
 prompt {
     background-color: @border-color;
     padding: 5px 5px 0px;
-    text-color: #202124;
+    text-color: #000000;
 }
 
 // Not used
@@ -42,24 +43,24 @@ entry {
 
 listview {
     border: 0px 0px 0px;
-    padding: 6px 0px 0px;
+    padding: 10px 0px 0px 0px;
     columns: 1;
 }
 
 element {
-    padding: 5px;
+    padding: 5px 0px 5px 20px;
+    border-radius: 30px;
 }
 
 element-icon {
     size: 35;
 }
 
-element selected {
-    background-image: linear-gradient(#1793d1, #89b4fa, #1793d1);
-    text-color: #000000;
+element-text {
+    padding: 0.2em;
 }
 
-element active {
-    background-color: #1793d1;
+element selected {
+    background-image: linear-gradient(#1793d1, #89b4fa, #1793d1);
     text-color: #000000;
 }

@@ -45,18 +45,18 @@
     status                  # exit code of the last command
     command_execution_time  # duration of the last command
     background_jobs         # presence of background jobs
-    direnv                  # direnv status (https://direnv.net/)
+    # direnv                  # direnv status (https://direnv.net/)
     # asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
     virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
-    anaconda                # conda environment (https://conda.io/)
+    # anaconda                # conda environment (https://conda.io/)
     pyenv                   # python environment (https://github.com/pyenv/pyenv)
     # goenv                   # go environment (https://github.com/syndbg/goenv)
     # nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
     # nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
     # nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
-    node_version          # node.js version
+    # node_version          # node.js version
     # go_version            # go version (https://golang.org)
-    rust_version          # rustc version (https://www.rust-lang.org)
+    # rust_version          # rustc version (https://www.rust-lang.org)
     # dotnet_version        # .NET version (https://dotnet.microsoft.com)
     # php_version           # php version (https://www.php.net/)
     # laravel_version       # laravel php framework version (https://laravel.com/)
@@ -79,11 +79,11 @@
     # google_app_cred         # google application credentials (https://cloud.google.com/docs/authentication/production)
     context                 # user@hostname
     # nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
-    ranger                  # ranger shell (https://github.com/ranger/ranger)
+    # ranger                  # ranger shell (https://github.com/ranger/ranger)
     # nnn                     # nnn shell (https://github.com/jarun/nnn)
-    vim_shell               # vim shell indicator (:sh)
+    # vim_shell               # vim shell indicator (:sh)
     # midnight_commander      # midnight commander shell (https://midnight-commander.org/)
-    nix_shell               # nix shell (https://nixos.org/nixos/nix-pills/developing-with-nix-shell.html)
+    # nix_shell               # nix shell (https://nixos.org/nixos/nix-pills/developing-with-nix-shell.html)
     vi_mode                 # vi mode (you don't need this if you've enabled prompt_char)
     # vpn_ip                # virtual private network indicator
     # load                  # CPU load
@@ -172,8 +172,8 @@
 
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
-  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=232
-  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=7
+  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=4
+  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=0
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
 
@@ -204,7 +204,7 @@
   # Current directory background color.
   typeset -g POWERLEVEL9K_DIR_BACKGROUND=4
   # Default current directory foreground color.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=254
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=7
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
@@ -280,7 +280,7 @@
 
   # The default icon shown next to non-writable directories when POWERLEVEL9K_DIR_SHOW_WRITABLE is
   # set to v2.
-  # typeset -g POWERLEVEL9K_LOCK_ICON='⭐'
+  typeset -g POWERLEVEL9K_LOCK_ICON=''
 
   # POWERLEVEL9K_DIR_CLASSES allows you to specify custom icons and colors for different
   # directories. It must be an array with 3 * N elements. Each triplet consists of:
@@ -297,21 +297,68 @@
   #
   # For example, given these settings:
   #
-  #   typeset -g POWERLEVEL9K_DIR_CLASSES=(
-  #     '~/work(|/*)'  WORK     ''
-  #     '~(|/*)'       HOME     ''
-  #     '*'            DEFAULT  '')
+     typeset -g POWERLEVEL9K_DIR_CLASSES=(
+              '~/Scripts(|/*)'      CODE       ''
+              '~/.config(|/*)'      CONFIG     ''
+              '~/Downloads(|/*)'    DOWNLOAD   ''
+              '~/Documents(|/*)'    DOCUMENT   ''
+              '~/.local(|/*)'       LOCAL      ''
+              '~/Music(|/*)'        MUSIC      ''
+              '~/Pictures(|/*)'     PHOTO      ''
+              '~/Videos(|/*)'       VIDEO      ''
+              '~'                   HOME       '')
   #
   # Whenever the current directory is ~/work or a subdirectory of ~/work, it gets styled with class
   # WORK or WORK_NOT_WRITABLE.
   #
   # Simply assigning classes to directories don't have any visible effects. It merely gives you an
   # option to define custom colors and icons for different directory classes.
-  #
-  #   # Styling for WORK.
-  #   typeset -g POWERLEVEL9K_DIR_WORK_VISUAL_IDENTIFIER_EXPANSION='⭐'
-  #   typeset -g POWERLEVEL9K_DIR_WORK_BACKGROUND=4
-  #   typeset -g POWERLEVEL9K_DIR_WORK_FOREGROUND=254
+
+     # Scripts
+     typeset -g POWERLEVEL9K_DIR_CODE_VISUAL_IDENTIFIER_EXPANSION='󱃖'
+     typeset -g POWERLEVEL9K_DIR_CODE_BACKGROUND=1
+     typeset -g POWERLEVEL9K_DIR_CODE_FOREGROUND=0
+
+     # Config
+     typeset -g POWERLEVEL9K_DIR_CONFIG_VISUAL_IDENTIFIER_EXPANSION=''
+     typeset -g POWERLEVEL9K_DIR_CONFIG_BACKGROUND=1
+     typeset -g POWERLEVEL9K_DIR_CONFIG_FOREGROUND=8
+
+     # Documents
+     typeset -g POWERLEVEL9K_DIR_DOCUMENT_VISUAL_IDENTIFIER_EXPANSION='󰈙'
+     typeset -g POWERLEVEL9K_DIR_DOCUMENT_BACKGROUND=12
+     typeset -g POWERLEVEL9K_DIR_DOCUMENT_FOREGROUND=7
+
+     # Downloads
+     typeset -g POWERLEVEL9K_DIR_DOWNLOAD_VISUAL_IDENTIFIER_EXPANSION='󰇚'
+     typeset -g POWERLEVEL9K_DIR_DOWNLOAD_BACKGROUND=4
+     typeset -g POWERLEVEL9K_DIR_DOWNLOAD_FOREGROUND=7
+
+     # Local
+     typeset -g POWERLEVEL9K_DIR_LOCAL_VISUAL_IDENTIFIER_EXPANSION=''
+     typeset -g POWERLEVEL9K_DIR_LOCAL_BACKGROUND=1
+     typeset -g POWERLEVEL9K_DIR_LOCAL_FOREGROUND=0
+
+     # Music
+     typeset -g POWERLEVEL9K_DIR_MUSIC_VISUAL_IDENTIFIER_EXPANSION=''
+     typeset -g POWERLEVEL9K_DIR_MUSIC_BACKGROUND=12
+     typeset -g POWERLEVEL9K_DIR_MUSIC_FOREGROUND=0
+
+     # Pictures
+     typeset -g POWERLEVEL9K_DIR_PHOTO_VISUAL_IDENTIFIER_EXPANSION=''
+     typeset -g POWERLEVEL9K_DIR_PHOTO_BACKGROUND=5
+     typeset -g POWERLEVEL9K_DIR_PHOTO_FOREGROUND=7
+
+     # Video
+     typeset -g POWERLEVEL9K_DIR_VIDEO_VISUAL_IDENTIFIER_EXPANSION='󰕧'
+     typeset -g POWERLEVEL9K_DIR_VIDEO_BACKGROUND=4
+     typeset -g POWERLEVEL9K_DIR_VIDEO_FOREGROUND=0
+
+     # Home
+     typeset -g POWERLEVEL9K_DIR_HOME_VISUAL_IDENTIFIER_EXPANSION=' '
+     typeset -g POWERLEVEL9K_DIR_HOME_BACKGROUND=4
+     typeset -g POWERLEVEL9K_DIR_HOME_FOREGROUND=7
+
   #   typeset -g POWERLEVEL9K_DIR_WORK_SHORTENED_FOREGROUND=250
   #   typeset -g POWERLEVEL9K_DIR_WORK_ANCHOR_FOREGROUND=255
   #
@@ -453,7 +500,7 @@
   typeset -g POWERLEVEL9K_VCS_{STAGED,UNSTAGED,UNTRACKED,CONFLICTED,COMMITS_AHEAD,COMMITS_BEHIND}_MAX_NUM=-1
 
   # Custom icon.
-  # typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_EXPANSION='󰊢'
   # Custom prefix.
   # typeset -g POWERLEVEL9K_VCS_PREFIX='on '
 
@@ -470,43 +517,43 @@
   # Status on success. No content, just an icon. No need to show it if prompt_char is enabled as
   # it will signify success by turning green.
   typeset -g POWERLEVEL9K_STATUS_OK=true
-  typeset -g POWERLEVEL9K_STATUS_OK_VISUAL_IDENTIFIER_EXPANSION='✔'
+  typeset -g POWERLEVEL9K_STATUS_OK_VISUAL_IDENTIFIER_EXPANSION='󰄴'
   # typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=2
   # typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND=0
 
   # Status when some part of a pipe command fails but the overall exit status is zero. It may look
   # like this: 1|0.
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE=true
-  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_VISUAL_IDENTIFIER_EXPANSION='✔'
-  # typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND=2
-  # typeset -g POWERLEVEL9K_STATUS_OK_PIPE_BACKGROUND=0
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_VISUAL_IDENTIFIER_EXPANSION=''
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND=3
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_BACKGROUND=0
 
   # Status when it's just an error code (e.g., '1'). No need to show it if prompt_char is enabled as
   # it will signify error by turning red.
   typeset -g POWERLEVEL9K_STATUS_ERROR=true
-  typeset -g POWERLEVEL9K_STATUS_ERROR_VISUAL_IDENTIFIER_EXPANSION='✘'
-  # typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=3
-  # typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND=1
+  typeset -g POWERLEVEL9K_STATUS_ERROR_VISUAL_IDENTIFIER_EXPANSION=''
+  typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=0
+  typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND=1
 
   # Status when the last command was terminated by a signal.
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL=true
   # Use terse signal names: "INT" instead of "SIGINT(2)".
   typeset -g POWERLEVEL9K_STATUS_VERBOSE_SIGNAME=false
-  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_VISUAL_IDENTIFIER_EXPANSION='✘'
-  # typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_FOREGROUND=3
-  # typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_BACKGROUND=1
+  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_VISUAL_IDENTIFIER_EXPANSION=''
+  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_FOREGROUND=0
+  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_BACKGROUND=3
 
   # Status when some part of a pipe command fails and the overall exit status is also non-zero.
   # It may look like this: 1|0.
   typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE=true
-  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_VISUAL_IDENTIFIER_EXPANSION='✘'
-  # typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_FOREGROUND=3
-  # typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_BACKGROUND=1
+  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_VISUAL_IDENTIFIER_EXPANSION=''
+  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_FOREGROUND=3
+  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_BACKGROUND=1
 
   ###################[ command_execution_time: duration of the last command ]###################
   # Execution time color.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=0
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=3
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=6
   # Show duration of the last command if takes at least this many seconds.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3
   # Show this many fractional digits. Zero means round to seconds.
@@ -520,12 +567,12 @@
 
   #######################[ background_jobs: presence of background jobs ]#######################
   # Background jobs color.
-  # typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND=6
-  # typeset -g POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND=0
+  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND=0
+  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND=5
   # Don't show the number of background jobs.
   typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE=false
   # Custom icon.
-  # typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VISUAL_IDENTIFIER_EXPANSION='󱃔'
 
   #######################[ direnv: direnv status (https://direnv.net/) ]########################
   # Direnv color.
@@ -765,7 +812,7 @@
   typeset -g POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND=2
   # Text and color for visual vi mode.
   typeset -g POWERLEVEL9K_VI_VISUAL_MODE_STRING=VISUAL
-  typeset -g POWERLEVEL9K_VI_MODE_VISUAL_BACKGROUND=4
+  typeset -g POWERLEVEL9K_VI_MODE_VISUAL_BACKGROUND=5
   # Text and color for overtype (a.k.a. overwrite and replace) vi mode.
   typeset -g POWERLEVEL9K_VI_OVERWRITE_MODE_STRING=OVERTYPE
   typeset -g POWERLEVEL9K_VI_MODE_OVERWRITE_BACKGROUND=3
@@ -1523,10 +1570,10 @@
   typeset -g POWERLEVEL9K_BATTERY_LOW_FOREGROUND=1
   # Show battery in green when it's charging or fully charged.
   typeset -g POWERLEVEL9K_BATTERY_{CHARGING,CHARGED}_FOREGROUND=2
-  # Show battery in yellow when it's discharging.
-  typeset -g POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND=3
+  # Show battery in white when it's discharging.
+  typeset -g POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND=7
   # Battery pictograms going from low to high level of charge.
-  typeset -g POWERLEVEL9K_BATTERY_STAGES='\uf58d\uf579\uf57a\uf57b\uf57c\uf57d\uf57e\uf57f\uf580\uf581\uf578'
+   typeset -g POWERLEVEL9K_BATTERY_STAGES='󰁺󰁻󰁼󰁽󰁾󰁿󰂀󰂁󰂂󰁹'
   # Don't show the remaining time to charge/discharge.
   typeset -g POWERLEVEL9K_BATTERY_VERBOSE=false
   # typeset -g POWERLEVEL9K_BATTERY_BACKGROUND=0

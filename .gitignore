@@ -26,6 +26,7 @@ grafx2/
 gzdoom/
 helix/
 icon-explorer/
+iDescriptor/
 kde.org/
 kdiskmark/
 Kitware/
@@ -45,6 +46,7 @@ pamac/
 pavucontrol.ini
 posting/
 pulse/
+quickshell/
 Raspberry\ Pi/
 retroarch/
 showfotorc
@@ -60,5 +62,6 @@ pavucontrol.ini
 QtProject.conf
 user-dirs.dirs
 user-dirs.locale
+xenon/
 zdoom/
 zint/

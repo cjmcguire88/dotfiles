@@ -1,10 +1,10 @@
 [Unit]
-Description=Kitty terminal with Zellij
+Description=Ghostty terminal with Zellij
 PartOf=graphical-session.target
 After=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/kitty -e zellij --layout /home/jason/.config/zellij/layouts/default.kdl
+ExecStart=/usr/bin/ghostty -e zellij --layout /home/jason/.config/zellij/layouts/default.kdl
 ExecStopPost=/bin/zsh -c "zellij kill-all-sessions"
 Restart=on-failure
 Slice=app.slice
