@@ -9,10 +9,6 @@ ___
 
 ![desktop-hypr](screenshots/desktop-hypr.png)
 
-![tmux](screenshots/tmux.png)
+![zellij](screenshots/zellij.png)
 
 ![desktop2](screenshots/desktop2.png)
-
-![desktop](screenshots/desktop.png)
-
-![desktop3](screenshots/desktop3.png)

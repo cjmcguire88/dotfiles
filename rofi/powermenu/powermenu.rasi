@@ -8,10 +8,10 @@
  */
 
 configuration {
-    show-icons:                     true;
-	  font:                      		  "FiraCode Nerd Font 14";
-    disable-history:                false;
-  	sidebar-mode: 					        false;
+    show-icons:                  true;
+    font:                        "FiraCode Nerd Font 14";
+    disable-history:             false;
+    sidebar-mode:                false;
 }
 
 @import "colors.rasi"
@@ -31,13 +31,13 @@ window {
 }
 
 prompt {
-    enabled: 						            true;
+    enabled:                        true;
     padding:                        10px;
-	  background-color: 				      #333333;
-	  text-color: 					          #1793d1;
-    border:                  		    2px 2px 4px 2px;
+    background-color:               #333333;
+    text-color:                     #1793d1;
+    border:                         2px 2px 4px 2px;
     border-radius:                  0px;
-    border-color:                  	#1793d1;
+    border-color:                   #1793d1;
 }
 
 textbox-prompt-colon {
@@ -49,7 +49,7 @@ textbox-prompt-colon {
 }
 
 inputbar {
-  	children: 						          [ textbox-prompt-colon, prompt ];
+  	children: 				        [ textbox-prompt-colon, prompt ];
     spacing:                        0px;
     background-color:               #202124;
     text-color:                     @foreground;
