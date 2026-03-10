@@ -27,6 +27,8 @@ require('lazy').setup {
 
   require 'plugins/mini',
 
+  require 'plugins/noice',
+
   require 'plugins/undo',
 
   require 'plugins/treesitter',

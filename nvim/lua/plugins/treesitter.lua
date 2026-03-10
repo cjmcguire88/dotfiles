@@ -17,6 +17,8 @@ return {
         'markdown_inline',
         'python',
         'query',
+        'regex',
+        'tsx',
         'rust',
         'verilog',
         'vim',
