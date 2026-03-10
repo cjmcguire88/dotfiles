@@ -12,6 +12,7 @@ Type=notify
 ExecStart=/usr/bin/hyprland
 ExecStop=/usr/bin/hyprctl dispatch exit
 ExecStopPost=systemctl --user unset-environment DISPLAY WAYLAND_DISPLAY HYPRLAND_INSTANCE_SIGNATURE XDG_CURRENT_DESKTOP
+Environment=LIBSEAT_BACKEND=logind
 Slice=session.slice
 TimeoutStartSec=30
 TimeoutStopSec=15
