@@ -33,7 +33,7 @@
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     os_icon                 # os identifier
     dir                     # current directory
-    vcs                     # git status
+    # vcs                     # git status
     # prompt_char           # prompt symbol
   )
 
@@ -78,6 +78,7 @@
     # gcloud                  # google cloud cli account and project (https://cloud.google.com/)
     # google_app_cred         # google application credentials (https://cloud.google.com/docs/authentication/production)
     context                 # user@hostname
+    vcs
     # nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
     # ranger                  # ranger shell (https://github.com/ranger/ranger)
     # nnn                     # nnn shell (https://github.com/jarun/nnn)
@@ -352,7 +353,7 @@
      # Video
      typeset -g POWERLEVEL9K_DIR_VIDEO_VISUAL_IDENTIFIER_EXPANSION='󰕧'
      typeset -g POWERLEVEL9K_DIR_VIDEO_BACKGROUND=4
-     typeset -g POWERLEVEL9K_DIR_VIDEO_FOREGROUND=0
+     typeset -g POWERLEVEL9K_DIR_VIDEO_FOREGROUND=7
 
      # Home
      typeset -g POWERLEVEL9K_DIR_HOME_VISUAL_IDENTIFIER_EXPANSION=' '
