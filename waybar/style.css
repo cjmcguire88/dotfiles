@@ -28,7 +28,6 @@ window#waybar.hidden {
 
 /* Buttons */
 button {
-  box-shadow: inset 0 -3px transparent;
   border: none;
   border-radius: 0;
   transition: background 0.3s ease;
@@ -40,34 +39,30 @@ button:hover {
 
 /* Workspaces */
 #workspaces {
-  font-size: 18px;
-  border: inset 1px #11111b;
-  border-radius: 20px;
-  margin: 2px 4px;
-  padding: 0 5px;
+  border: inset 1px #161817;
+  margin: 2px 2px;
+  padding: 0px 8px;
   background: #45475a;
-  box-shadow: inset 2px 2px 4px 2px #181825;
+  box-shadow: inset 0px 0px 2px 1px #161817;
 }
 
 #workspaces button {
   padding: 0 5px;
   background: none;
   color: #edfefe;
-  text-shadow: 2px 2px 4px #000;
-}
-
-#workspaces button:hover {
-  background-color: #585b70;
-  border-radius: 20px;
-}
-
-#workspaces button.active {
-  background-color: #181825;
-  border-radius: 20px;
 }
 
 #workspaces button.urgent {
   background-color: #f38ba8;
+}
+
+#workspaces button label {
+  font-size: 14px;
+}
+
+#workspaces button.active label {
+  font-size: 18px;
+  text-shadow: 4px 4px 2px #000;
 }
 
 /* Workspaces Labels */
@@ -99,9 +94,9 @@ button:hover {
   color: #74c7ec;
 }
 
-#workspaces button label {
-  font-size: 15px;
-  text-shadow: 2px 2px 3px #000;
+#workspaces button:hover label {
+  color: #161817;
+  font-size: 18px;
 }
 
 /* Modules Margins */
@@ -133,14 +128,17 @@ button:hover {
 
 /* Clock */
 #clock {
-  background: radial-gradient(circle, #313244 60%, #1e1e2e);
-  text-shadow: 2px 2px 4px #000;
+  border: inset 1px #050505;
+  border-radius: 10px;
+  margin: 4px 0px;
+  background: radial-gradient(circle, #45475a 60%, #1e1e2e);
+  text-shadow: 1px 3px 2px #000;
   transition: background 0.5s ease;
 }
 
 #clock:hover {
-  background: radial-gradient(circle, #45475a 60%, #1e1e2e);
-  text-shadow: 0 2px 6px #000;
+  background: radial-gradient(circle, #585b70 60%, #1e1e2e);
+  text-shadow: 3px 3px 2px #000;
 }
 
 /* Battery */
@@ -169,7 +167,6 @@ button:hover {
 #battery.charging,
 #battery.plugged {
   color: #30d475;
-  text-shadow: 0 0 4px #000;
   animation: blink1 1s infinite alternate;
 }
 
@@ -181,17 +178,28 @@ label:focus {
   background-color: #000;
 }
 
+/* Idle Inhibitor */
+#idle_inhibitor {
+  color: #666;
+}
+
+#idle_inhibitor.activated {
+  color: #a6e3a1;
+  text-shadow: 0 0px 6px #27ae60;
+}
+
 #cpu,
 #memory,
 #network,
 #pulseaudio,
 #temperature {
-  border-radius: 20px;
-  background: radial-gradient(#444, #333 60%, #1e1e2e);
+  border-radius: 10px;
+  background: #313244;
   box-shadow:
-    inset 2px 2px 6px #050505,
-    0 1px 6px rgba(0, 0, 0, 0.3);
-  text-shadow: 2px 2px 4px #000;
+    inset 0px 0px 5px 3px #050505,
+    0px 0px 2px #11111b;
+  text-shadow: 2px 2px 2px #000000;
+  margin: 2px;
   transition:
     background 0.1s ease,
     color 0.1s ease,
@@ -220,7 +228,7 @@ label:focus {
 #pulseaudio:hover,
 #temperature:hover {
   font-size: 15px;
-  color: #202124;
+  color: #161817;
 }
 
 #cpu:hover {
@@ -252,7 +260,7 @@ label:focus {
 /* Audio */
 #pulseaudio.muted {
   background: #333;
-  color: #000;
+  color: #888888;
 }
 
 /* Arch Linux Customizations */
@@ -260,7 +268,7 @@ label:focus {
   font-size: 20px;
   background: none;
   color: #1793d1;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 4px 4px 2px #000;
   transition:
     color 0.5s ease,
     text-shadow 0.5s ease;
@@ -268,7 +276,7 @@ label:focus {
 
 #custom-arch:hover {
   color: #89b4fa;
-  text-shadow: 0 2px 6px #1793d1;
+  text-shadow: 2px 2px 6px #1793d1;
   font-size: 21px;
 }
 
@@ -332,15 +340,4 @@ label:focus {
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
   background-color: #f38ba8;
-}
-
-/* Idle Inhibitor */
-#idle_inhibitor {
-  background: none;
-  color: #666;
-}
-
-#idle_inhibitor.activated {
-  color: #a6e3a1;
-  text-shadow: 0 2px 4px #27ae60;
 }
