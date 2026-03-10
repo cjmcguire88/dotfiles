@@ -1,0 +1,101 @@
+wtf:
+  colors:
+    border:
+      focusable: darkslateblue
+      focused: orange
+      normal: gray
+  grid:
+    columns: [38, 38, 38, 38, 90]
+    rows: [10, 10, 10, 4, 4, 90]
+  refreshInterval: 1
+  mods:
+    clocks_a:
+      colors:
+        rows:
+          even: "lightblue"
+          odd: "white"
+      enabled: true
+      locations:
+        Los Angeles: "America/Los_Angeles"
+        Berlin: "Europe/Berlin"
+        Dubai: "Asia/Dubai"
+        London: "Europe/London"
+        Moscow: "Europe/Moscow"
+        Sydney: "Australia/Sydney"
+        Tehran: "Asia/Tehran"
+        Tel Aviv: "Asia/Jerusalem"
+        Tokyo: "Asia/Tokyo"
+      position:
+        top: 0
+        left: 0
+        height: 1
+        width: 1
+      refreshInterval: 15
+      sort: "chronological"
+      timeFormat: "3:04 PM"
+      title: " 󰥔 "
+      type: "clocks"
+    power:
+      enabled: true
+      position:
+        top: 0
+        left: 1
+        height: 1
+        width: 1
+      refreshInterval: 15
+      title: "  "
+    hackernews:
+      enabled: true
+      numberOfStories: 10
+      position:
+        top: 1
+        left: 0
+        width: 2
+        height: 1
+      storyType: top
+      refreshInterval: 15m
+    resourceusage:
+      cpuCombined: false
+      enabled: true
+      position:
+        top: 2
+        left: 0
+        height: 1
+        width: 1
+      refreshInterval: 1s
+      showCPU: true
+      showMem: true
+      showSwp: true
+    ipinfo:
+      colors:
+        name: "lightblue"
+        value: "white"
+      enabled: true
+      position:
+        top: 2
+        left: 1
+        height: 1
+        width: 1
+      refreshInterval: 150
+    #    textfile:
+    #      enabled: true
+    #      filePath: "~/.config/hypr/hyprland.conf"
+    #      format: true
+    #      position:
+    #        top: 0
+    #        left: 2
+    #        height: 4
+    #        width: 2
+    #      refreshInterval: 30
+    #      wrapText: false
+    uptime:
+      args: []
+      cmd: "uptime"
+      enabled: true
+      position:
+        top: 3
+        left: 0
+        height: 1
+        width: 2
+      refreshInterval: 30
+      type: cmdrunner
