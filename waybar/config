@@ -52,8 +52,8 @@
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "󰷛",
-      "deactivated": "󰷛"
+      "activated": "󰷛 ",
+      "deactivated": "󰷛 "
     }
   },
   "tray": {
@@ -208,7 +208,7 @@
   "custom/power": {
     "format": "⏻",
     "tooltip": false,
-    "on-click": "$HOME/.config/rofi/powermenu/powermenu.sh"
+    "on-click": "$HOME/.config/rofi/powermenu/type-2/powermenu.sh"
   },
   "custom/pacman": {
     "format": "{icon}",
