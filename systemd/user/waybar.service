@@ -23,8 +23,6 @@ MemoryMin=100M
 MemoryLow=250M
 OOMPolicy=continue
 OOMScoreAdjust=-250
-UMask=0077
-NoNewPrivileges=yes
 
 [Install]
 WantedBy=graphical-session.target

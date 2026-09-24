@@ -1,14 +1,14 @@
 [Unit]
-Description=SWWW Wallpaper Daemon
-Documentation=https://github.com/LGFae/swww
+Description=AWWW Wallpaper Daemon
+Documentation=https://github.com/LGFae/awww
 PartOf=graphical-session.target
 After=graphical-session.target
 ConditionEnvironment=WAYLAND_DISPLAY
-	
+
 [Service]
 Type=simple
 Environment=RUST_BACKTRACE=1
-ExecStart=/usr/bin/swww-daemon --format argb
+ExecStart=/usr/bin/awww-daemon --format argb
 Slice=session.slice
 Restart=on-failure
 TimeoutStartSec=30
@@ -19,7 +19,6 @@ RestartSteps=2
 RestartMaxDelaySec=15
 StandardOutput=journal
 StandardError=journal
-
 
 [Install]
 WantedBy=graphical-session.target
