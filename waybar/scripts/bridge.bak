@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+SCRIPT="$HOME/.local/bin/bridge"
+SIGNAL=10 # choose a free signal number (see below)
+
+case "${1:-}" in
+toggle)
+    if "$SCRIPT" status | grep -q on; then
+        "$SCRIPT" -d
+        notify-send "Bridge" "Deactivated" -i network-wired-disconnected
+    else
+        "$SCRIPT" -a
+        notify-send "Bridge" "Activated" -i network-wired
+    fi
+    # force Waybar to refresh immediately
+    pkill -RTMIN+$SIGNAL waybar
+    ;;
+*)
+    # Normal status output for Waybar
+    if "$SCRIPT" status | grep -q on; then
+        printf '{"text":"","tooltip":"Bridge: ON (click to disable)","class":"on"}\n'
+    else
+        printf '{"text":"󰈀","tooltip":"Bridge: OFF (click to enable)","class":"off"}\n'
+    fi
+    ;;
+esac

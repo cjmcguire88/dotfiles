@@ -178,6 +178,29 @@ label:focus {
   background-color: #000;
 }
 
+#custom-bridge {
+  padding: 0 8px;
+  margin: 0 2px;
+  border-radius: 6px;
+}
+
+#custom-bridge.bridge {
+  color: #a6e3a1; /* green */
+}
+
+#custom-bridge.ethernet {
+  color: #edfefe;
+}
+
+#custom-bridge.wifi {
+  color: #edfefe;
+}
+
+#custom-bridge.down {
+  color: #6c7086;
+  /* opacity: 0.7; */
+}
+
 /* Idle Inhibitor */
 #idle_inhibitor {
   color: #666;
