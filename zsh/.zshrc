@@ -14,11 +14,16 @@ fi
 ZSH_CACHE_DIR=$HOME/.cache/zsh
 autoload -Uz compinit
 compinit
+
 setopt share_history
 setopt inc_append_history
+setopt dot_glob
+setopt extended_glob
+
 export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=100000
 export SAVEHIST=1000000
+
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 eval "$(zoxide init zsh)"
