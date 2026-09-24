@@ -29,6 +29,8 @@ require('lazy').setup {
 
   require 'plugins/noice',
 
+  require 'plugins/lazygit',
+
   require 'plugins/undo',
 
   require 'plugins/treesitter',
