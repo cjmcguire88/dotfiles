@@ -1,5 +1,3 @@
-return {
-  {
-    'norcalli/nvim-colorizer.lua',
-  },
-}
+-- ~/.config/nvim/lua/plugins/colorizer.lua
+
+require('colorizer').setup({})
