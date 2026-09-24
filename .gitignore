@@ -12,8 +12,10 @@ containers/
 dconf/
 digikamrc
 digikam_systemrc
+doom/
 eDEX-UI/
 Electron/
+Emacs/
 filelightrc
 fontconfig/
 font-manager/
@@ -33,6 +35,7 @@ kdiskmark/
 Kitware/
 Kvantum/
 libreoffice/
+librewolf/
 libvirt/
 LuxOS\ Commander/
 menus/
@@ -50,6 +53,8 @@ pulse/
 quickshell/
 Raspberry\ Pi/
 retroarch/
+rufus-linux/
+shelly/
 showfotorc
 sniffnet/
 solaar/
@@ -63,6 +68,7 @@ pavucontrol.ini
 QtProject.conf
 user-dirs.dirs
 user-dirs.locale
+warp-terminal/
 xenon/
 zdoom/
 zint/
